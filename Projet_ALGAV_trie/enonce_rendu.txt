@@ -1,0 +1,18 @@
+Enonce rapport
+Email: Maryse.Pelletier@lip6.fr
+A rendre: Rapport et le code source avant le 22/12/2017
+Implementation: langage au choix
+rapport au format pdf:
+    -presentation du problème
+    -réponses aux questions
+    -choix d'implementation
+    (expliquer les algos si nécessaire)
+    -résultats expérimentaux
+    
+soutenance le 19/12/2017
+~ 15 min en tout donc:
+    -5 min de présentation avec des diapos
+    -démo => exemple de base
+          => shakespeare
+          
+En binôme, donner la composition des binômes en séance 8/9
