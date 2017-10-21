@@ -40,4 +40,16 @@ public class TrieHybrideLoadFile {
 		return construction;
 		
 	}
+	
+	public static ITrieHybride loadFileShakespeare(ITrieHybride th){
+		String prefix = "files/Shakespeare";
+		File folder = new File(prefix);
+		String[] listOfFiles = folder.list();
+		ITrieHybride construction = th;
+		for(String file: listOfFiles){
+			construction = TrieHybrideLoadFile.loadFile(prefix+"/"+file, construction);
+		}
+		return construction;
+
+	}
 }
