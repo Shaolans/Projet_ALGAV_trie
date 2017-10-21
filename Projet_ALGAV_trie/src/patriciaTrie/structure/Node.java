@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Node {
 	
-	private Character valeur;
+	private String valeur;
 	private List<Node> fils;
 	
-	public Node(Character valeur){
+	public Node(String valeur){
 		this.valeur = valeur;
 		fils=new ArrayList<Node>();
 	}
 	
-	public char getValeur(){
+	public String getValeur(){
 		return valeur;
 	}
 	

@@ -6,7 +6,7 @@ import patriciaTrie.interfaces.IPatriciaTrie;;
 
 public class PatriciaTrie implements IPatriciaTrie{
 	
-	private Node first;
+	private Node[26] nodes = new Node();
 	
 	public PatriciaTrie(){
 		first = new Node('~');
@@ -58,14 +58,12 @@ public class PatriciaTrie implements IPatriciaTrie{
 		boolean trouve ;
 		List<Node> fils = first.getFils();
 		
-		
 		for(int i=0 ; i<word.length(); i++){
 			
 			trouve = false;
 			
 			for(Node n : fils){
 				
-
 				if(word.charAt(i)==n.getValeur()){
 					fils=n.getFils();
 					trouve=true;
@@ -74,17 +72,51 @@ public class PatriciaTrie implements IPatriciaTrie{
 				
 			}
 			
-			
 			if(trouve == false){
 				return false;
 			}
 
 		}
 		
+		return true;
+	}
+	
+	
+	
+	@Override
+	public boolean deleteWord(String word){
+		
+		boolean deleted = false;
+		List<Node> fils = first.getFils();
+		Node pere = first;
+		
+		if(findWord(word)==false){
+			return false;
+		}
+		
+		for(int i=0 ; i<word.length(); i++){
+			
+			for(Node n : fils){
+				if(n.getValeur()== word.charAt(i)){
+					if(n.getFils().size()==1){
+						deleted=true;
+						break;
+					}
+					else{
+						pere = n;
+						fils = n.getFils();
+						break;
+					}
+				}
+				if(deleted==true)
+					break;
+			}
+			
+		}
 		
 		return true;
-		
 	}
+
 	
 	
 	@Override
@@ -101,6 +133,5 @@ public class PatriciaTrie implements IPatriciaTrie{
 		
 	}
 
-	
 	
 }
