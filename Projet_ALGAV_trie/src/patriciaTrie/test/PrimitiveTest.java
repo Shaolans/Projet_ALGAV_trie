@@ -16,7 +16,7 @@ public class PrimitiveTest {
 		
 		System.out.println(pt);
 		
-		System.out.println(pt.findWord("amel"));
+		//System.out.println(pt.findWord("amel"));
 		
 	}
 	

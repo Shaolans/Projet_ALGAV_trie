@@ -6,47 +6,80 @@ import patriciaTrie.interfaces.IPatriciaTrie;;
 
 public class PatriciaTrie implements IPatriciaTrie{
 	
-	private Node[26] nodes = new Node();
+	private Node[] nodes = new Node[26];
+	String endChar = "~";
 	
-	public PatriciaTrie(){
-		first = new Node('~');
-	}
+	public PatriciaTrie(){	}
 
 	@Override
 	public void addWord(String word) {
 
-		int k=0;
-		boolean trouve;
-		List<Node> fils;
-
-		fils = first.getFils();
+		Node currentNode ;
+		int idx_first = (int)word.charAt(0)-97;
 		
-		for(int i=0; i<word.length(); i++){
-			trouve=false;
-			k=0;
-			while( k < fils.size()){
-				if(fils.get(k).getValeur() == word.charAt(i)){
-					fils = fils.get(k).getFils();
-					trouve=true;
+		if(nodes[idx_first]==null){
+			nodes[idx_first] = new Node(word+endChar);
+			return;
+		}
+		
+		currentNode = nodes[idx_first];
+		int i=1, j=1;
+		boolean findEnd = false;
+		String valeurNoeud = currentNode.getValeur();
+		boolean nextNodeFound =true;
+		
+		while(nextNodeFound){
+			i=1;
+			valeurNoeud = currentNode.getValeur();
+
+			while(i<valeurNoeud.length() && j<word.length() ){
+				//si on atteint un caractère final dans le noeud
+				if(valeurNoeud.charAt(i)==endChar.charAt(0)){
+					findEnd=true;
 					break;
 				}
-				k++;
+				
+				//quand on atteint le premier caractère qui diffère dans le noeud
+				if(valeurNoeud.charAt(i)!=word.charAt(j)){
+					break;
+				}
+				i++;
+				j++;
 			}
 			
-			if(trouve==false){
-				for(int j=i; j<word.length(); j++){
-					Node node = new Node(word.charAt(j));
-					fils.add(node);
-					fils = node.getFils();
-				}
-				
-				break;
+			if(i==word.length()){
+				currentNode.getFils().add(new Node(valeurNoeud.substring(i)));
+				currentNode.getFils().add(new Node(endChar));
+				currentNode.setValeur(word);
+				return;
 			}
+			
+			if(findEnd){
+				currentNode.getFils().add(new Node(word.substring(j)+endChar));
+				currentNode.getFils().add(new Node(endChar));
+				currentNode.setValeur(valeurNoeud.substring(0, i));
+				return;
+			}
+			
+			nextNodeFound=false;
+			for(Node n : currentNode.getFils()){
+				if(n.getValeur().charAt(0)==word.charAt(j)){
+					currentNode = n;
+					valeurNoeud = currentNode.getValeur();
+					j++;
+					nextNodeFound=true;
+					break;
+				}
+			}			
 			
 		}
 		
+		currentNode.getFils().add(new Node(word.substring(j)+endChar));
+		if(i<valeurNoeud.length()){
+			currentNode.getFils().add(new Node(valeurNoeud.substring(i)));
+			currentNode.setValeur(valeurNoeud.substring(0, i));
+		}
 		
-		fils.add(new Node('~'));
 		
 	}
 	
@@ -54,29 +87,6 @@ public class PatriciaTrie implements IPatriciaTrie{
 
 	@Override
 	public boolean findWord(String word) {
-		
-		boolean trouve ;
-		List<Node> fils = first.getFils();
-		
-		for(int i=0 ; i<word.length(); i++){
-			
-			trouve = false;
-			
-			for(Node n : fils){
-				
-				if(word.charAt(i)==n.getValeur()){
-					fils=n.getFils();
-					trouve=true;
-					break;
-				}
-				
-			}
-			
-			if(trouve == false){
-				return false;
-			}
-
-		}
 		
 		return true;
 	}
@@ -86,33 +96,6 @@ public class PatriciaTrie implements IPatriciaTrie{
 	@Override
 	public boolean deleteWord(String word){
 		
-		boolean deleted = false;
-		List<Node> fils = first.getFils();
-		Node pere = first;
-		
-		if(findWord(word)==false){
-			return false;
-		}
-		
-		for(int i=0 ; i<word.length(); i++){
-			
-			for(Node n : fils){
-				if(n.getValeur()== word.charAt(i)){
-					if(n.getFils().size()==1){
-						deleted=true;
-						break;
-					}
-					else{
-						pere = n;
-						fils = n.getFils();
-						break;
-					}
-				}
-				if(deleted==true)
-					break;
-			}
-			
-		}
 		
 		return true;
 	}
@@ -124,10 +107,12 @@ public class PatriciaTrie implements IPatriciaTrie{
 		
 		StringBuilder word = new StringBuilder();
 		
-		for(Node n : first.getFils()){
-				word.append(n.toString());
+		for(int i=0; i<26; i++){
+			if(nodes[i]!=null){
+				word.append(nodes[i].toString());
 				word.append('\n');
 			}
+		}
 		
 		return word.toString();
 		

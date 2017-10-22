@@ -25,14 +25,9 @@ public class Node {
 	public String toString(){
 		
 		StringBuilder chaine = new StringBuilder(valeur);
+		chaine.append('\n');
 		
-		chaine.append(valeur);
-		
-		if(fils.size()==1){
-			chaine.append(fils.get(0).toString());
-		}
-		else{
-			chaine.append('\n');
+		if(fils.size()!=0){
 			for(Node n : fils){
 				chaine.append(n.toString());
 			}
@@ -40,6 +35,10 @@ public class Node {
 		
 		return chaine.toString();
 		
+	}
+
+	public void setValeur(String newValeur) {
+		valeur=newValeur;
 	}
 	
 }
