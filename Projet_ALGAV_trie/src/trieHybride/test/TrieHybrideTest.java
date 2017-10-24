@@ -36,12 +36,11 @@ public class TrieHybrideTest {
 		//TrieHybridePrimitive.supression(root, "A");
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		//System.out.println(root.getChar());
-		
-		for(String word: TrieLoadFile.loadWordsShakespeare()){
+		/*for(String word: TrieLoadFile.loadWordsShakespeare()){
 			if(!TrieHybridePrimitive.recherche(root, word)){
 				System.out.println("PROBLEME");
 			}
-		}
+		}*/
 		
 		/*ITrieHybride tmp = root;
 		tmp = tmp.getfc();
