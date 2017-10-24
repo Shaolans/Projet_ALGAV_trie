@@ -1,6 +1,6 @@
 package trieHybride.test;
 
-import trieHybride.file.TrieHybrideLoadFile;
+import trie.file.TrieLoadFile;
 import trieHybride.implementation.TrieHybridePrimitive;
 import trieHybride.interfaces.ITrieHybride;
 
@@ -23,20 +23,25 @@ public class TrieHybrideTest {
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motar"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "quel"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motorise"));
-		//root = TrieHybrideLoadFile.loadFile("files/exemple_de_base", null);
-		root = TrieHybrideLoadFile.loadFileShakespeare(null);
+		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base", null);
+		root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
 		System.out.println(TrieHybridePrimitive.comptageMots(root));
-		//System.out.println(TrieHybridePrimitive.comptageNil(root));
-		//System.out.println(TrieHybridePrimitive.hauteur(root));
+		System.out.println(TrieHybridePrimitive.comptageNil(root));
+		System.out.println(TrieHybridePrimitive.hauteur(root));
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
-		//System.out.println(TrieHybridePrimitive.prefixe(root, "d"));
-		//System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
+		System.out.println(TrieHybridePrimitive.prefixe(root, "d"));
+		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
 		
 		//TrieHybridePrimitive.supression(root, "A");
-		System.out.println(TrieHybridePrimitive.listeMots(root));
+		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		//System.out.println(root.getChar());
 		
+		for(String word: TrieLoadFile.loadWordsShakespeare()){
+			if(!TrieHybridePrimitive.recherche(root, word)){
+				System.out.println("PROBLEME");
+			}
+		}
 		
 		/*ITrieHybride tmp = root;
 		tmp = tmp.getfc();
