@@ -33,7 +33,7 @@ public class TrieHybrideTest {
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		System.out.println(TrieHybridePrimitive.prefixe(root, "d"));
 		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
-		TrieVisualizer.visualizeTrieHybride("", true, false ,root);
+		TrieVisualizer.visualizeTrieHybride(root);
 		//TrieHybridePrimitive.supression(root, "A");
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		//System.out.println(root.getChar());
