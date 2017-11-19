@@ -91,8 +91,24 @@ public class PatriciaTrie {
 
 	
 	public boolean findWord(String word) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		if(word.length()==ind){
+			if(patTries[26]!=null)
+				return true;
+			else
+				return false;
+		}
+		
+		char c = word.charAt(ind);
+		
+		if(patTries[c-97]==null)
+			return false;
+		
+		if(patTries[c-97].feuille==word)
+			return true;
+		
+		return patTries[c-97].findWord(word);
+		
 	}
 
 	
