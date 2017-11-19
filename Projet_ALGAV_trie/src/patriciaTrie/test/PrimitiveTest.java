@@ -1,5 +1,9 @@
 package patriciaTrie.test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import patriciaTrie.structure.PatriciaTrie;
 
 public class PrimitiveTest {
@@ -7,18 +11,26 @@ public class PrimitiveTest {
 	public static void main(String[] args ){
 		
 		PatriciaTrie pt = new PatriciaTrie();
-		
-		pt.addWord("amel");
-		pt.addWord("ami");
-		pt.addWord("amical");
-		pt.addWord("bob");
-		pt.addWord("amicalement");
+		File f = new File("files/exemple_de_base");
+		String word;
+		Scanner scan = null;
+		try {
+			scan = new Scanner(f);
+			
+			while( scan.hasNext()){
+				word = scan.next();
+				word=word.toLowerCase();
+				PatriciaTrie.addWord(pt, word);
+			}
+
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally{
+			scan.close();
+		}
 		
 		System.out.println(pt);
-		
-		System.out.println(pt.findWord("amel"));
-		System.out.println(pt.findWord("kenza"));
-		System.out.println(pt.findWord("amical"));
 		
 	}
 	

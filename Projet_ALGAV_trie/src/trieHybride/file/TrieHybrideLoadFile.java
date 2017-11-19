@@ -30,13 +30,16 @@ public class TrieHybrideLoadFile {
 		
 		try{
 			sc = new Scanner(f);
-			while(true){
+			while(sc.hasNext()){
 				word = sc.next();
 				TrieHybridePrimitive.ajoutMot(word, construction, cpt++);
 			}
 		}catch(Exception ex){
+			ex.printStackTrace();
+		}finally{
 			sc.close();
 		}
+		
 		return construction;
 		
 	}
