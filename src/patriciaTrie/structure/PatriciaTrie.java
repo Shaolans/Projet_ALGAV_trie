@@ -1,37 +1,75 @@
 package patriciaTrie.structure;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class PatriciaTrie {
 	
 	private PatriciaTrie[] patTries = new PatriciaTrie[27];
 	private int ind;
-	private String feuille;
+	private String val;
+	private boolean feuille;
 	
 	public PatriciaTrie(){
 		ind=0;
 	}
 	
-	private PatriciaTrie(int ind){
+	private PatriciaTrie(int ind, String val, boolean feuille){
+		this.val = val;
 		this.ind=ind;
+		this.feuille=feuille;
 	}
 
 	
-	public static boolean addWord(PatriciaTrie p, String word) {
-
-		if(findWord(p, word)){
+	public static boolean ajouterMot(PatriciaTrie p, String word) {
+		
+		if(recherche(p, word)){
 			return false;
 		}
 		
 		char c = word.charAt(p.ind);
 		if(p.patTries[c-97]==null){
-			p.patTries[c-97] = new PatriciaTrie(p.ind+1);
-			p.patTries[c-97].feuille = word;
+			p.patTries[c-97] = new PatriciaTrie(p.ind+1, word, true);
 		}
 		else{
-			if(p.patTries[c-97].feuille==null ){
+			if( ! p.patTries[c-97].feuille ){
+				
 				for(int i=p.ind; i<word.length(); i++){
-					if(p.patTries[word.charAt(i)-97]!=null && i==p.ind){
-						addWord(p.patTries[word.charAt(i)-97],word);
+					
+					int k = word.charAt(i);
+					
+					if(p.patTries[k-97]!=null ){
+						
+						if(word.startsWith(p.patTries[k-97].val)){
+							return ajouterMot(p.patTries[k-97], word);
+						}
+						else{
+							String mot1, mot2;
+							if(p.patTries[k-97].val.length()<word.length()){
+								mot1=p.patTries[k-97].val;
+								mot2=word;
+							}
+							else{
+								mot1=word;
+								mot2=p.patTries[k-97].val;
+							}
+							int j;
+							for(j=0; j<mot1.length(); j++){
+								if(mot1.charAt(j)!=mot2.charAt(j)){
+									break;
+								}
+							}
+							
+							
+							String s = p.patTries[k-97].val;
+							PatriciaTrie np = new PatriciaTrie(p.patTries[k-97].ind-1, s.substring(0, j), false);
+							np.patTries[s.charAt(j)-97] = p.patTries[k-97];
+							np.patTries[word.charAt(j)-97]=new PatriciaTrie(p.patTries[k-97].ind, word, true);
+							p.patTries[k-97] = np;
+							
+						}					
+						
 						break;
 					}
 				}
@@ -40,13 +78,13 @@ public class PatriciaTrie {
 			else{
 				
 				String mot1, mot2;
-				if(p.patTries[c-97].feuille.length()<word.length()){
-					mot1=p.patTries[c-97].feuille;
+				if(p.patTries[c-97].val.length()<word.length()){
+					mot1=p.patTries[c-97].val;
 					mot2=word;
 				}
 				else{
 					mot1=word;
-					mot2=p.patTries[c-97].feuille;
+					mot2=p.patTries[c-97].val;
 				}
 				int i;
 				for(i=0; i<mot1.length(); i++){
@@ -55,18 +93,15 @@ public class PatriciaTrie {
 					}
 				}
 				if(i==mot1.length()){
-					p.patTries[c-97].patTries[26]=new PatriciaTrie(i);
-					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i);
-					p.patTries[c-97].patTries[26].feuille = mot1;
-					p.patTries[c-97].patTries[mot2.charAt(i)-97].feuille = mot2;
+					p.patTries[c-97].patTries[26]=new PatriciaTrie(i, mot1, true);
+					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i, mot2, true);
 				}
 				else{
-					p.patTries[c-97].patTries[mot1.charAt(i)-97]=new PatriciaTrie(i);
-					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i);
-					p.patTries[c-97].patTries[mot1.charAt(i)-97].feuille = mot1;
-					p.patTries[c-97].patTries[mot2.charAt(i)-97].feuille = mot2;
+					p.patTries[c-97].patTries[mot1.charAt(i)-97]=new PatriciaTrie(i, mot1, true);
+					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i, mot2, true);
 				}
-				p.patTries[c-97].feuille=null;
+				p.patTries[c-97].val=mot1.substring(0, i);
+				p.patTries[c-97].feuille=false;
 				p.patTries[c-97].ind=i;
 			}
 		}
@@ -81,8 +116,8 @@ public class PatriciaTrie {
 		for(int i=0; i<27; i++){
 			if(patTries[i]!=null){
 				word.append("niveau " +((char)(i+97))+" "+ind+"\n");
-				if(patTries[i].feuille!=null){
-					word.append(patTries[i].feuille);
+				if(patTries[i].feuille){
+					word.append(patTries[i].val);
 					word.append("\n");
 				}
 				else{
@@ -96,7 +131,7 @@ public class PatriciaTrie {
 	}
 
 	
-	public static boolean findWord(PatriciaTrie p, String word) {
+	public static boolean recherche(PatriciaTrie p, String word) {
 
 		if(word.length()==p.ind){
 
@@ -111,17 +146,17 @@ public class PatriciaTrie {
 		if(p.patTries[c-97]==null)
 			return false;
 		
-		if(word.equals(p.patTries[c-97].feuille))
+		if(word.equals(p.patTries[c-97].val))
 			return true;
 		
-		return findWord(p.patTries[c-97], word);
+		return recherche(p.patTries[c-97], word);
 		
 	}
 
 	
-	public static boolean deleteWord(PatriciaTrie p, String word) {		
+	public static boolean supprimerMot(PatriciaTrie p, String word) {		
 		
-		if(!findWord(p, word))
+		if(!recherche(p, word))
 			return false;
 		
 		if(word.length()==p.ind){
@@ -131,7 +166,7 @@ public class PatriciaTrie {
 			char c = word.charAt(p.ind);
 			
 			
-			if(p.patTries[c-97].feuille==word){
+			if(p.patTries[c-97].feuille && p.patTries[c-97].val==word){
 				p.patTries[c-97]=null;
 				
 					int patTriesOqp=0;
@@ -146,23 +181,151 @@ public class PatriciaTrie {
 							break;
 					}
 					if(patTriesOqp==1){
-						if(p.patTries[autrePat].feuille==null){
+						if(!p.patTries[autrePat].feuille){
 							p.ind = p.patTries[autrePat].ind;
 							p.patTries = p.patTries[autrePat].patTries;
 						}
 						else{
-							p.feuille = p.patTries[autrePat].feuille;
+							p.val = p.patTries[autrePat].val;
 							p.patTries[autrePat]=null;
+							p.feuille=true;
 						}
 					}
 				
 			}
 			else{
-				deleteWord(p.patTries[c-97], word);
+				supprimerMot(p.patTries[c-97], word);
 			}
 		}
 		
 		return true;
+	}
+	
+	
+	public static int comptageMots(PatriciaTrie p){
+		
+		int cpt=0;
+		
+		if(p.feuille)
+			return 1;
+		
+		for(int i=0; i<27; i++){
+			if(p.patTries[i]!=null){
+				cpt += comptageMots(p.patTries[i]);
+			}
+		}
+		
+		return cpt;
+	}
+	
+	public static List<String> listeMots(PatriciaTrie p){
+		
+		List<String> mots = new ArrayList<String>();
+		
+		if(p.feuille){
+			mots.add(p.val);
+			return mots;
+		}
+		
+		for(int i=0; i<27; i++){
+			if(p.patTries[i]!=null){
+				mots.addAll(listeMots(p.patTries[i]));
+			}
+		}
+		
+		
+		return mots;
+	}
+	
+	
+	public static int comptageNil(PatriciaTrie p){
+		
+		int cpt=0;
+		
+		for(int i=0; i<27; i++){
+			if(p.patTries[i]==null){
+				cpt++;
+			}
+			else{
+				cpt += comptageNil(p.patTries[i]);
+			}
+		}
+		
+		return cpt;
+	}
+	
+	
+	public static int hauteur(PatriciaTrie p){
+		
+		int h = 0;
+		
+		if(p.feuille){
+			return 0;
+		}
+		
+		for(int i=0; i<27; i++){
+			if(p.patTries[i]!=null){
+				int x = 1 + PatriciaTrie.hauteur(p.patTries[i]);
+				if( h < x ){
+					h=x;
+				}
+			}
+		}
+		
+		return h;
+	}
+	
+	
+	public static double profondeurMoyenne(PatriciaTrie p){
+		
+		List<Integer> pfs = new ArrayList<>();
+		profondeurs(p, pfs, 0);
+		double somme=0;
+		for(Integer i : pfs){
+			somme+=i;
+		}
+		return somme/pfs.size();
+		
+	}
+	
+	private static void profondeurs(PatriciaTrie p, List<Integer> pfs, int x){
+
+		if(p.feuille){
+			pfs.add(x);
+		}
+		
+		for(int i=0; i<27; i++){
+			if(p.patTries[i]!=null){
+				PatriciaTrie.profondeurs(p.patTries[i], pfs, x +1);
+			}
+		}
+
+	}
+	
+	public static int prefixe(PatriciaTrie p, String prefixe){
+		
+		int cpt=0;
+		
+		if(p.feuille){
+			return 1;
+		}
+		
+		if(p.ind >= prefixe.length()){
+			for(int i=0; i<27; i++){
+				if(p.patTries[i]!=null)
+					cpt += prefixe(p.patTries[i], prefixe);
+			}
+			return cpt;
+		}
+		
+		char c = prefixe.charAt(p.ind);
+		
+		if(p.patTries[c-97]==null){
+			return 0;
+		}
+		
+		return prefixe(p.patTries[c-97], prefixe);
+		
 	}
 	
 }
