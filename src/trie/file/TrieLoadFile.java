@@ -34,7 +34,7 @@ public class TrieLoadFile {
 			sc = new Scanner(f);
 			while(sc.hasNext()){
 				word = sc.next();
-				TrieHybridePrimitive.ajoutMot(word, construction, cpt++);
+				TrieHybridePrimitive.ajoutMot(word.toLowerCase(), construction, cpt++);
 			}
 		}catch(Exception ex){
 			ex.printStackTrace();
@@ -66,7 +66,7 @@ public class TrieLoadFile {
 			sc = new Scanner(f);
 			while(true){
 				word = sc.next();
-				listword.add(word);
+				listword.add(word.toLowerCase());
 			}
 		}catch(Exception ex){
 			sc.close();
