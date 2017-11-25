@@ -69,7 +69,7 @@ public class TrieHybridePrimitive {
 		
 
 		
-		//cas general, parcours du TH pour trouver le TH où inserer le mot
+		//cas general, parcours du TH pour trouver le TH oï¿½ inserer le mot
 		
 		//si le premier caractere du mot a inserer est egal a la lettre du TH
 		//alors on descend dans le fils central en retirant la lettre du mot
@@ -140,7 +140,7 @@ public class TrieHybridePrimitive {
 	 */
 	public static boolean recherche(ITrieHybride th, String word){
 		if(th == null) return false;
-		//si on a parcourut et qu'on n'a pas trouvé le mot alors false
+		//si on a parcourut et qu'on n'a pas trouvï¿½ le mot alors false
 		if(word.length() == 0) return false;
 		
 		char c = word.charAt(0);
@@ -429,7 +429,7 @@ public class TrieHybridePrimitive {
 				
 				//cas ou il n'y a pas de mot, on detruit le TH
 				if(cptfc == 0 && cptfg == 0 && cptfd == 0){
-					if(thfather.getfc() == th){
+					/*if(thfather.getfc() == th){
 						thfather.setfc(null);
 					}
 					if(thfather.getfg() == th){
@@ -437,7 +437,8 @@ public class TrieHybridePrimitive {
 					}
 					if(thfather.getfd() == th){
 						thfather.setfd(null);
-					}
+					}*/
+					
 				}
 				return root;
 			}
