@@ -13,6 +13,7 @@ public class PatriciaTrie {
 	
 	public PatriciaTrie(){
 		ind=0;
+		val="";
 	}
 	
 	private PatriciaTrie(int ind, String val, boolean feuille){
@@ -24,9 +25,8 @@ public class PatriciaTrie {
 	
 	public static boolean ajouterMot(PatriciaTrie p, String word) {
 		
-		if(recherche(p, word)){
+		if(p.ind==word.length())
 			return false;
-		}
 		
 		char c = word.charAt(p.ind);
 		if(p.patTries[c-97]==null){
@@ -34,50 +34,45 @@ public class PatriciaTrie {
 		}
 		else{
 			if( ! p.patTries[c-97].feuille ){
-				
-				for(int i=p.ind; i<word.length(); i++){
-					
-					int k = word.charAt(i);
-					
-					if(p.patTries[k-97]!=null ){
 						
-						if(word.startsWith(p.patTries[k-97].val)){
-							return ajouterMot(p.patTries[k-97], word);
-						}
-						else{
-							String mot1, mot2;
-							if(p.patTries[k-97].val.length()<word.length()){
-								mot1=p.patTries[k-97].val;
-								mot2=word;
-							}
-							else{
-								mot1=word;
-								mot2=p.patTries[k-97].val;
-							}
-							int j;
-							for(j=0; j<mot1.length(); j++){
-								if(mot1.charAt(j)!=mot2.charAt(j)){
-									break;
-								}
-							}
-							
-							
-							String s = p.patTries[k-97].val;
-							PatriciaTrie np = new PatriciaTrie(p.patTries[k-97].ind-1, s.substring(0, j), false);
-							np.patTries[s.charAt(j)-97] = p.patTries[k-97];
-							np.patTries[word.charAt(j)-97]=new PatriciaTrie(p.patTries[k-97].ind, word, true);
-							p.patTries[k-97] = np;
-							
-						}					
-						
-						break;
+				if(word.startsWith(p.patTries[c-97].val)){
+					return ajouterMot(p.patTries[c-97], word);
+				}
+				else{
+					String mot1, mot2;
+					if(p.patTries[c-97].val.length()<word.length()){
+						mot1=p.patTries[c-97].val;
+						mot2=word;
 					}
+					else{
+						mot1=word;
+						mot2=p.patTries[c-97].val;
+					}
+					int j;
+					for(j=0; j<mot1.length(); j++){
+						if(mot1.charAt(j)!=mot2.charAt(j)){
+							break;
+						}
+					}
+							
+							
+					String s = p.patTries[c-97].val;
+					PatriciaTrie np = new PatriciaTrie(p.patTries[c-97].ind-1, s.substring(0, j), false);
+					np.patTries[s.charAt(j)-97] = p.patTries[c-97];
+					np.patTries[word.charAt(j)-97]=new PatriciaTrie(p.patTries[c-97].ind, word, true);
+					p.patTries[c-97] = np;
+												
 				}
 				
 			}
 			else{
-				
+
+				if(word.equals(p.patTries[c-97].val))
+					return false;
+
 				String mot1, mot2;
+				
+				
 				if(p.patTries[c-97].val.length()<word.length()){
 					mot1=p.patTries[c-97].val;
 					mot2=word;
@@ -156,17 +151,18 @@ public class PatriciaTrie {
 	
 	public static boolean supprimerMot(PatriciaTrie p, String word) {		
 		
-		if(!recherche(p, word))
-			return false;
-		
+		boolean res = true;
+	
 		if(word.length()==p.ind){
 			p.patTries[26]=null;
 		}
 		else{
+			
 			char c = word.charAt(p.ind);
 			
-			
-			if(p.patTries[c-97].feuille && p.patTries[c-97].val==word){
+			if(p.patTries[c-97]==null)
+				return false;
+			if(p.patTries[c-97].feuille && word.equals(p.patTries[c-97].val)){
 				p.patTries[c-97]=null;
 				
 					int patTriesOqp=0;
@@ -194,11 +190,11 @@ public class PatriciaTrie {
 				
 			}
 			else{
-				supprimerMot(p.patTries[c-97], word);
+				res = supprimerMot(p.patTries[c-97], word);
 			}
 		}
 		
-		return true;
+		return res;
 	}
 	
 	
@@ -325,6 +321,124 @@ public class PatriciaTrie {
 		}
 		
 		return prefixe(p.patTries[c-97], prefixe);
+		
+	}
+	
+	
+	public static PatriciaTrie fusion(PatriciaTrie p1, PatriciaTrie p2){
+		
+		PatriciaTrie patfusion = null ;
+		
+		if(p1.feuille && p2.feuille){
+			if(p1.val.equals(p2.val)){
+				PatriciaTrie p = new PatriciaTrie(p1.ind, p1.val, p1.feuille);
+				ajouterMot(p, p1.val);
+				return p;
+			}
+			else{
+				PatriciaTrie p = new PatriciaTrie();
+				ajouterMot(p, p1.val);
+				ajouterMot(p, p2.val);
+				return p;
+			}
+		}
+		
+		if(p1.ind==0 || p2.ind==0){
+			
+			patfusion = new PatriciaTrie();
+			
+			for(int i=0; i<27; i++){
+				if(p1.patTries[i]!=null && p2.patTries[i]!=null)
+					patfusion.patTries[i] = fusion(p1.patTries[i], p2.patTries[i]);
+				else{
+					if(p1.patTries[i]==null && p2.patTries[i]!=null)
+						patfusion.patTries[i] = copiePatTrie(p2.patTries[i]);
+					else{
+						if(p1.patTries[i]!=null && p2.patTries[i]==null)
+							patfusion.patTries[i] = copiePatTrie(p1.patTries[i]);
+					}
+						
+				}
+			}
+		}
+		
+		if(p1.val != null && p2.val!=null){
+			
+			String mot1, mot2;
+			PatriciaTrie pmot1, pmot2;
+			if(p1.val.length()<p2.val.length()){
+				mot1=p1.val;
+				mot2=p2.val;
+				pmot1 = p1;
+				pmot2 = p2;
+			}
+			else{
+				mot1=p2.val;
+				mot2=p1.val;
+				pmot1 = p2;
+				pmot2 = p1;
+			}
+			
+			int j;
+			for(j=0; j<mot1.length(); j++){
+				if(mot1.charAt(j)!=mot2.charAt(j)){
+					break;
+				}
+			}
+			
+			
+			
+			if(j==mot1.length() && mot2.length()!=mot1.length()){
+				patfusion = copiePatTrie(pmot1);
+				patfusion.patTries[mot2.charAt(j)-97]= fusion(pmot1.patTries[mot2.charAt(j)-97], pmot2);
+			}
+			else{
+				if(j==mot1.length()){
+					patfusion = new PatriciaTrie(pmot1.ind, pmot1.val, pmot1.feuille);
+					for(int i=0; i<27; i++){
+						if(p1.patTries[i]!=null && p2.patTries[i]!=null)
+							patfusion.patTries[i] = fusion(p1.patTries[i], p2.patTries[i]);
+						else{
+							if(p1.patTries[i]==null && p2.patTries[i]!=null)
+								patfusion.patTries[i] = copiePatTrie(p2.patTries[i]);
+							else{
+								if(p1.patTries[i]!=null && p2.patTries[i]==null)
+									patfusion.patTries[i] = copiePatTrie(p1.patTries[i]);
+							}
+								
+						}
+					}
+				}
+				else{
+					patfusion = new PatriciaTrie(j, mot1.substring(0, j), false);
+					patfusion.patTries[mot1.charAt(j)-97] = copiePatTrie(pmot1);
+					patfusion.patTries[mot2.charAt(j)-97] = copiePatTrie(pmot2);
+				}
+			}
+			
+		}	
+			
+			
+		return patfusion;
+		
+		
+	}
+	
+	
+	
+	private static PatriciaTrie copiePatTrie(PatriciaTrie p){
+		if(p == null)
+			return null;
+		PatriciaTrie copy = new PatriciaTrie(p.ind,p.val,p.feuille);
+		
+		if(!p.feuille){
+			for(int i = 0; i<27; i++){
+				copy.patTries[i] = copiePatTrie(p.patTries[i]);
+			}
+		}
+
+		
+		return copy;
 		
 	}
 	
