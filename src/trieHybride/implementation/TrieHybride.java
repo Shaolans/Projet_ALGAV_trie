@@ -3,6 +3,7 @@ package trieHybride.implementation;
 import trieHybride.interfaces.ITrieHybride;
 
 public class TrieHybride implements ITrieHybride {
+	public static int cpt = 0;
 	private char letter;
 	private int value;
 	private ITrieHybride fg;
@@ -38,6 +39,11 @@ public class TrieHybride implements ITrieHybride {
 			letter = word.charAt(0);
 			fc = new TrieHybride(word.substring(1, word.length()), value);
 		}
+	}
+	
+	
+	public TrieHybride(String word){
+		this(word, cpt++);
 	}
 	
 	@Override

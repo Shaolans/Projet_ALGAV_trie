@@ -11,7 +11,7 @@ import trieHybride.interfaces.ITrieHybride;
 
 
 public class TrieLoadFile {
-
+	private static int cpt = 0;
 	
 	/**
 	 * Construit un TrieHybride a partir d'un fichier texte
@@ -24,7 +24,6 @@ public class TrieLoadFile {
 		Scanner sc = null;
 		String word;
 		ITrieHybride construction = th;
-		int cpt = 0;
 		
 		if(th == null){
 			construction = TrieHybridePrimitive.initTrieHybride();
