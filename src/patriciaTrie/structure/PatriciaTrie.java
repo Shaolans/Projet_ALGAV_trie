@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public class PatriciaTrie {
-	
+
 	private PatriciaTrie[] patTries = new PatriciaTrie[27];
 	private int ind;
 	private String val;
@@ -16,7 +16,7 @@ public class PatriciaTrie {
 		val="";
 	}
 	
-	private PatriciaTrie(int ind, String val, boolean feuille){
+	public PatriciaTrie(int ind, String val, boolean feuille){
 		this.val = val;
 		this.ind=ind;
 		this.feuille=feuille;
@@ -424,4 +424,36 @@ public class PatriciaTrie {
 		
 	}
 	
+	
+	public PatriciaTrie[] getPatTries() {
+		return patTries;
+	}
+
+	public void setPatTries(PatriciaTrie[] patTries) {
+		this.patTries = patTries;
+	}
+
+	public int getInd() {
+		return ind;
+	}
+
+	public void setInd(int ind) {
+		this.ind = ind;
+	}
+
+	public String getVal() {
+		return val;
+	}
+
+	public void setVal(String val) {
+		this.val = val;
+	}
+
+	public boolean isFeuille() {
+		return feuille;
+	}
+
+	public void setFeuille(boolean feuille) {
+		this.feuille = feuille;
+	}
 }
