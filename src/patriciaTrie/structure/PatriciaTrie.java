@@ -339,29 +339,11 @@ public class PatriciaTrie {
 				PatriciaTrie p = new PatriciaTrie();
 				ajouterMot(p, p1.val);
 				ajouterMot(p, p2.val);
-				return p;
+				return p.patTries[p1.val.charAt(0)-97];
 			}
 		}
 		
-		if(p1.ind==0 || p2.ind==0){
-			
-			patfusion = new PatriciaTrie();
-			
-			for(int i=0; i<27; i++){
-				if(p1.patTries[i]!=null && p2.patTries[i]!=null)
-					patfusion.patTries[i] = fusion(p1.patTries[i], p2.patTries[i]);
-				else{
-					if(p1.patTries[i]==null && p2.patTries[i]!=null)
-						patfusion.patTries[i] = copiePatTrie(p2.patTries[i]);
-					else{
-						if(p1.patTries[i]!=null && p2.patTries[i]==null)
-							patfusion.patTries[i] = copiePatTrie(p1.patTries[i]);
-					}
-						
-				}
-			}
-		}
-		
+				
 		if(p1.val != null && p2.val!=null){
 			
 			String mot1, mot2;
@@ -396,8 +378,9 @@ public class PatriciaTrie {
 				if(j==mot1.length()){
 					patfusion = new PatriciaTrie(pmot1.ind, pmot1.val, pmot1.feuille);
 					for(int i=0; i<27; i++){
-						if(p1.patTries[i]!=null && p2.patTries[i]!=null)
+						if(p1.patTries[i]!=null && p2.patTries[i]!=null){
 							patfusion.patTries[i] = fusion(p1.patTries[i], p2.patTries[i]);
+						}
 						else{
 							if(p1.patTries[i]==null && p2.patTries[i]!=null)
 								patfusion.patTries[i] = copiePatTrie(p2.patTries[i]);
@@ -427,17 +410,16 @@ public class PatriciaTrie {
 	
 	
 	private static PatriciaTrie copiePatTrie(PatriciaTrie p){
-		if(p == null)
-			return null;
+		
 		PatriciaTrie copy = new PatriciaTrie(p.ind,p.val,p.feuille);
 		
 		if(!p.feuille){
 			for(int i = 0; i<27; i++){
-				copy.patTries[i] = copiePatTrie(p.patTries[i]);
+				if(p.patTries[i]!=null)
+					copy.patTries[i] = copiePatTrie(p.patTries[i]);
 			}
 		}
 
-		
 		return copy;
 		
 	}
