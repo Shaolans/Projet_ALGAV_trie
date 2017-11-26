@@ -13,7 +13,7 @@ public class PrimitiveTest {
 	public static void main(String[] args ){
 		
 		PatriciaTrie pt = new PatriciaTrie();
-		File f = new File("files/exemple_de_base");
+		/*File f = new File("files/exemple_de_base");
 		List<String> words = new ArrayList<String>();
 		String word;
 		Scanner scan = null;
@@ -43,7 +43,21 @@ public class PrimitiveTest {
 		System.out.println("Nombre de compteurs NIL :" + PatriciaTrie.comptageNil(pt));
 		System.out.println("Hauteur : "+ PatriciaTrie.hauteur(pt));
 		System.out.println("Profondeur moyenne :"+ PatriciaTrie.profondeurMoyenne(pt));
-		System.out.println("Nombre de mot de préfixe dactylo "+ PatriciaTrie.prefixe(pt, "dactylo"));
+		System.out.println("Nombre de mot de préfixe dactylo "+ PatriciaTrie.prefixe(pt, "dactylo"));*/
+		
+		PatriciaTrie pt2 = new PatriciaTrie();
+		
+		PatriciaTrie.ajouterMot(pt, "amel");
+		PatriciaTrie.ajouterMot(pt2, "amel");
+		PatriciaTrie.ajouterMot(pt2, "ameliorer");
+		PatriciaTrie.ajouterMot(pt, "coo");
+		PatriciaTrie.ajouterMot(pt2, "coo");
+		PatriciaTrie.ajouterMot(pt, "cookie");
+		PatriciaTrie.ajouterMot(pt2, "cook");
+		PatriciaTrie.ajouterMot(pt2, "gateau");
+		PatriciaTrie pt3 = PatriciaTrie.fusion(pt, pt2);
+		
+		System.out.println(pt3);
 		
 	}
 	
