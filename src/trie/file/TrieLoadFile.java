@@ -45,6 +45,10 @@ public class TrieLoadFile {
 		
 	}
 	
+	public static ITrieHybride loadFileTrieHybride(String file) {
+		return TrieLoadFile.loadFileTrieHybride(file, null);
+	}
+	
 	public static ITrieHybride loadFileShakespeareTrieHybride(ITrieHybride th){
 		String prefix = "files/Shakespeare";
 		File folder = new File(prefix);

@@ -55,9 +55,13 @@ public class PrimitiveTest {
 		PatriciaTrie.ajouterMot(pt, "cookie");
 		PatriciaTrie.ajouterMot(pt2, "cook");
 		PatriciaTrie.ajouterMot(pt2, "gateau");
+		trie.visualizer.TrieVisualizer.visualizePatriciaTrie(pt);
 		PatriciaTrie pt3 = PatriciaTrie.fusion(pt, pt2);
 		
-		System.out.println(pt3);
+		//System.out.println(pt3);
+		
+	
+		
 		
 	}
 	

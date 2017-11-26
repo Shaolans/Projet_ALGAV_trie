@@ -1,5 +1,6 @@
 package trie.visualizer;
 
+import patriciaTrie.structure.PatriciaTrie;
 import trieHybride.interfaces.ITrieHybride;
 
 public class TrieVisualizer {
@@ -51,5 +52,54 @@ public class TrieVisualizer {
 		}else{
 			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), true, true, null);
 		}
+	}
+	
+	
+	public static void visualizePatriciaTrie(PatriciaTrie pt){
+		TrieVisualizer.visualizePatriciaTrieAux("", true, pt);
+	}
+	
+	public static void visualizePatriciaTrieAux(String prefix, boolean isLast, PatriciaTrie pt){
+		System.out.println(prefix + "    " + (isLast ? "'---" : "|---") + pt.getInd() + "," + (pt.getVal()==""?"RACINE":pt.getVal()));
+		String tableau = "[";
+		PatriciaTrie pattable[] = pt.getPatTries();
+		
+		//genere la string de tableau
+		for(int i = 0; i < 27; i++) {
+			if(pattable[i] != null) {
+				tableau += (char)(i+97)+"|";
+			}
+		}
+		
+		//retire le "|" en trop s'il y a
+		if(tableau.length() > 1) {
+			tableau = tableau.substring(0, tableau.length()-1);
+		}
+		tableau += "]";
+		
+		//affiche le tableau
+		System.out.println(prefix + "    " + (isLast?" ":"|" ) + "   " + tableau);
+		
+		//recherche du dernier element pour fermer "'|---"
+		int last = 0;
+		for(int i = 0; i < 27; i++) {
+			if(pattable[i] != null) {
+				last = i;
+			}
+		}
+		
+		//appel recursif
+		for(int i = 0; i < 27; i++) {
+			if(pattable[i] != null && last != i) {
+				TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "|   "), false, pattable[i]);
+			}
+			
+		}
+		
+		//appel du dernier element
+		if(pattable[last] != null) {
+			TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "|   "), true, pattable[last]);
+		}
+		
 	}
 }

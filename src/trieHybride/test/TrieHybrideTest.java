@@ -25,7 +25,7 @@ public class TrieHybrideTest {
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motar"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "quel"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motorise"));
-		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base", null);
+		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
 		TrieHybridePrimitive.ajoutMot("ling", root, 0);
