@@ -39,7 +39,6 @@ public class TrieHybrideTest {
 		System.out.println(TrieHybridePrimitive.prefixe(root, "d"));
 		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
 		
-		
 		TrieHybridePrimitive.supression(root, "ling");
 		TrieVisualizer.visualizeTrieHybride(root);
 		

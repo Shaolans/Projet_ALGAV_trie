@@ -394,7 +394,9 @@ public class TrieHybridePrimitive {
 	 * @return TH sans le mot
 	 */
 	public static ITrieHybride supression(ITrieHybride th, String word){
-		return TrieHybridePrimitive.suppressionAux(th, th, th, word);
+		ITrieHybride newTrie = TrieHybridePrimitive.suppressionAux(th, th, th, word);
+		TrieHybridePrimitive.purgeNoWordsBranch(newTrie);
+		return newTrie;
 	}
 	
 
@@ -471,6 +473,41 @@ public class TrieHybridePrimitive {
 			return TrieHybridePrimitive.suppressionAux(root, th.getfd(), th, word);
 		}
 		return root;
+		
+	}
+	
+	
+	//detruit les sous arbres ne contenant pas de mot
+	public static void purgeNoWordsBranch(ITrieHybride th) {
+		if(th == null) return;
+		int cptwords;
+		
+		if(th.existfg()) {
+			cptwords = TrieHybridePrimitive.comptageMots(th.getfg());
+			if(cptwords == 0) {
+				th.setfg(null);
+			}else {
+				TrieHybridePrimitive.purgeNoWordsBranch(th.getfg());
+			}
+		}
+		
+		if(th.existfc()) {
+			cptwords = TrieHybridePrimitive.comptageMots(th.getfc());
+			if(cptwords == 0) {
+				th.setfc(null);
+			}else {
+				TrieHybridePrimitive.purgeNoWordsBranch(th.getfc());
+			}
+		}
+		
+		if(th.existfg()) {
+			cptwords = TrieHybridePrimitive.comptageMots(th.getfd());
+			if(cptwords == 0) {
+				th.setfd(null);
+			}else {
+				TrieHybridePrimitive.purgeNoWordsBranch(th.getfd());
+			}
+		}
 		
 	}
 }
