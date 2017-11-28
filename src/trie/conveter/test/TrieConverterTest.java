@@ -13,7 +13,12 @@ public class TrieConverterTest {
 		TrieHybridePrimitive.ajoutMot("bonsoir", root, 1);
 		TrieHybridePrimitive.ajoutMot("bonneannee", root, 2);
 		TrieHybridePrimitive.ajoutMot("marcher", root, 3);
+		TrieHybridePrimitive.ajoutMot("mar", root, 4);
+		TrieHybridePrimitive.ajoutMot("bonsoiree", root, 5);
+		TrieHybridePrimitive.ajoutMot("bonsoirea", root, 6);
+		TrieHybridePrimitive.ajoutMot("bonsoireee", root, 7);
 		PatriciaTrie rootpat = trie.converter.TrieConverter.convertIntoPatriciaTrie(root);
+		//TrieVisualizer.visualizeTrieHybride(root);
 		TrieVisualizer.visualizePatriciaTrie(rootpat);
 	}
 }
