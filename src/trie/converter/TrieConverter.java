@@ -79,13 +79,12 @@ public class TrieConverter {
 		ITrieHybride tmp = th;
 		ITrieHybride tmpchild;
 		int charvalue;
-		
+		System.out.println(th.getChar());
 		while(!tmp.existfg() && !tmp.existfd() && tmp.existfc() && !tmp.isWord()) {
 			current += tmp.getChar();
 			tmp = tmp.getfc();
 		}
-		
-		
+		System.out.println(current+tmp.getChar());
 		
 		tmpchild = tmp.getfg();
 		if(tmpchild != null) {
@@ -98,7 +97,7 @@ public class TrieConverter {
 		tmpchild = tmp.getfc();
 		if(tmpchild != null) {
 			charvalue = tmpchild.getChar();
-			pattable[charvalue-97] = TrieConverter.convertIntoPatriciaTrieAux(tmpchild, current);
+			pattable[charvalue-97] = TrieConverter.convertIntoPatriciaTrieAux(tmpchild, current+tmpchild.getChar());
 		}
 		
 		tmpchild = tmp.getfd();

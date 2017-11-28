@@ -15,7 +15,7 @@ public class TrieVisualizer {
 	
 	/**
 	 * Affiche la representation graphique du trie hybride
-	 * @param prefix le chaine de caractere à afficher
+	 * @param prefix le chaine de caractere ï¿½ afficher
 	 * @param isLast indique si le noeud correspond au dernier fils (fils droit)
 	 * @param isEmpty indique si le noeud est un arbre vide
 	 * @param th noeud courant
@@ -23,7 +23,7 @@ public class TrieVisualizer {
 	public static void visualizeTrieHybrideAux(String prefix, boolean isLast, boolean isEmpty, ITrieHybride th){
 		//si le noeud correspond a un arbre vide alors on l'affiche
 		if(isEmpty){
-			System.out.println(prefix + (isLast ? "'---" : "|---") + "ø");
+			System.out.println(prefix + (isLast ? "'---" : "|---") + "{O}");
 			return;
 		}
 		//on affiche le noeud
@@ -31,7 +31,7 @@ public class TrieVisualizer {
 		
 		//si fils gauche existe
 		//si noeud courant est un fils droit (le dernier fils) alors pour la ligne suivante on ne represente pas une branche suite
-		//sinon on représente en tant que suite, et on appel recursivement pour le fils gauche
+		//sinon on reprï¿½sente en tant que suite, et on appel recursivement pour le fils gauche
 		//sinon si pas de fils gauche alors isEmpty on print un arbre vide dans l'appel recursif
 		if(th.existfg()){
 			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, false, th.getfg());
@@ -60,7 +60,7 @@ public class TrieVisualizer {
 	}
 	
 	public static void visualizePatriciaTrieAux(String prefix, boolean isLast, PatriciaTrie pt){
-		System.out.println(prefix + "    " + (isLast ? "'---" : "|---") + pt.getInd() + "," + (pt.getVal()==""?"RACINE":pt.getVal()));
+		System.out.println(prefix + "    " + (isLast ? "'---" : "|---") + pt.getInd() + "," + (pt.getVal()==""?"ROOT":pt.getVal()));
 		String tableau = "[";
 		PatriciaTrie pattable[] = pt.getPatTries();
 		
