@@ -31,7 +31,14 @@ public class TrieConverter {
 		
 		//si n'a pas de fils central alors pas d'appel
 		//car on construit les patricia a partir des fils centraux
-		if(!th.existfc()) return;
+		if(!th.existfc()) {
+			if(th.isWord()) {
+				pt.getPatTries()[th.getChar()-97] = new PatriciaTrie(word.length()+1, word+th.getChar(), false);
+				pt.getPatTries()[th.getChar()-97].getPatTries()[26] = new PatriciaTrie(word.length()+1, word+th.getChar(), true);
+				return;
+			}
+			
+		}
 		
 		
 		char letter = th.getChar();
@@ -47,7 +54,9 @@ public class TrieConverter {
 			tmp = tmp.getfc();
 		}
 		
-		
+		/*System.out.println(current);
+		System.out.println(pere.getChar());
+		System.out.println(tmp.getChar());*/
 		
 		//determine si le curseur s'est deplace
 		//sert a choisir quel patricia donner en recursion
@@ -76,10 +85,10 @@ public class TrieConverter {
 			PatriciaTrie pattable[] = newPat.getPatTries();
 			pattable[26] = new PatriciaTrie(current.length()+1, current+tmp.getChar(), true);
 		}
-		
+
 		if(pere.existfc()) {
 			if(tmp.isWord()) {
-				TrieConverter.convertIntoPatriciaTrieAux(tmp.getfc(), current+tmp.getChar(), newPat);
+				TrieConverter.convertIntoPatriciaTrieAux(tmp.getfc(), current+tmp.getChar(), newPat);	
 			}else {
 				TrieConverter.convertIntoPatriciaTrieAux(pere.getfc(), current, newPat);
 			}
@@ -89,10 +98,12 @@ public class TrieConverter {
 		/*if(tmp.existfg()) {
 			TrieConverter.convertIntoPatriciaTrieAux(pere.getfg(), current, newPat);
 		}
-		
+			
 		if(tmp.existfd()) {
 			TrieConverter.convertIntoPatriciaTrieAux(pere.getfd(), current, newPat);
 		}*/
 		
 	}
+	
+
 }

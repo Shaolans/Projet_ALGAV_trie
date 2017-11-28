@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import patriciaTrie.structure.PatriciaTrie;
+import trieHybride.implementation.TrieHybridePrimitive;
 
 public class PrimitiveTest {
 	
@@ -55,13 +56,20 @@ public class PrimitiveTest {
 		PatriciaTrie.ajouterMot(pt, "cookie");
 		PatriciaTrie.ajouterMot(pt2, "cook");
 		PatriciaTrie.ajouterMot(pt2, "gateau");
-		trie.visualizer.TrieVisualizer.visualizePatriciaTrie(pt);
+		//trie.visualizer.TrieVisualizer.visualizePatriciaTrie(pt);
 		PatriciaTrie pt3 = PatriciaTrie.fusion(pt, pt2);
 		
 		//System.out.println(pt3);
 		
 	
-		
+		PatriciaTrie pt4 = new PatriciaTrie();
+		PatriciaTrie.ajouterMot(pt4,"bonjour");
+		PatriciaTrie.ajouterMot(pt4,"bonsoir");
+		PatriciaTrie.ajouterMot(pt4,"bonneannee");
+		PatriciaTrie.ajouterMot(pt4,"marcher");
+		PatriciaTrie.ajouterMot(pt4,"mar");
+		trie.visualizer.TrieVisualizer.visualizePatriciaTrie(pt4);
+
 		
 	}
 	
