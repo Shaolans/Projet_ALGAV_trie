@@ -14,7 +14,7 @@ public class TrieConverter {
 	
 	
 	
-	private static void convertIntoPatriciaTrieAux(ITrieHybride th, String word, PatriciaTrie pt) {
+	private static void convertIntoPatriciaTrieAux2(ITrieHybride th, String word, PatriciaTrie pt) {
 		if(th == null) return;
 		
 		//appel recursif sur le sous arbre gauche, on garde le meme mot et le meme patricia
@@ -46,7 +46,7 @@ public class TrieConverter {
 		ITrieHybride pere = th;
 		ITrieHybride tmp = th.getfc();
 		
-		//on recupere le mot le plus long qui forme un préfixe
+		//on recupere le mot le plus long qui forme un prï¿½fixe
 		//on ajoute pas la derniere lettre
 		while(!tmp.existfg() && !tmp.existfd() && tmp.existfc() && !tmp.isWord()) {
 			current += tmp.getChar();
@@ -92,7 +92,7 @@ public class TrieConverter {
 			}else {
 				TrieConverter.convertIntoPatriciaTrieAux(pere.getfc(), current, newPat);
 			}
-			
+		
 		}
 		
 		/*if(tmp.existfg()) {
@@ -105,5 +105,73 @@ public class TrieConverter {
 		
 	}
 	
+	
+	private static void convertIntoPatriciaTrieAux(ITrieHybride th, String word, PatriciaTrie pt) {
+		if(th == null) return;
+		
+		if(th.existfg()){
+			TrieConverter.convertIntoPatriciaTrieAux(th.getfg(), word, pt);
+		}
+		
+		if(th.existfd()){
+			TrieConverter.convertIntoPatriciaTrieAux(th.getfd(), word, pt);
+		}
+		
+		PatriciaTrie pattable[] = pt.getPatTries();
+		
+		if(th.isWord()){
+			if(pt.isFeuille()){
+				pattable[26] = new PatriciaTrie(pt.getInd(), pt.getVal()+th.getChar(), true);
+				pt.setFeuille(false);
+			}else{
+				pattable[th.getChar()-97] = new PatriciaTrie(pt.getInd(), pt.getVal()+th.getChar(), true);
+			}
+		}
+		
+		if(!th.existfc()){
+			return;
+		}
+		
+		
+		char letter = th.getChar();
+		String current = word;
+		String acc = ""+letter;
+		ITrieHybride pere = th;
+		ITrieHybride tmp = th.getfc();
+		
+		
+		
+		//on recupere le mot le plus long qui forme un prï¿½fixe
+		//on ajoute pas la derniere lettre
+		while(!tmp.existfg() && !tmp.existfd() && tmp.existfc() && !tmp.isWord()) {
+			acc += tmp.getChar();
+			pere = tmp;
+			tmp = tmp.getfc();
+		}
+		
+		PatriciaTrie newPat;
+		
+		if(th != pere){
+			if(pt.isFeuille()){
+				pattable[26] = new PatriciaTrie(pt.getInd(), pt.getVal(), true);
+				pt.setFeuille(false);
+			}
+			
+			
+			if(tmp.isWord()){
+				newPat = new PatriciaTrie(acc.length()+1, current+acc+tmp.getChar(), true);
+			}else{
+				newPat = new PatriciaTrie(acc.length()+1, current+acc, false);
+			}
+			
+			TrieConverter.convertIntoPatriciaTrieAux(tmp.getfg(), current+acc, newPat);
+			TrieConverter.convertIntoPatriciaTrieAux(tmp.getfd(), current+acc, newPat);
+			TrieConverter.convertIntoPatriciaTrieAux(tmp.getfc(), current+acc+tmp.getChar(), newPat);
+			pattable[th.getChar()-97] = newPat;
+		}
+		
+		
+		return;
+	}
 
 }
