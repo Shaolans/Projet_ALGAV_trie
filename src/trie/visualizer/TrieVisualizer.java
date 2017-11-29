@@ -23,34 +23,34 @@ public class TrieVisualizer {
 	public static void visualizeTrieHybrideAux(String prefix, boolean isLast, boolean isEmpty, ITrieHybride th){
 		//si le noeud correspond a un arbre vide alors on l'affiche
 		if(isEmpty){
-			System.out.println(prefix + (isLast ? "'---" : "|---") + "{O}");
+			System.out.println(prefix + (isLast ? "└────" : "├────") + "∅");
 			return;
 		}
 		//on affiche le noeud
-		System.out.println(prefix + (isLast ? "'---" : "|---") + th.getChar() + (th.isWord()?","+th.getValue():""));
+		System.out.println(prefix + (isLast ? "└────" : "├────") + th.getChar() + (th.isWord()?","+th.getValue():""));
 		
 		//si fils gauche existe
 		//si noeud courant est un fils droit (le dernier fils) alors pour la ligne suivante on ne represente pas une branche suite
 		//sinon on repr�sente en tant que suite, et on appel recursivement pour le fils gauche
 		//sinon si pas de fils gauche alors isEmpty on print un arbre vide dans l'appel recursif
 		if(th.existfg()){
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, false, th.getfg());
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, false, th.getfg());
 		}else{
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, true, null);
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, true, null);
 		}
 		
 		//analogue au fils gauche
 		if(th.existfc()){
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, false, th.getfc());
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, false, th.getfc());
 		}else{
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, true, null);
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, true, null);
 		}
 		
 		//analogue au fils gauche
 		if(th.existfd()){
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), true, false, th.getfd());
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), true, false, th.getfd());
 		}else{
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), true, true, null);
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), true, true, null);
 		}
 	}
 	
@@ -60,14 +60,14 @@ public class TrieVisualizer {
 	}
 	
 	public static void visualizePatriciaTrieAux(String prefix, boolean isLast, PatriciaTrie pt){
-		System.out.println(prefix + "    " + (isLast ? "'---" : "|---") + pt.getInd() + "," + (pt.getVal()==""?"ROOT":pt.getVal()));
+		System.out.println(prefix + "    " + (isLast ? "└────" : "├────") + pt.getInd() + "," + (pt.getVal()==""?"ROOT":pt.getVal()));
 		String tableau = "[";
 		PatriciaTrie pattable[] = pt.getPatTries();
 		
 		//genere la string de tableau
 		for(int i = 0; i < 27; i++) {
 			if(pattable[i] != null) {
-				tableau += (char)(i+97)+"|";
+				tableau += (char)(i+97)+"│";
 			}
 		}
 		
@@ -78,7 +78,7 @@ public class TrieVisualizer {
 		tableau += "]";
 		
 		//affiche le tableau
-		System.out.println(prefix + "    " + (isLast?" ":"|" ) + "   " + tableau);
+		System.out.println(prefix + "    " + (isLast?" ":"│" ) + "   " + tableau);
 		
 		//recherche du dernier element pour fermer "'|---"
 		int last = 0;
@@ -91,14 +91,14 @@ public class TrieVisualizer {
 		//appel recursif
 		for(int i = 0; i < 27; i++) {
 			if(pattable[i] != null && last != i) {
-				TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "|   "), false, pattable[i]);
+				TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "│   "), false, pattable[i]);
 			}
 			
 		}
 		
 		//appel du dernier element
 		if(pattable[last] != null) {
-			TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "|   "), true, pattable[last]);
+			TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "│   "), true, pattable[last]);
 		}
 		
 	}
