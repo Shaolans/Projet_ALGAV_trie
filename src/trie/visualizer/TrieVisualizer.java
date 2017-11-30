@@ -23,11 +23,11 @@ public class TrieVisualizer {
 	public static void visualizeTrieHybrideAux(String prefix, boolean isLast, boolean isEmpty, ITrieHybride th){
 		//si le noeud correspond a un arbre vide alors on l'affiche
 		if(isEmpty){
-			System.out.println(prefix + (isLast ? "└────" : "├────") + "∅");
+			System.out.println(prefix + (isLast ? "'---" : "|---") + "∅");
 			return;
 		}
 		//on affiche le noeud
-		System.out.println(prefix + (isLast ? "└────" : "├────") + th.getChar() + (th.isWord()?","+th.getValue():""));
+		System.out.println(prefix + (isLast ? "'---" : "|---") + th.getChar() + (th.isWord()?","+th.getValue():""));
 		
 		//si fils gauche existe
 		//si noeud courant est un fils droit (le dernier fils) alors pour la ligne suivante on ne represente pas une branche suite
