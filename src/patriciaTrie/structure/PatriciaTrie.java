@@ -89,11 +89,11 @@ public class PatriciaTrie {
 				}
 				if(i==mot1.length()){
 					p.patTries[c-97].patTries[26]=new PatriciaTrie(i, mot1, true);
-					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i, mot2, true);
+					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i+1, mot2, true);
 				}
 				else{
-					p.patTries[c-97].patTries[mot1.charAt(i)-97]=new PatriciaTrie(i, mot1, true);
-					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i, mot2, true);
+					p.patTries[c-97].patTries[mot1.charAt(i)-97]=new PatriciaTrie(i+1, mot1, true);
+					p.patTries[c-97].patTries[mot2.charAt(i)-97]=new PatriciaTrie(i+1, mot2, true);
 				}
 				p.patTries[c-97].val=mot1.substring(0, i);
 				p.patTries[c-97].feuille=false;
