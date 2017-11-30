@@ -16,7 +16,7 @@ public class TrieConverterTest {
 		TrieHybridePrimitive.ajoutMot("mar", root, 4);
 		TrieHybridePrimitive.ajoutMot("bonsoiree", root, 5);
 		//TrieHybridePrimitive.ajoutMot("bonsoirea", root, 6);
-		//TrieHybridePrimitive.ajoutMot("bonsoireee", root, 7);
+		TrieHybridePrimitive.ajoutMot("bonsoireee", root, 7);
 		
 		PatriciaTrie rootpat = trie.converter.TrieConverter.convertIntoPatriciaTrie(root);
 		//TrieVisualizer.visualizeTrieHybride(root);

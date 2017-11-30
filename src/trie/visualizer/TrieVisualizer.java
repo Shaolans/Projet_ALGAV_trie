@@ -60,7 +60,7 @@ public class TrieVisualizer {
 	}
 	
 	public static void visualizePatriciaTrieAux(String prefix, boolean isLast, PatriciaTrie pt){
-		System.out.println(prefix + "    " + (isLast ? "└────" : "├────") + pt.getInd() + "," + (pt.getVal()==""?"ROOT":pt.getVal()));
+		System.out.println(prefix + "    " + (isLast ? "└────" : "├────") + (!pt.isFeuille()?pt.getInd()+",":"")  + (pt.getVal()==""?"ROOT":pt.getVal()));
 		String tableau = "[";
 		PatriciaTrie pattable[] = pt.getPatTries();
 		
