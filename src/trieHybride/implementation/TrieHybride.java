@@ -10,7 +10,7 @@ public class TrieHybride implements ITrieHybride {
 	private ITrieHybride fd;
 	private ITrieHybride fc;
 	
-	//constructeur par défaut (creer un TH vide)
+	//constructeur par dï¿½faut (creer un TH vide)
 	public TrieHybride(){
 		letter = ' ';
 		value = -1;
@@ -28,23 +28,20 @@ public class TrieHybride implements ITrieHybride {
 	}
 	
 	//creer un TH contenant un mot (ou reste d'un mot)
-	public TrieHybride(String word, int value){
+	public TrieHybride(String word){
 		this();
 		//si derniere lettre on ne creer pas de nouveau TH
 		if(word.length() == 1){
-			this.value = value;
+			this.value = cpt++;
 			letter = word.charAt(0);
 		}else{
 			//on attribut la lettre et on creer un nouveau TH fils fc qui contiendra la lettre suivante
 			letter = word.charAt(0);
-			fc = new TrieHybride(word.substring(1, word.length()), value);
+			fc = new TrieHybride(word.substring(1, word.length()));
 		}
 	}
 	
 	
-	public TrieHybride(String word){
-		this(word, cpt++);
-	}
 	
 	@Override
 	public char getChar() {
@@ -124,6 +121,15 @@ public class TrieHybride implements ITrieHybride {
 	@Override
 	public boolean isLeaf() {
 		return !this.existfc() && !this.existfg() && !this.existfd();
+	}
+	
+	@Override
+	public void turnIntoWord() {
+		this.value = cpt++;
+	}
+	
+	public static int getCpt() {
+		return cpt++;
 	}
 
 }

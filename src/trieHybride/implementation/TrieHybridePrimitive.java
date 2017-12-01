@@ -11,7 +11,7 @@ public class TrieHybridePrimitive {
 		return new TrieHybride();
 	}
 	
-	public static void ajoutMot(String word, ITrieHybride th, int value){
+	public static void ajoutMot(String word, ITrieHybride th){
 		//cas d'arret lorsque le mot a ete ajoute
 		if(word.length() == 0) return;
 		
@@ -22,10 +22,10 @@ public class TrieHybridePrimitive {
 			th.setChar(c);
 			//si le mot n'est pas une lettre mais un mot
 			if(word.length() > 1){
-				th.setfc(new TrieHybride(word.substring(1, word.length()), value));
+				th.setfc(new TrieHybride(word.substring(1, word.length())));
 			}else{
 				//si lettre alors on set la value et on sort
-				th.setValue(value);
+				th.turnIntoWord();
 			}
 			return;
 		}
@@ -36,7 +36,7 @@ public class TrieHybridePrimitive {
 			//si la lettre == lettre du TH alors on setValue si c'est deja un mot on ne fait rien
 			if(c == th.getChar()){
 				if(!th.isWord()){
-					th.setValue(value);
+					th.turnIntoWord();
 					return;
 				}
 				return;
@@ -47,9 +47,9 @@ public class TrieHybridePrimitive {
 			//sinon on creer un nouveau TH dans le fils droit qui contiendra la lettre
 			if(c > th.getChar()){
 				if(th.existfd()){
-					TrieHybridePrimitive.ajoutMot(word, th.getfd(), value);
+					TrieHybridePrimitive.ajoutMot(word, th.getfd());
 				}else{
-					th.setfd(new TrieHybride(word, value));
+					th.setfd(new TrieHybride(word));
 				}
 				
 				return;
@@ -58,9 +58,9 @@ public class TrieHybridePrimitive {
 			//de maniere analogue pour le fils gauche
 			if(c < th.getChar()){
 				if(th.existfg()){
-					TrieHybridePrimitive.ajoutMot(word, th.getfg(), value);
+					TrieHybridePrimitive.ajoutMot(word, th.getfg());
 				}else{
-					th.setfg(new TrieHybride(word, value));
+					th.setfg(new TrieHybride(word));
 				}
 				return;
 			}
@@ -77,11 +77,11 @@ public class TrieHybridePrimitive {
 		if(c == th.getChar()){
 			if(th.existfc()){
 				//System.out.println(word+" C EX");
-				TrieHybridePrimitive.ajoutMot(word.substring(1, word.length()), th.getfc(), value);
+				TrieHybridePrimitive.ajoutMot(word.substring(1, word.length()), th.getfc());
 				return;
 			}
 			//System.out.println(word+" C NEX");
-			th.setfc(new TrieHybride(word.substring(1, word.length()), value));
+			th.setfc(new TrieHybride(word.substring(1, word.length())));
 			return;
 		}
 		
@@ -89,11 +89,11 @@ public class TrieHybridePrimitive {
 		if(c < th.getChar()){
 			if(th.existfg()){
 				//System.out.println(word+" G EX");
-				TrieHybridePrimitive.ajoutMot(word, th.getfg(), value);
+				TrieHybridePrimitive.ajoutMot(word, th.getfg());
 				return;
 			}
 			//System.out.println(word+" G NEX");
-			th.setfg(new TrieHybride(word, value));
+			th.setfg(new TrieHybride(word));
 			//System.out.println("YOLO " + th.getfg().getChar()+" "+word+" "+th.getChar());
 			return;
 		}
@@ -102,11 +102,11 @@ public class TrieHybridePrimitive {
 		if(c > th.getChar()){
 			if(th.existfd()){
 				//System.out.println(word+" D EX");
-				TrieHybridePrimitive.ajoutMot(word, th.getfd(), value);
+				TrieHybridePrimitive.ajoutMot(word, th.getfd());
 				return;
 			}
 			//System.out.println(word+" D NEX");
-			th.setfd(new TrieHybride(word, value));
+			th.setfd(new TrieHybride(word));
 			return;
 		}
 		return;

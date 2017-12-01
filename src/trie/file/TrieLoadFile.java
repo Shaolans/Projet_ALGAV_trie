@@ -11,7 +11,6 @@ import trieHybride.interfaces.ITrieHybride;
 
 
 public class TrieLoadFile {
-	private static int cpt = 0;
 	
 	/**
 	 * Construit un TrieHybride a partir d'un fichier texte
@@ -33,7 +32,7 @@ public class TrieLoadFile {
 			sc = new Scanner(f);
 			while(sc.hasNext()){
 				word = sc.next();
-				TrieHybridePrimitive.ajoutMot(word.toLowerCase(), construction, cpt++);
+				TrieHybridePrimitive.ajoutMot(word.toLowerCase(), construction);
 			}
 		}catch(Exception ex){
 			ex.printStackTrace();

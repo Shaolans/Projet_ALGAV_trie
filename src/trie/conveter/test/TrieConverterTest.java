@@ -23,9 +23,9 @@ public class TrieConverterTest {
 		TrieHybridePrimitive.ajoutMot("bonsoireaaaaa", root, 7);*/
 		
 		
-		TrieHybridePrimitive.ajoutMot("bonsoireo", root, 5);
-		TrieHybridePrimitive.ajoutMot("bonsoirea", root, 6);
-		TrieHybridePrimitive.ajoutMot("bonsoireaa", root, 8);
+		TrieHybridePrimitive.ajoutMot("bonsoireo", root);
+		TrieHybridePrimitive.ajoutMot("bonsoirea", root);
+		TrieHybridePrimitive.ajoutMot("bonsoireaa", root);
 		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		
 		PatriciaTrie rootpat = trie.converter.TrieConverter.convertIntoPatriciaTrie(root);

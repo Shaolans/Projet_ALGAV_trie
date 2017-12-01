@@ -27,7 +27,7 @@ public interface ITrieHybride {
 	
 	//indique si le TH est la derniere lettre d'un mot (value != -1)
 	public boolean isWord();
-	//indique si le TH est vide (pas de caractere attribué (letter != ' '))
+	//indique si le TH est vide (pas de caractere attribuï¿½ (letter != ' '))
 	public boolean isEmpty();
 	//indique si le TH est une feuille (pas de fils)
 	public boolean isLeaf();
@@ -38,4 +38,6 @@ public interface ITrieHybride {
 	public boolean existfd();
 	//indique s'il existe un fils central
 	public boolean existfc();
-}
+	//transforme le noeud en mot
+	public void turnIntoWord();
+	}
