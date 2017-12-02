@@ -6,6 +6,10 @@ import trieHybride.interfaces.ITrieHybride;
 
 public class PatToHybrid {
 	
+	public static ITrieHybride patToHybridTrie(PatriciaTrie p){
+		return  patToHybridTrie( p, null);
+	}
+	
 	public static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 		
 		PatriciaTrie [] patTries = p.getPatTries();
@@ -64,6 +68,11 @@ public class PatToHybrid {
 		}
 		
 		return th;
+	}
+	
+	
+	public static PatriciaTrie hybrideTrieToPatricia(PatriciaTrie p, ITrieHybride th){
+		return null;
 	}
 	
 }

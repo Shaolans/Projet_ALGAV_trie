@@ -11,7 +11,7 @@ public class PatToHybridTest {
 	public static void main(String[] args){
 		
 		PatriciaTrie p = new PatriciaTrie();
-		TrieHybride th = new TrieHybride();
+		TrieHybride th ;
 		TrieHybride bonTh = new TrieHybride();
 		
 		PatriciaTrie.ajouterMot(p, "amelo");
@@ -26,7 +26,7 @@ public class PatToHybridTest {
 		
 		System.out.println(p);
 		
-		th = (TrieHybride) PatToHybrid.patToHybridTrie(p, th);
+		th = (TrieHybride) PatToHybrid.patToHybridTrie(p);
 		
 		System.out.println("Trie hybride résultant"); 
 		
