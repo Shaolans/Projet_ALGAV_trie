@@ -33,18 +33,20 @@ public class PatToHybrid {
 				else{
 					
 					String wordPart = patTries[i].getVal().substring(p.getInd());
-					ITrieHybride pTh;
+					ITrieHybride pTh, bonTh;
 					
 					if(first){
 						
 						th = new TrieHybride(wordPart.charAt(0), -1, null, null, null);
 						first=false;
 						pTh = th;
+						bonTh = th;
 					}
 					else{
+						System.out.println(wordPart);
 						th.setfd(new TrieHybride(wordPart.charAt(0), -1, null, null,null));
-						pTh=th;
-						
+						pTh=th.getfd();
+						bonTh=pTh;
 					}
 					
 					
@@ -52,11 +54,11 @@ public class PatToHybrid {
 						pTh.setfc(new TrieHybride(wordPart.charAt(k), -1, null, null, null));
 						pTh = pTh.getfc();
 					}
-					if(th.getfc()==null){
-						th.setfc(patToHybridTrie(patTries[i], pTh));
+					if(bonTh.getfc()==null){
+						bonTh.setfc(patToHybridTrie(patTries[i], pTh));
 					}
 					else
-						th.getfc().setfc(patToHybridTrie(patTries[i], pTh));
+						bonTh.getfc().setfc(patToHybridTrie(patTries[i], pTh));
 				}
 			}
 		}

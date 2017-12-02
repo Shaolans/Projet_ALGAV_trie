@@ -18,9 +18,9 @@ public class PatToHybridTest {
 		PatriciaTrie.ajouterMot(p, "ami");
 		PatriciaTrie.ajouterMot(p, "ameliorer");
 		PatriciaTrie.ajouterMot(p, "amel");
-		/*PatriciaTrie.ajouterMot(p, "salut");
+		PatriciaTrie.ajouterMot(p, "salut");
 		PatriciaTrie.ajouterMot(p, "salee");
-		PatriciaTrie.ajouterMot(p, "sayonara");*/
+		PatriciaTrie.ajouterMot(p, "sayonara");
 		
 		System.out.println("Patricia trie entré");
 		
