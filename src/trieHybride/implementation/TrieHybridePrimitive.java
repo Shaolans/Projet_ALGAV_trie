@@ -1,6 +1,7 @@
 package trieHybride.implementation;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import trieHybride.interfaces.ITrieHybride;
@@ -508,6 +509,88 @@ public class TrieHybridePrimitive {
 				TrieHybridePrimitive.purgeNoWordsBranch(th.getfd());
 			}
 		}
+		
+	}
+	
+	public static void extractLRNode(ITrieHybride th, List<ITrieHybride> l){
+		if(th == null) return;
+		l.add(th);
+		TrieHybridePrimitive.extractLRNode(th.getfg(), l);
+		TrieHybridePrimitive.extractLRNode(th.getfd(), l);
+	}
+	
+	public static int countLRNode(ITrieHybride th) {
+		if(th == null) return 0;
+		return 1 + TrieHybridePrimitive.countLRNode(th.getfg()) + TrieHybridePrimitive.countLRNode(th.getfd());
+	}
+	
+	public static boolean checkBalanceAux(ITrieHybride th) {
+		int left = TrieHybridePrimitive.countLRNode(th.getfg());
+		int right = TrieHybridePrimitive.countLRNode(th.getfd());
+		if(Math.abs(left-right) > 1) return false;
+		return true;
+	}
+	
+	public static boolean checkBalance(ITrieHybride th) {
+		if(th == null) return true;
+		if(!TrieHybridePrimitive.checkBalanceAux(th)) return false;
+		List<ITrieHybride> l = new ArrayList<>();
+		TrieHybridePrimitive.extractLRNode(th, l);
+		for(ITrieHybride tmp: l) {
+			if(!TrieHybridePrimitive.checkBalance(tmp.getfc())) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	public static void balanceTrieHybrideAux(ITrieHybride th, ITrieHybride pere) {
+		if(th == null) return;
+		if(checkBalanceAux(th)) {
+			List<ITrieHybride> l = new ArrayList<>();
+			TrieHybridePrimitive.extractLRNode(th, l);
+			for(ITrieHybride tmp: l) {
+				if(tmp.existfc()) {
+					TrieHybridePrimitive.balanceTrieHybrideAux(tmp.getfc(), tmp);
+				}
+			}
+			return;
+		}
+		
+		List<ITrieHybride> l = new ArrayList<>();
+		TrieHybridePrimitive.extractLRNode(th, l);
+		Collections.sort(l,(th1,th2)->(th1.getChar()<th2.getChar())?-1:1);
+		for(ITrieHybride p: l) System.out.print(p.getChar() + " ");
+		System.out.println();
+		for(ITrieHybride tmp: l) {
+			tmp.setfd(null);
+			tmp.setfg(null);
+		}
+		int indicemilieu = (int)Math.ceil(l.size()/2.0);
+		ITrieHybride tmp = new TrieHybride(th.getChar(), th.getValue(), th.getfc(), null, null);
+		ITrieHybride tmp2 = l.get(indicemilieu);
+		
+		th.setChar(tmp2.getChar());
+		th.setValue(tmp2.getValue());
+		th.setfc(tmp2.getfc());
+		if(pere != null) {
+			pere.setfc(tmp2);
+		}
+		tmp2.setChar(tmp.getChar());
+		tmp2.setValue(tmp.getValue());
+		tmp2.setfc(tmp.getfc());
+		
+		List<ITrieHybride> dump = new ArrayList<>();
+		dump.add(tmp2);
+		int split = 0;
+		int indice = indicemilieu;
+		do {
+			split = (int)Math.floor(indice/2.0);
+			return;
+		}while(dump.size() < l.size());
+		
+		
 		
 	}
 }

@@ -28,10 +28,10 @@ public class TrieHybrideTest {
 		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
-		TrieHybridePrimitive.ajoutMot("ling", root);
+		/*TrieHybridePrimitive.ajoutMot("ling", root);
 		TrieHybridePrimitive.ajoutMot("lune", root);
 		TrieHybridePrimitive.ajoutMot("li", root);
-		TrieHybridePrimitive.ajoutMot("la", root);
+		TrieHybridePrimitive.ajoutMot("la", root);*/
 		/*System.out.println(TrieHybridePrimitive.comptageMots(root));
 		System.out.println(TrieHybridePrimitive.comptageNil(root));
 		System.out.println(TrieHybridePrimitive.hauteur(root));*/
@@ -41,6 +41,17 @@ public class TrieHybrideTest {
 		
 		//TrieHybridePrimitive.supression(root, "ling");
 		TrieVisualizer.visualizeTrieHybride(root);
+		
+		TrieHybridePrimitive.ajoutMot("thor", root);
+		TrieHybridePrimitive.ajoutMot("b", root);
+		TrieHybridePrimitive.ajoutMot("a", root);
+		TrieHybridePrimitive.ajoutMot("z", root);
+		TrieHybridePrimitive.ajoutMot("u", root);
+		TrieHybridePrimitive.ajoutMot("v", root);
+		TrieHybridePrimitive.ajoutMot("w", root);
+		TrieHybridePrimitive.ajoutMot("z", root);
+		
+		TrieHybridePrimitive.balanceTrieHybrideAux(root, null);
 		
 		//TrieHybridePrimitive.supression(root, "genial");
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
