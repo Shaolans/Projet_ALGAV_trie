@@ -1,6 +1,7 @@
 package trieHybride.implementation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -551,7 +552,7 @@ public class TrieHybridePrimitive {
 			List<ITrieHybride> l = new ArrayList<>();
 			TrieHybridePrimitive.extractLRNode(th, l);
 			for(ITrieHybride tmp: l) {
-				if(tmp.existfc()) {
+				if(tmp.existfc() && tmp != th) {
 					TrieHybridePrimitive.balanceTrieHybrideAux(tmp.getfc(), tmp);
 				}
 			}
@@ -561,16 +562,15 @@ public class TrieHybridePrimitive {
 		List<ITrieHybride> l = new ArrayList<>();
 		TrieHybridePrimitive.extractLRNode(th, l);
 		Collections.sort(l,(th1,th2)->(th1.getChar()<th2.getChar())?-1:1);
-		for(ITrieHybride p: l) System.out.print(p.getChar() + " ");
+		//for(ITrieHybride p: l) System.out.print(p.getChar() + " ");
 		System.out.println();
 		for(ITrieHybride tmp: l) {
 			tmp.setfd(null);
 			tmp.setfg(null);
 		}
-		int indicemilieu = (int)Math.ceil(l.size()/2.0);
-		ITrieHybride tmp = new TrieHybride(th.getChar(), th.getValue(), th.getfc(), null, null);
+		int indicemilieu = (int)Math.floor(l.size()/2.0);
+		ITrieHybride tmp = new TrieHybride(th.getChar(), th.getValue(), null, th.getfc(), null);
 		ITrieHybride tmp2 = l.get(indicemilieu);
-		
 		th.setChar(tmp2.getChar());
 		th.setValue(tmp2.getValue());
 		th.setfc(tmp2.getfc());
@@ -580,17 +580,106 @@ public class TrieHybridePrimitive {
 		tmp2.setChar(tmp.getChar());
 		tmp2.setValue(tmp.getValue());
 		tmp2.setfc(tmp.getfc());
+		//System.out.println("aZEAZEAZEAZE "+tmp.getfc());
 		
-		List<ITrieHybride> dump = new ArrayList<>();
-		dump.add(tmp2);
-		int split = 0;
-		int indice = indicemilieu;
-		do {
-			split = (int)Math.floor(indice/2.0);
-			return;
-		}while(dump.size() < l.size());
+		Collections.sort(l,(th1,th2)->(th1.getChar()<th2.getChar())?-1:1);
+		/*for(ITrieHybride tmp3: l) {
+			System.out.println(tmp3.getChar()+" "+tmp3.getfg()+" "+tmp3.getfd());
+		}*/
+		
+		//System.out.println("azeaze "+th.getChar()+" "+th.getfc()+" "+th.getfg()+" "+th.getfd());
+		ITrieHybride[] tab = new ITrieHybride[l.size()];
+		for(int i = 0; i < l.size(); i++) {
+			tab[i] = l.get(i);
+		}
+		
+		//TrieHybridePrimitive.spliting(th, indicemilieu, 0, tab.length, tab);
+		
+		int split = (int)Math.floor(tab.length/2.0);
+		ITrieHybride subtabl[] = Arrays.copyOfRange(tab, 0, split);
+		ITrieHybride subtabr[] = Arrays.copyOfRange(tab, split+1, tab.length);
+		TrieHybridePrimitive.spliting(tab[split], subtabl, subtabr);
+		
+		for(ITrieHybride tmp3: l) {
+			if(tmp3.existfc() && tmp3 != th) {
+				TrieHybridePrimitive.balanceTrieHybrideAux(tmp3.getfc(), tmp3);
+			}
+		}
+
+		return;
 		
 		
 		
+	}
+	
+	/*
+	public static void spliting(ITrieHybride th, int mid, int min, int max, ITrieHybride tab[]) {
+		if(mid == min || mid == max || min == max) return;
+		
+		int splitl = (int)Math.floor(mid/2.0);
+		int splitr = (int)Math.ceil(mid/2.0);
+		if(splitl == min || splitr == max) return;
+		
+		System.out.println(th.getChar()+" "+mid+" "+min+" "+max);
+		System.out.println(tab[mid].getChar());
+		System.out.println("mid "+mid);
+		System.out.println("left "+splitl);
+		System.out.println("right "+(mid+splitr));
+		th.setfg(tab[splitl]);
+		th.setfd(tab[splitr+mid]);
+		System.out.println(tab[splitl].getChar()+" "+splitl+" 0 "+mid);
+		System.out.println(tab[splitr+mid].getChar()+" "+(splitr+mid)+" "+mid+" "+max+"\n");
+		TrieHybridePrimitive.spliting(th.getfg(), splitl, 0, mid-1, tab);
+		TrieHybridePrimitive.spliting(th.getfd(), splitr+mid, mid+1, max, tab);
+
+	}*/
+	
+	
+	public static void spliting(ITrieHybride th, ITrieHybride tabl[], ITrieHybride tabr[]) {
+		boolean recl = true;
+		boolean recr = true;
+		if(tabl.length == 0) {
+			recl = false;
+		}
+		
+		if(tabr.length == 0) {
+			recr = false;
+		}
+		
+		int splitl = (int)Math.floor(tabl.length/2.0);
+		int splitr = (int)Math.floor(tabr.length/2.0);
+		ITrieHybride subtabl[];
+		ITrieHybride subtabr[];
+		
+		System.out.println(th.getChar());
+		System.out.println("mid l = "+splitl);
+		System.out.println("mid r = "+splitr);
+		
+		
+		
+		if(recl) {
+			th.setfg(tabl[splitl]);
+			subtabl = Arrays.copyOfRange(tabl, 0, splitl);
+			subtabr = Arrays.copyOfRange(tabl, splitl+1, tabl.length);
+			System.out.println("LEFT "+tabl[splitl]);
+			for(ITrieHybride t: subtabl) System.out.print(t.getChar()+" ");
+			System.out.println();
+			for(ITrieHybride t: subtabr) System.out.print(t.getChar()+" ");
+			System.out.println();
+			System.out.println();
+			TrieHybridePrimitive.spliting(th.getfg(), subtabl, subtabr);
+		}
+		
+		if(recr) {
+			th.setfd(tabr[splitr]);
+			subtabl = Arrays.copyOfRange(tabr, 0, splitr);
+			subtabr = Arrays.copyOfRange(tabr, splitr+1, tabr.length);
+			System.out.println("RIGHT "+tabl[splitr]);
+			for(ITrieHybride t: subtabl) System.out.print(t.getChar()+" ");
+			for(ITrieHybride t: subtabr) System.out.print(t.getChar()+" ");
+			System.out.println();
+			System.out.println();
+			TrieHybridePrimitive.spliting(th.getfd(), subtabl, subtabr);
+		}
 	}
 }

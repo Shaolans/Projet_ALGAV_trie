@@ -1,5 +1,7 @@
 package trieHybride.test;
 
+import java.util.Arrays;
+
 import trie.file.TrieLoadFile;
 import trie.visualizer.TrieVisualizer;
 import trieHybride.implementation.TrieHybridePrimitive;
@@ -42,17 +44,25 @@ public class TrieHybrideTest {
 		//TrieHybridePrimitive.supression(root, "ling");
 		TrieVisualizer.visualizeTrieHybride(root);
 		
-		TrieHybridePrimitive.ajoutMot("thor", root);
+		TrieHybridePrimitive.ajoutMot("t", root);
 		TrieHybridePrimitive.ajoutMot("b", root);
 		TrieHybridePrimitive.ajoutMot("a", root);
 		TrieHybridePrimitive.ajoutMot("z", root);
 		TrieHybridePrimitive.ajoutMot("u", root);
 		TrieHybridePrimitive.ajoutMot("v", root);
 		TrieHybridePrimitive.ajoutMot("w", root);
-		TrieHybridePrimitive.ajoutMot("z", root);
-		
+		TrieHybridePrimitive.ajoutMot("x", root);
+				
 		TrieHybridePrimitive.balanceTrieHybrideAux(root, null);
 		
+		
+		/*System.out.println();
+		System.out.println(root.getfg());
+		System.out.println(root.getfd());
+		System.out.println(root.getfd().getfd());
+		System.out.println(root.getfd().getfg());*/
+		
+		TrieVisualizer.visualizeTrieHybride(root);
 		//TrieHybridePrimitive.supression(root, "genial");
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		//System.out.println(root.getChar());
