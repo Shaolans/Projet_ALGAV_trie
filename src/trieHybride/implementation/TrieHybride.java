@@ -131,5 +131,9 @@ public class TrieHybride implements ITrieHybride {
 	public static int getCpt() {
 		return cpt++;
 	}
+	
+	public static void resetCpt(){
+		cpt=0;
+	}
 
 }

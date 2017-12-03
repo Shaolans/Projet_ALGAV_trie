@@ -23,7 +23,7 @@ public class TrieVisualizer {
 	public static void visualizeTrieHybrideAux(String prefix, boolean isLast, boolean isEmpty, ITrieHybride th){
 		//si le noeud correspond a un arbre vide alors on l'affiche
 		if(isEmpty){
-			System.out.println(prefix + (isLast ? "'---" : "|---") + "∅");
+			System.out.println(prefix + (isLast ? "'---" : "|---") + "�");
 			return;
 		}
 		//on affiche le noeud
@@ -34,23 +34,23 @@ public class TrieVisualizer {
 		//sinon on repr�sente en tant que suite, et on appel recursivement pour le fils gauche
 		//sinon si pas de fils gauche alors isEmpty on print un arbre vide dans l'appel recursif
 		if(th.existfg()){
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, false, th.getfg());
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, false, th.getfg());
 		}else{
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, true, null);
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, true, null);
 		}
 		
 		//analogue au fils gauche
 		if(th.existfc()){
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, false, th.getfc());
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, false, th.getfc());
 		}else{
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), false, true, null);
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), false, true, null);
 		}
 		
 		//analogue au fils gauche
 		if(th.existfd()){
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), true, false, th.getfd());
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), true, false, th.getfd());
 		}else{
-			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "│   "), true, true, null);
+			TrieVisualizer.visualizeTrieHybrideAux(prefix + (isLast ? "    " : "|   "), true, true, null);
 		}
 	}
 	
