@@ -44,17 +44,24 @@ public class TrieHybrideTest {
 		//TrieHybridePrimitive.supression(root, "ling");
 		TrieVisualizer.visualizeTrieHybride(root);
 		
-		TrieHybridePrimitive.ajoutMot("t", root);
-		TrieHybridePrimitive.ajoutMot("b", root);
-		TrieHybridePrimitive.ajoutMot("a", root);
-		TrieHybridePrimitive.ajoutMot("z", root);
-		TrieHybridePrimitive.ajoutMot("u", root);
-		TrieHybridePrimitive.ajoutMot("v", root);
-		TrieHybridePrimitive.ajoutMot("w", root);
-		TrieHybridePrimitive.ajoutMot("x", root);
-				
-		TrieHybridePrimitive.balanceTrieHybrideAux(root, null);
+		TrieHybridePrimitive.ajoutMot("th", root);
+		TrieHybridePrimitive.ajoutMot("bar", root);
+		TrieHybridePrimitive.ajoutMot("ar", root);
+		TrieHybridePrimitive.ajoutMot("ze", root);
+		TrieHybridePrimitive.ajoutMot("ur", root);
+		TrieHybridePrimitive.ajoutMot("ve", root);
+		TrieHybridePrimitive.ajoutMot("wa", root);
+		TrieHybridePrimitive.ajoutMot("xe", root);
 		
+		TrieHybridePrimitive.ajoutMot("doef", root);
+		TrieHybridePrimitive.ajoutMot("dob", root);
+		TrieHybridePrimitive.ajoutMot("doc", root);
+		TrieHybridePrimitive.ajoutMot("dof", root);
+		TrieHybridePrimitive.ajoutMot("doh", root);
+		TrieHybridePrimitive.ajoutMot("dox", root);
+		TrieHybridePrimitive.ajoutMot("doz", root);
+				
+		TrieHybridePrimitive.balanceTrieHybride(root);
 		
 		/*System.out.println();
 		System.out.println(root.getfg());

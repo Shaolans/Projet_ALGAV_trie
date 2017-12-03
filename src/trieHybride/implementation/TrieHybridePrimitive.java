@@ -513,6 +513,12 @@ public class TrieHybridePrimitive {
 		
 	}
 	
+	
+	/**
+	 * Extrait tout les noeuds qui sont accessibles uniquement par les fils gauches et droits
+	 * @param th TrieHybride dont lequel on parcourt
+	 * @param l la liste des noeuds
+	 */
 	public static void extractLRNode(ITrieHybride th, List<ITrieHybride> l){
 		if(th == null) return;
 		l.add(th);
@@ -520,11 +526,21 @@ public class TrieHybridePrimitive {
 		TrieHybridePrimitive.extractLRNode(th.getfd(), l);
 	}
 	
+	/**
+	 * Compte le nombre de noeuds qui sont accessibles uniquement par les fils gauches et droits
+	 * @param th TrieHybride a compter
+	 * @return le nombre de noeuds
+	 */
 	public static int countLRNode(ITrieHybride th) {
 		if(th == null) return 0;
 		return 1 + TrieHybridePrimitive.countLRNode(th.getfg()) + TrieHybridePrimitive.countLRNode(th.getfd());
 	}
 	
+	/**
+	 * Calcul si le noeud courant de ce TrieHybride est equilibre
+	 * @param th Le TrieHybride a considerer
+	 * @return true si equilibre, false sinon
+	 */
 	public static boolean checkBalanceAux(ITrieHybride th) {
 		int left = TrieHybridePrimitive.countLRNode(th.getfg());
 		int right = TrieHybridePrimitive.countLRNode(th.getfd());
@@ -532,6 +548,11 @@ public class TrieHybridePrimitive {
 		return true;
 	}
 	
+	/**
+	 * Calcul si un TrieHybride est entierement equilibre
+	 * @param th Le TrieHybride a considerer
+	 * @return true si equilibre, false sinon
+	 */
 	public static boolean checkBalance(ITrieHybride th) {
 		if(th == null) return true;
 		if(!TrieHybridePrimitive.checkBalanceAux(th)) return false;
@@ -546,98 +567,116 @@ public class TrieHybridePrimitive {
 	}
 	
 	
-	public static void balanceTrieHybrideAux(ITrieHybride th, ITrieHybride pere) {
+	/**
+	 * Equilibre un TrieHybride
+	 * @param th Le TrieHybride a considerer
+	 */
+	public static void balanceTrieHybride(ITrieHybride th) {
+		//si le TrieHybride est null alors il est equilibre
 		if(th == null) return;
+		
+		/**
+		 * Si le TrieHybride est deja equilibre alors on recupere les fils centraux
+		 * des noeuds gauches et droits et on rappel le reequilibrage sur ces fils centraux
+		 */
 		if(checkBalanceAux(th)) {
 			List<ITrieHybride> l = new ArrayList<>();
 			TrieHybridePrimitive.extractLRNode(th, l);
 			for(ITrieHybride tmp: l) {
-				if(tmp.existfc() && tmp != th) {
-					TrieHybridePrimitive.balanceTrieHybrideAux(tmp.getfc(), tmp);
+				if(tmp.existfc()) {
+					TrieHybridePrimitive.balanceTrieHybride(tmp.getfc());
 				}
 			}
 			return;
 		}
 		
+		/**
+		 * On recupere les noeuds gauches et droits on les tri dans l'ordre alphabetique
+		 */
 		List<ITrieHybride> l = new ArrayList<>();
 		TrieHybridePrimitive.extractLRNode(th, l);
 		Collections.sort(l,(th1,th2)->(th1.getChar()<th2.getChar())?-1:1);
-		//for(ITrieHybride p: l) System.out.print(p.getChar() + " ");
-		System.out.println();
+
+		
+		/**
+		 * On detruit les liens des fils gauches et droits de tout ces noeuds
+		 */
 		for(ITrieHybride tmp: l) {
 			tmp.setfd(null);
 			tmp.setfg(null);
 		}
+		
+		/**
+		 * On calcul le nouveau fils central (point d'entree de recherche) qui est donc le trieHybride qui
+		 * decoupe en 2 ensembles plus ou moins egaux
+		 * On echange l'ancien noeud par le nouveau (impossible de faire autrement avec les pointeurs sauf si on a un pere)
+		 */
 		int indicemilieu = (int)Math.floor(l.size()/2.0);
 		ITrieHybride tmp = new TrieHybride(th.getChar(), th.getValue(), null, th.getfc(), null);
 		ITrieHybride tmp2 = l.get(indicemilieu);
+		
 		th.setChar(tmp2.getChar());
 		th.setValue(tmp2.getValue());
 		th.setfc(tmp2.getfc());
-		if(pere != null) {
-			pere.setfc(tmp2);
-		}
+		
 		tmp2.setChar(tmp.getChar());
 		tmp2.setValue(tmp.getValue());
 		tmp2.setfc(tmp.getfc());
-		//System.out.println("aZEAZEAZEAZE "+tmp.getfc());
 		
 		Collections.sort(l,(th1,th2)->(th1.getChar()<th2.getChar())?-1:1);
-		/*for(ITrieHybride tmp3: l) {
-			System.out.println(tmp3.getChar()+" "+tmp3.getfg()+" "+tmp3.getfd());
-		}*/
+
 		
-		//System.out.println("azeaze "+th.getChar()+" "+th.getfc()+" "+th.getfg()+" "+th.getfd());
+		/**
+		 * On transforme la liste en tableau
+		 */
 		ITrieHybride[] tab = new ITrieHybride[l.size()];
 		for(int i = 0; i < l.size(); i++) {
 			tab[i] = l.get(i);
 		}
 		
-		//TrieHybridePrimitive.spliting(th, indicemilieu, 0, tab.length, tab);
-		
+		/**
+		 * On coupe le tableau en deux sous-ensembles
+		 * subtabl correpond aux TrieHybride qui peuvent se trouver au fils gauche
+		 * du TrieHybride de milieu calcule
+		 * subtabr correspond aux TrieHybride qui peuvent se trouver au fils droit
+		 * du TrieHybride de milieu calcule
+		 */
 		int split = (int)Math.floor(tab.length/2.0);
 		ITrieHybride subtabl[] = Arrays.copyOfRange(tab, 0, split);
 		ITrieHybride subtabr[] = Arrays.copyOfRange(tab, split+1, tab.length);
+		/** On effectue spliting qui va generer en quelque sorte
+		 * un arbre binaire equilibre
+		 */
+		
 		TrieHybridePrimitive.spliting(tab[split], subtabl, subtabr);
 		
+		/**
+		 * On recupere les fils centraux des noeuds gauches et droits
+		 * On fait un appel recursif au reequilibrage
+		 */
 		for(ITrieHybride tmp3: l) {
-			if(tmp3.existfc() && tmp3 != th) {
-				TrieHybridePrimitive.balanceTrieHybrideAux(tmp3.getfc(), tmp3);
+			if(tmp3.existfc()) {
+				TrieHybridePrimitive.balanceTrieHybride(tmp3.getfc());
 			}
 		}
 
 		return;
 		
-		
-		
+
 	}
 	
-	/*
-	public static void spliting(ITrieHybride th, int mid, int min, int max, ITrieHybride tab[]) {
-		if(mid == min || mid == max || min == max) return;
-		
-		int splitl = (int)Math.floor(mid/2.0);
-		int splitr = (int)Math.ceil(mid/2.0);
-		if(splitl == min || splitr == max) return;
-		
-		System.out.println(th.getChar()+" "+mid+" "+min+" "+max);
-		System.out.println(tab[mid].getChar());
-		System.out.println("mid "+mid);
-		System.out.println("left "+splitl);
-		System.out.println("right "+(mid+splitr));
-		th.setfg(tab[splitl]);
-		th.setfd(tab[splitr+mid]);
-		System.out.println(tab[splitl].getChar()+" "+splitl+" 0 "+mid);
-		System.out.println(tab[splitr+mid].getChar()+" "+(splitr+mid)+" "+mid+" "+max+"\n");
-		TrieHybridePrimitive.spliting(th.getfg(), splitl, 0, mid-1, tab);
-		TrieHybridePrimitive.spliting(th.getfd(), splitr+mid, mid+1, max, tab);
-
-	}*/
 	
-	
+	/**
+	 * Genere un TrieHybride equilibre
+	 * @param th le TrieHybride dont lequel on va donner le fils gauche et droit
+	 * @param tabl les TrieHybride possibles pour le fils gauche
+	 * @param tabr les TrieHybride possibles pour le fils droit
+	 */
 	public static void spliting(ITrieHybride th, ITrieHybride tabl[], ITrieHybride tabr[]) {
 		boolean recl = true;
 		boolean recr = true;
+		
+		//Si le tableau vide alors on n'effectue pas d'attribution
 		if(tabl.length == 0) {
 			recl = false;
 		}
@@ -646,40 +685,54 @@ public class TrieHybridePrimitive {
 			recr = false;
 		}
 		
+		
+		/**
+		 * On calcul l'indice du fils gauche et droit qui doit
+		 * etre le milieu des sous tableaux
+		 */
 		int splitl = (int)Math.floor(tabl.length/2.0);
 		int splitr = (int)Math.floor(tabr.length/2.0);
 		ITrieHybride subtabl[];
 		ITrieHybride subtabr[];
 		
-		System.out.println(th.getChar());
+		/*System.out.println(th.getChar());
 		System.out.println("mid l = "+splitl);
-		System.out.println("mid r = "+splitr);
+		System.out.println("mid r = "+splitr);*/
 		
 		
-		
+		/**
+		 * Si le sous tableau n'est pas vide alors on donne en tant que fils gauche
+		 * le fils gauche calcule (l'element qui se trouve au milieu du sous tableau gauche)
+		 * puis on redecoupe le sous tableau gauche en 2 sous tableaux et on rappel recursivement
+		 * sur le fils gauche calcule
+		 */
 		if(recl) {
 			th.setfg(tabl[splitl]);
 			subtabl = Arrays.copyOfRange(tabl, 0, splitl);
 			subtabr = Arrays.copyOfRange(tabl, splitl+1, tabl.length);
-			System.out.println("LEFT "+tabl[splitl]);
+			/*System.out.println("LEFT "+tabl[splitl]);
 			for(ITrieHybride t: subtabl) System.out.print(t.getChar()+" ");
 			System.out.println();
 			for(ITrieHybride t: subtabr) System.out.print(t.getChar()+" ");
 			System.out.println();
-			System.out.println();
+			System.out.println();*/
 			TrieHybridePrimitive.spliting(th.getfg(), subtabl, subtabr);
 		}
+		
 		
 		if(recr) {
 			th.setfd(tabr[splitr]);
 			subtabl = Arrays.copyOfRange(tabr, 0, splitr);
 			subtabr = Arrays.copyOfRange(tabr, splitr+1, tabr.length);
-			System.out.println("RIGHT "+tabl[splitr]);
+			/*System.out.println("RIGHT "+tabl[splitr]);
 			for(ITrieHybride t: subtabl) System.out.print(t.getChar()+" ");
 			for(ITrieHybride t: subtabr) System.out.print(t.getChar()+" ");
 			System.out.println();
-			System.out.println();
+			System.out.println();*/
 			TrieHybridePrimitive.spliting(th.getfd(), subtabl, subtabr);
 		}
 	}
+	
+	
+	
 }
