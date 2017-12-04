@@ -56,16 +56,19 @@ public class TrieConverterTest  {
 		TrieHybride th ;
 		
 		TrieHybride.resetCpt();
-		//PatriciaTrie.ajouterMot(p, "amelo");
-		//PatriciaTrie.ajouterMot(p, "ami");
+		PatriciaTrie.ajouterMot(p, "amelo");
+		PatriciaTrie.ajouterMot(p, "ami");
 		PatriciaTrie.ajouterMot(p, "ameliorer");
 		PatriciaTrie.ajouterMot(p, "ameliore");
-		//PatriciaTrie.ajouterMot(p, "amel");
-		//PatriciaTrie.ajouterMot(p, "salut");
-		//PatriciaTrie.ajouterMot(p, "salee");
-		//PatriciaTrie.ajouterMot(p, "sayonara");
+		PatriciaTrie.ajouterMot(p, "amel");
+		PatriciaTrie.ajouterMot(p, "chou");
+		PatriciaTrie.ajouterMot(p, "chouette");
+		PatriciaTrie.ajouterMot(p, "chouquette");
+		PatriciaTrie.ajouterMot(p, "salut");
+		PatriciaTrie.ajouterMot(p, "salee");
+		PatriciaTrie.ajouterMot(p, "sayonara");
 		
-		System.out.println(p);
+		//System.out.println(p);
 		
 		
 		th = (TrieHybride) TrieConverter.patToHybridTrie(p);
@@ -73,14 +76,17 @@ public class TrieConverterTest  {
 		TrieHybride.resetCpt();
 		
 		TrieHybride bonTh = new TrieHybride();
-		//TrieHybridePrimitive.ajoutMot("amel", bonTh);
+		TrieHybridePrimitive.ajoutMot("amel", bonTh);
 		TrieHybridePrimitive.ajoutMot("ameliore", bonTh);
 		TrieHybridePrimitive.ajoutMot("ameliorer", bonTh);
-		//TrieHybridePrimitive.ajoutMot("amelo", bonTh);
-		//TrieHybridePrimitive.ajoutMot("ami", bonTh);
-		//TrieHybridePrimitive.ajoutMot("salee", bonTh);
-		//TrieHybridePrimitive.ajoutMot("salut", bonTh);
-		//TrieHybridePrimitive.ajoutMot("sayonara", bonTh);
+		TrieHybridePrimitive.ajoutMot("amelo", bonTh);
+		TrieHybridePrimitive.ajoutMot("ami", bonTh);
+		TrieHybridePrimitive.ajoutMot("chou", bonTh);
+		TrieHybridePrimitive.ajoutMot("chouette", bonTh);
+		TrieHybridePrimitive.ajoutMot("chouquette", bonTh);
+		TrieHybridePrimitive.ajoutMot("salee", bonTh);
+		TrieHybridePrimitive.ajoutMot("salut", bonTh);
+		TrieHybridePrimitive.ajoutMot("sayonara", bonTh);
 
 		
 		PrintStream standardOutput = System.out;
@@ -96,10 +102,156 @@ public class TrieConverterTest  {
 		String resAttendu = outContent.toString();
 		System.setOut(standardOutput);
 		
-		System.out.println(resAttendu);
-		System.out.println(resObtenu);
+		//System.out.println(resAttendu);
+		//System.out.println(resObtenu);
 		
 		assertEquals(resAttendu, resObtenu);
 
 	}
+	
+	
+	@Test
+	public void patToHybrideTest2() {
+		
+		PatriciaTrie p = new PatriciaTrie();
+		TrieHybride th ;
+		
+		TrieHybride.resetCpt();
+		PatriciaTrie.ajouterMot(p, "amelo");
+		PatriciaTrie.ajouterMot(p, "ami");
+		PatriciaTrie.ajouterMot(p, "ameliorer");
+		PatriciaTrie.ajouterMot(p, "ameliore");
+		PatriciaTrie.ajouterMot(p, "amel");
+		
+		
+		//System.out.println(p);
+		
+		
+		th = (TrieHybride) TrieConverter.patToHybridTrie(p);
+		
+		TrieHybride.resetCpt();
+		
+		TrieHybride bonTh = new TrieHybride();
+		TrieHybridePrimitive.ajoutMot("amel", bonTh);
+		TrieHybridePrimitive.ajoutMot("ameliore", bonTh);
+		TrieHybridePrimitive.ajoutMot("ameliorer", bonTh);
+		TrieHybridePrimitive.ajoutMot("amelo", bonTh);
+		TrieHybridePrimitive.ajoutMot("ami", bonTh);
+
+		
+		PrintStream standardOutput = System.out;
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+		
+		System.setOut(new PrintStream(outContent));
+		TrieVisualizer.visualizeTrieHybride(th);
+		String resObtenu = outContent.toString();
+		outContent = new ByteArrayOutputStream();
+		
+		System.setOut(new PrintStream(outContent));
+		TrieVisualizer.visualizeTrieHybride(bonTh);
+		String resAttendu = outContent.toString();
+		System.setOut(standardOutput);
+		
+		//System.out.println(resAttendu);
+		//System.out.println(resObtenu);
+		
+		assertEquals(resAttendu, resObtenu);
+
+	}
+	
+	@Test
+	public void patToHybrideTest3() {
+		
+		PatriciaTrie p = new PatriciaTrie();
+		TrieHybride th ;
+		
+		TrieHybride.resetCpt();
+		
+		PatriciaTrie.ajouterMot(p, "ameliorer");
+		PatriciaTrie.ajouterMot(p, "ameliore");
+		PatriciaTrie.ajouterMot(p, "amel");
+		
+		
+		//System.out.println(p);
+		
+		
+		th = (TrieHybride) TrieConverter.patToHybridTrie(p);
+		
+		TrieHybride.resetCpt();
+		
+		TrieHybride bonTh = new TrieHybride();
+		TrieHybridePrimitive.ajoutMot("amel", bonTh);
+		TrieHybridePrimitive.ajoutMot("ameliore", bonTh);
+		TrieHybridePrimitive.ajoutMot("ameliorer", bonTh);
+		
+
+		
+		PrintStream standardOutput = System.out;
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+		
+		System.setOut(new PrintStream(outContent));
+		TrieVisualizer.visualizeTrieHybride(th);
+		String resObtenu = outContent.toString();
+		outContent = new ByteArrayOutputStream();
+		
+		System.setOut(new PrintStream(outContent));
+		TrieVisualizer.visualizeTrieHybride(bonTh);
+		String resAttendu = outContent.toString();
+		System.setOut(standardOutput);
+		
+		//System.out.println(resAttendu);
+		//System.out.println(resObtenu);
+		
+		assertEquals(resAttendu, resObtenu);
+
+	}
+	
+	
+	@Test
+	public void patToHybrideTest4() {
+		
+		PatriciaTrie p = new PatriciaTrie();
+		TrieHybride th ;
+		
+		TrieHybride.resetCpt();
+		
+		PatriciaTrie.ajouterMot(p, "chou");
+		PatriciaTrie.ajouterMot(p, "salut");
+		PatriciaTrie.ajouterMot(p, "amel");
+		
+		
+		//System.out.println(p);
+		
+		
+		th = (TrieHybride) TrieConverter.patToHybridTrie(p);
+		
+		TrieHybride.resetCpt();
+		
+		TrieHybride bonTh = new TrieHybride();
+		TrieHybridePrimitive.ajoutMot("amel", bonTh);
+		TrieHybridePrimitive.ajoutMot("chou", bonTh);
+		TrieHybridePrimitive.ajoutMot("salut", bonTh);
+		
+
+		
+		PrintStream standardOutput = System.out;
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+		
+		System.setOut(new PrintStream(outContent));
+		TrieVisualizer.visualizeTrieHybride(th);
+		String resObtenu = outContent.toString();
+		outContent = new ByteArrayOutputStream();
+		
+		System.setOut(new PrintStream(outContent));
+		TrieVisualizer.visualizeTrieHybride(bonTh);
+		String resAttendu = outContent.toString();
+		System.setOut(standardOutput);
+		
+		//System.out.println(resAttendu);
+		//System.out.println(resObtenu);
+		
+		assertEquals(resAttendu, resObtenu);
+
+	}
+	
 }
