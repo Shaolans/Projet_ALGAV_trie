@@ -12,7 +12,7 @@ public class TrieConverter {
 		return  patToHybridTrie( p, null);
 	}
 	
-	private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
+private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 		
 		PatriciaTrie [] patTries = p.getPatTries();
 		boolean first = true;
@@ -65,13 +65,14 @@ public class TrieConverter {
 					}
 					else
 						bonTh.getfc().setfc(patToHybridTrie(patTries[i], pTh));
+					
 				}
 			}
 		}
 		
 		return th;
 	}
-	
+
 	
 	public static PatriciaTrie hybrideTrieToPatricia(ITrieHybride th){
 		if(th==null)
@@ -80,47 +81,65 @@ public class TrieConverter {
 	}
 	
 	
-	private static PatriciaTrie hybrideTrieToPatricia(ITrieHybride th, PatriciaTrie p){
+	private static PatriciaTrie hybrideTrieToPatricia(ITrieHybride th, PatriciaTrie pat){
 		
 		StringBuilder prefixe = new StringBuilder();
-		PatriciaTrie [] patTries = p.getPatTries();
+		PatriciaTrie [] patTries = pat.getPatTries();
 		ITrieHybride pTh = th;
 		ITrieHybride pThWord = th;
+		PatriciaTrie patBis = null;
+		ITrieHybride filsGauche, filsDroit;
 		
 		if(th.getfd()!=null){
-			p = hybrideTrieToPatricia(pTh.getfd(), p);
+			pat = hybrideTrieToPatricia(pTh.getfd(), pat);
 		}
 		if(th.getfg()!=null){
-			p = hybrideTrieToPatricia(pTh.getfg(), p);
+			pat = hybrideTrieToPatricia(pTh.getfg(), pat);
 		}
 		
-		prefixe.append(p.getVal());
+		prefixe.append(pat.getVal());
 		
 		do{
 			prefixe.append(pTh.getChar());
 			if(pTh.getfc()==null){
-				int ind = p.getInd()+p.getVal().length();
+				int ind = pat.getInd()+pat.getVal().length();
 				patTries[pThWord.getChar()-97] = new PatriciaTrie(ind, prefixe.toString(), true);
-				return p;
+				return pat;
 			}
 			
 			if(pTh.isWord()){
-				int ind = p.getInd()+p.getVal().length();
-				patTries[th.getChar()-97] = new PatriciaTrie(ind, prefixe.toString(), false);
-				patTries = patTries[th.getChar()-97].getPatTries();
-				patTries[26] = new PatriciaTrie(ind, prefixe.toString(), true);
+				
+				patTries[pThWord.getChar()-97] = new PatriciaTrie(prefixe.length(), prefixe.toString(), false);
+				patBis = patTries[pThWord.getChar()-97];
+				patTries = patBis.getPatTries();
+				patTries[26] = new PatriciaTrie(prefixe.length(), prefixe.toString(), true);
 				pThWord = pTh.getfc();
 				
 			}
 			
 			pTh = pTh.getfc();
-		}while(pTh.getfd()==null && pTh.getfg()==null);
+			
+			filsDroit = pTh.getfd();
+			filsGauche = pTh.getfg();
+			
+			if(pThWord==pTh){
+				if(filsDroit!=null){
+					patBis = hybrideTrieToPatricia(pTh.getfd(), patBis);
+					filsDroit = null;
+				}
+				if(filsGauche!=null){
+					patBis = hybrideTrieToPatricia(pTh.getfg(), patBis);
+					filsGauche=null;
+				}
+			}
+			
+		}while(filsDroit==null && filsGauche==null);
 
 		patTries[th.getChar()-97]=new PatriciaTrie(prefixe.length(), prefixe.toString(), false);
 		
 		patTries[th.getChar()-97] = hybrideTrieToPatricia(pTh, patTries[th.getChar()-97]);
 		
-		return p;
+		return pat;
 	}
 	
 	

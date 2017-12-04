@@ -58,12 +58,22 @@ public class PatriciaTrie {
 									break;
 								}
 							}
-									
+							
+							int val, indDiff;
+							
+							if(j==mot1.length()){
+								val = 26;
+								indDiff = -j; 
+							}
+							else{
+								val = word.charAt(j)-97;
+								indDiff = -j+1;
+							}
 									
 							String s = p.patTries[c-97].val;
-							PatriciaTrie np = new PatriciaTrie(p.patTries[c-97].ind-1, s.substring(0, j), false);
+							PatriciaTrie np = new PatriciaTrie(p.patTries[c-97].ind+indDiff, s.substring(0, j), false);
 							np.patTries[s.charAt(j)-97] = p.patTries[c-97];
-							np.patTries[word.charAt(j)-97]=new PatriciaTrie(p.patTries[c-97].ind, word, true);
+							np.patTries[val]=new PatriciaTrie(p.patTries[c-97].ind, word, true);
 							p.patTries[c-97] = np;
 														
 						}
