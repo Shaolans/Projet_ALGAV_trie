@@ -1,8 +1,10 @@
 package trieHybride.test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import trie.file.TrieLoadFile;
+import trie.file.TriePrintFile;
 import trie.visualizer.TrieVisualizer;
 import trieHybride.implementation.TrieHybridePrimitive;
 import trieHybride.interfaces.ITrieHybride;
@@ -85,6 +87,11 @@ public class TrieHybrideTest {
 		tmp = tmp.getfc();
 		System.out.println(tmp.getChar());
 		System.out.println(tmp.getfg().getChar());*/
+		ArrayList<String> l = new ArrayList<>();
+		l.add("bonjour 45");
+		l.add("bonjoure 56");
+		l.add("bonjours azeazeaze");
+		TriePrintFile.printFile("comparaison/test565.txt", l);
 	}
 
 }
