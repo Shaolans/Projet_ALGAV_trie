@@ -396,9 +396,9 @@ public class TrieHybridePrimitive {
 	 * @return TH sans le mot
 	 */
 	public static ITrieHybride supression(ITrieHybride th, String word){
-		ITrieHybride newTrie = TrieHybridePrimitive.suppressionAux(th, th, th, word);
-		TrieHybridePrimitive.purgeNoWordsBranch(newTrie);
-		return newTrie;
+		TrieHybridePrimitive.suppressionAux(th, th, word);
+		//TrieHybridePrimitive.purgeNoWordsBranch(newTrie);
+		return th;
 	}
 	
 
@@ -410,9 +410,9 @@ public class TrieHybridePrimitive {
 	 * @param word le mot a supprimer
 	 * @return
 	 */
-	private static ITrieHybride suppressionAux(ITrieHybride root, ITrieHybride th, ITrieHybride thfather, String word){
+	private static void suppressionAux(ITrieHybride th, ITrieHybride thfather, String word){
 		//si TH null alors arret
-		if(th == null) return root;
+		if(th == null) return;
 		int cptfc = 0;
 		int cptfg = 0;
 		int cptfd = 0;
@@ -427,13 +427,13 @@ public class TrieHybridePrimitive {
 				th.setValue(-1);
 				
 				//on cherche s'il y a un mot dependant de ce TH
-				cptfc = TrieHybridePrimitive.comptageMots(th.getfc());
-				cptfg = TrieHybridePrimitive.comptageMots(th.getfg());
-				cptfd = TrieHybridePrimitive.comptageMots(th.getfd());
+				//cptfc = TrieHybridePrimitive.comptageMots(th.getfc());
+				//cptfg = TrieHybridePrimitive.comptageMots(th.getfg());
+				//cptfd = TrieHybridePrimitive.comptageMots(th.getfd());
 				
 				//cas ou il n'y a pas de mot, on detruit le TH
-				if(cptfc == 0 && cptfg == 0 && cptfd == 0){
-					/*if(thfather.getfc() == th){
+				/*if(cptfc == 0 && cptfg == 0 && cptfd == 0){
+					if(thfather.getfc() == th){
 						thfather.setfc(null);
 					}
 					if(thfather.getfg() == th){
@@ -441,19 +441,19 @@ public class TrieHybridePrimitive {
 					}
 					if(thfather.getfd() == th){
 						thfather.setfd(null);
-					}*/
+					}
 					
-				}
-				return root;
+				}*/
+				return;
 			}
 			
 			//si la lettre ne concorde pas on continue la recherche dans le fils gauche ou droit
 			if(c > th.getChar()){
-				return suppressionAux(root, th.getfd(), th, word);
+				suppressionAux(th.getfd(), th, word);
 			}
 			
 			if(c < th.getChar()){
-				return suppressionAux(root, th.getfg(), th, word);
+				suppressionAux(th.getfg(), th, word);
 			}
 		}
 		
@@ -462,19 +462,26 @@ public class TrieHybridePrimitive {
 		//si la premiere lettre du mot concorde avec la lettre du TH alors on descend dans le fils central
 		//et on retire la premiere lettre du mot
 		if(c == th.getChar()){
-			return TrieHybridePrimitive.suppressionAux(root, th.getfc(), th, word.substring(1, word.length()));
+			TrieHybridePrimitive.suppressionAux(th.getfc(), th, word.substring(1, word.length()));
 		}
 		
 		//sinon dans les fils gauche ou droite on cherche un TH dont la lettre concorde
 		if(c < th.getChar()){
-			return TrieHybridePrimitive.suppressionAux(root, th.getfg(), th, word);
+			TrieHybridePrimitive.suppressionAux(th.getfg(), th, word);
 			
 		}
 		
 		if(c > th.getChar()){
-			return TrieHybridePrimitive.suppressionAux(root, th.getfd(), th, word);
+			TrieHybridePrimitive.suppressionAux(th.getfd(), th, word);
 		}
-		return root;
+		
+		cptfc = TrieHybridePrimitive.comptageMots(th.getfc());
+		cptfg = TrieHybridePrimitive.comptageMots(th.getfg());
+		cptfd = TrieHybridePrimitive.comptageMots(th.getfd());
+		
+		if(cptfc == 0) th.setfc(null);
+		if(cptfd == 0) th.setfd(null);
+		if(cptfg == 0) th.setfg(null);
 		
 	}
 	

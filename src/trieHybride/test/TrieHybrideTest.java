@@ -30,21 +30,21 @@ public class TrieHybrideTest {
 		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
-		/*TrieHybridePrimitive.ajoutMot("ling", root);
+		TrieHybridePrimitive.ajoutMot("ling", root);
 		TrieHybridePrimitive.ajoutMot("lune", root);
 		TrieHybridePrimitive.ajoutMot("li", root);
-		TrieHybridePrimitive.ajoutMot("la", root);*/
+		TrieHybridePrimitive.ajoutMot("la", root);
 		/*System.out.println(TrieHybridePrimitive.comptageMots(root));
 		System.out.println(TrieHybridePrimitive.comptageNil(root));
 		System.out.println(TrieHybridePrimitive.hauteur(root));*/
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		System.out.println(TrieHybridePrimitive.prefixe(root, "li"));
 		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
-		
-		//TrieHybridePrimitive.supression(root, "ling");
 		TrieVisualizer.visualizeTrieHybride(root);
+		TrieHybridePrimitive.supression(root, "ling");
 		
-		TrieHybridePrimitive.ajoutMot("th", root);
+		
+		/*TrieHybridePrimitive.ajoutMot("th", root);
 		TrieHybridePrimitive.ajoutMot("bar", root);
 		TrieHybridePrimitive.ajoutMot("ar", root);
 		TrieHybridePrimitive.ajoutMot("ze", root);
@@ -59,9 +59,9 @@ public class TrieHybrideTest {
 		TrieHybridePrimitive.ajoutMot("dof", root);
 		TrieHybridePrimitive.ajoutMot("doh", root);
 		TrieHybridePrimitive.ajoutMot("dox", root);
-		TrieHybridePrimitive.ajoutMot("doz", root);
+		TrieHybridePrimitive.ajoutMot("doz", root);*/
 				
-		TrieHybridePrimitive.balanceTrieHybride(root);
+		//TrieHybridePrimitive.balanceTrieHybride(root);
 		
 		/*System.out.println();
 		System.out.println(root.getfg());
