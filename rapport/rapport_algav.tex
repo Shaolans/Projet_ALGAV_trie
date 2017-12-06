@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{report}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\renewcommand{\chaptername}{}
+
+\setcounter{chapter}{-1}
+
+\title{\Huge Rapport \\ Projet ALGAV Trie \\ \large Implantation du Trie Hybride et du Patricia Trie}
+\author{Amel Arkoub 3301571 \\ Ling-Chun SO 3414546}
+\date{22 décembre 2017}
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+\chapter{Introduction}
+\chapter{Trie Hybride}
+\section{Implantation}
+\section{Complexité}
+\subsection{Recherche}
+Pour la recherche d'un mot de \textit{L} caractères et un Trie Hybride de taille \textit{n}, 
+en prenant la comparaison de caractère comme mesure, on obtient une complexité dans le cas général:
+\begin{itemize}
+ \item en $\Theta$(L), si \textit{L} < \textit{n};
+ \item en $\Theta$(n) sinon.
+\end{itemize}
+Sinon on a une complexité en $\Theta$(n) dans le pire cas.
+\subsection{Comptage Mots}
+Le comptage de mots revient à faire un parcours de l'arbre en entier.
+Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du noeud comme mesure,
+on a donc une complexité $\Theta$(n).
+\subsection{Liste Mots}
+La récupération des mots dans un Trie Hybride correspond aussi à un parcours de l'arbre en entier en gardant le \textit{préfixe}
+en argument dans les appels de fonctions.
+Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du noeud comme mesure,
+on a donc une complexité en $\Theta$(n).
+\subsection{Comptage Nil}
+Le comptage de pointeur vers null correspond à un parcours de tout les noeuds pour compter le nombre de fils null.
+Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du noeud comme mesure,
+on a une complexité en $\Theta$(n) puisque pour \textit{n} noeuds, on a un nombre de comparaison $\le$ \textit{3n}.
+\subsection{Hauteur}
+La détermination de la hauteur du Trie Hybride est un parcours complet de l'arbre, en prenant l'existence de fils comme mesure
+, on obtient une complexité en $\Theta$(n).
+\subsection{Profondeur Moyenne}
+La profondeur moyenne d'un Trie Hybride est un parcours jusqu'aux feuilles dont on ajoute la profondeur dans une liste et on effectue
+une division. En prenant la comparaison d'existence de fils comme mesure, on obtient une complexité de $\Theta$(n).
+\subsection{Préfixe}
+La recherche du préfixe peut dans le pire des cas en $\Theta$(n) puisque le pire des cas est atteint lorsque le Trie Hybride
+revient à être une ``liste chaînée'' et donc à hauteur \textit{h}=n.
+\subsection{Suppression}
+La suppression d'un mot est une recherche dans le Trie Hybride, ce qui correspond à une complexité en $\Theta$(n) comparaison
+dans le pire cas, cependant il y a aussi 3 appels à la fonction comptageMots de complexité $\Theta$(n).
+On a donc une complexité en $\mathcal{O}$($n^2$).
+\chapter{Patricia Trie}
+\section{Implantation}
+\section{Complexité}
+\subsection{Recherche}
+\subsection{Comptage Mots}
+\subsection{Liste Mots}
+\subsection{Comptage Nil}
+\subsection{Hauteur}
+\subsection{Profondeur Moyenne}
+\subsection{Préfixe}
+\subsection{Suppression}
+\chapter{Fonctions complexes}
+\section{Implantation}
+\section{Complexité}
+\subsection{Fusion de Patricia Trie}
+\subsection{Conversion de Patricia Trie en Trie Hybride}
+\subsection{Conversion de Trie Hybride en Patricia Trie}
+\subsection{Rééquilibrage de Trie Hybride}
+\chapter{Etude expérimentale}
+
+\end{document}
