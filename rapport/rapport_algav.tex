@@ -5,11 +5,21 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{hyperref}
+% \usepackage{hyperref}
+\usepackage{tikz}
+\usepackage[margin=0.75in]{geometry}
+\usetikzlibrary{arrows}
 
 \renewcommand{\chaptername}{}
-
 \setcounter{chapter}{-1}
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily},
+  arn_n/.style = {treenode, circle, draw=black, text width=2em},
+  arn_x/.style = {treenode, rectangle, draw=black, text width=1.5em,
+    minimum width=1.5em, minimum height=1.5em}
+}
 
 \title{\Huge Rapport \\ Projet ALGAV Trie \\ \large Implantation du Trie Hybride et du Patricia Trie}
 \author{Amel Arkoub 3301571 \\ Ling-Chun SO 3414546}
@@ -29,9 +39,87 @@
 
 \tableofcontents
 \newpage
+
 \chapter{Introduction}
+\section*{Présentation}
+\paragraph*{}
+Nous souhaitons représenter un dictionnaire de mots, c'est-à-dire implanter une structure de
+données éfficace stockant des mots. Pour cela, nous allons nous servir de la structure de Trie.
+Dans cette optique, nous proposons l'implantation de deux structures de tries concurrentes que sont le Trie Hybride
+et le Patricia Trie. De cette implantation, une étude expérimentale sera analysées afin de mettre en exergue
+les avantages et inconvénients de chacune de ces structures. Le langage choisit pour l'implantation de ces deux
+structures est JAVA.
+
+\section*{Trie}
+Un Trie est une représentation arborescente d'un ensemble de clés en évitant de répéter les préfixes communs.
+
+\section*{Trie Hybride}
+Un Trie Hybride est un arbre ternaire dont chaque noeud contient un caractère et une valeur (non vide
+lorsque le noeud représente une clé). Chaque noeud a 3 pointeurs: un lien Inf (resp. Eq, res. Sup) vers le sous
+arbre dont le premier caractère est inférieur (resp. égal, resp. supérieur) à son caractère. Il permet en outre
+de réduire le nombre de pointeurs vide par rapport à un R-Trie.
+
+\section*{Patricia Trie}
+Un Patricia Trie est un arbre dont le but est de réduire la taille des R-Trie tout en conservant une recherche
+efficace. Pour ce faire, plutôt que chaque noeud interne permette de distinguer une lettre, il permet de distinguer
+la plus longue sous-chaîne de lettres communes à plusieurs mots.
+
 \chapter{Trie Hybride}
 \section{Implantation}
+\subsection{Structure}
+Dans notre implantation JAVA, un Trie Hybride est un objet qui contient 5 éléments:
+\begin{itemize}
+ \item un char ``letter'', qui correspond à la lettre stockée.
+ \item une valeur ``value'', qui correspond à la représentation de fin de mot (-1 le noeud n'est pas la fin
+ d'un mot, sinon la valeur correspond à l'ordre d'ajout croissant).
+ \item un pointeur vers un Trie Hybride ``fc'', ce Trie Hybride correpond au fils central, c'est-à-dire on parcours ce
+ Trie Hybride si le caractère recherché au Trie Hybride courant est correct.
+ \item un pointeur vers un Trie Hybride ``fg'', ce Trie Hybride correpond au fils gauche, c'est-à-dire on parcours ce
+ Trie Hybride si le caractère recherché au Trie Hybride courant est plus petit dans l'ordre alphabétique.
+ \item un pointeur vers un Trie Hybride ``fd'', ce Trie Hybride correpond au fils droit, c'est-à-dire on parcours ce
+ Trie Hybride si le caractère recherché au Trie Hybride courant est plus grand dans l'ordre alphabétique.
+\end{itemize}
+
+\paragraph*{}
+Voici une représentation ci-dessous du Trie Hybride résultant des l'ajouts successifs des mots:
+\begin{itemize}
+ \item don
+ \item le
+ \item a
+ \item dort
+\end{itemize}
+
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 6cm/#1,
+  level distance = 2.5cm}]
+\node [arn_n] {d \\ -1}
+    child{ node [arn_n] {a \\ 2}}
+    child{ node [arn_n] {o \\ -1}
+	    child{ node [arn_x] {}}
+            child{ node [arn_n] {n \\ 0} 
+							child{ node [arn_n] {r \\ -1}
+							      child{ node [arn_n] {t \\ 3}}
+							}
+							child{ node [arn_x] {}}
+							child{ node [arn_x] {}}
+            }
+            child{ node [arn_x] {}}
+		}
+    child{ node [arn_n] {l \\ -1}
+	    child{ node [arn_n] {e \\ 1}}
+    }
+; 
+\end{tikzpicture}
+\begin{figure}[!htbp]
+\caption{Représentation d'un Trie Hybride}
+\end{figure}
+
+\section{Description des algorithmes}
+
+
+\subsection{Trie Hybride}
+
+
+
 \section{Complexité}
 \subsection{Recherche}
 Pour la recherche d'un mot de \textit{L} caractères et un Trie Hybride de taille \textit{n}, 
