@@ -151,11 +151,6 @@ Les étapes sont donc:
  \item si le Trie Hybride courant est un pointeur null alors on a un cas d'arrêt
  \item si le mot est réduit à une lettre alors on vérifie que le caractère du mot et du Trie Hybride courant, s'ils ne sont
  pas égaux alors on fait un appel récursif sur le fils gauche ou droit suivant la comparaison de l'ordre alphabétique des lettres
- \item dans le cas général, on compare le caractère du mot et le caractère du Trie Hybride courant, si les lettres
- concordent alors on appel récursivement sur le fils central, s'ils sont différents on fait un appel récursif sur le
- fils gauche ou droit suivant l'ordre alphabétique des caractères.
- \item on calcul le nombre de mots issus de chaque fils, s'il existe un fils dont le nombre de mots est égal à 0, alors on détruit
- le fils en question.
 \end{itemize}
 
 
