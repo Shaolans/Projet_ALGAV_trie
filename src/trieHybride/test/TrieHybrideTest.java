@@ -30,20 +30,20 @@ public class TrieHybrideTest {
 		//System.out.println(TrieHybridePrimitive.recherche(root, "quel"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motorise"));
 		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
-		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
+		root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
-		TrieHybridePrimitive.ajoutMot("ling", root);
+		/*TrieHybridePrimitive.ajoutMot("ling", root);
 		TrieHybridePrimitive.ajoutMot("lune", root);
 		TrieHybridePrimitive.ajoutMot("li", root);
-		TrieHybridePrimitive.ajoutMot("la", root);
+		TrieHybridePrimitive.ajoutMot("la", root);*/
 		/*System.out.println(TrieHybridePrimitive.comptageMots(root));
 		System.out.println(TrieHybridePrimitive.comptageNil(root));
 		System.out.println(TrieHybridePrimitive.hauteur(root));*/
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
-		System.out.println(TrieHybridePrimitive.prefixe(root, "li"));
+		/*System.out.println(TrieHybridePrimitive.prefixe(root, "li"));
 		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
 		TrieVisualizer.visualizeTrieHybride(root);
-		TrieHybridePrimitive.supression(root, "ling");
+		TrieHybridePrimitive.supression(root, "ling");*/
 		
 		
 		/*TrieHybridePrimitive.ajoutMot("th", root);
@@ -71,7 +71,18 @@ public class TrieHybrideTest {
 		System.out.println(root.getfd().getfd());
 		System.out.println(root.getfd().getfg());*/
 		
-		TrieVisualizer.visualizeTrieHybride(root);
+		
+		/*
+		TrieHybridePrimitive.supression(root,"t");
+		TrieHybridePrimitive.supression(root,"th");
+		TrieHybridePrimitive.supression(root,"the");
+		TrieHybridePrimitive.supression(root,"them");
+		TrieHybridePrimitive.supression(root,"themeselves");
+		System.out.println(TrieHybridePrimitive.recherche(root, "theme"));
+		TrieHybridePrimitive.supression(root,"theme");
+		System.out.println(TrieHybridePrimitive.recherche(root, "theme"));
+		*/
+		//TrieVisualizer.visualizeTrieHybride(root);
 		//TrieHybridePrimitive.supression(root, "genial");
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		//System.out.println(root.getChar());

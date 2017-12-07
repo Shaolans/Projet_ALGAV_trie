@@ -450,10 +450,12 @@ public class TrieHybridePrimitive {
 			//si la lettre ne concorde pas on continue la recherche dans le fils gauche ou droit
 			if(c > th.getChar()){
 				suppressionAux(th.getfd(), th, word);
+				return;
 			}
 			
 			if(c < th.getChar()){
 				suppressionAux(th.getfg(), th, word);
+				return;
 			}
 		}
 		
