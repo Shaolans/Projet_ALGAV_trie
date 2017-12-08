@@ -1,37 +1,50 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {0}Introduction}{2}
-\contentsline {chapter}{\numberline {1}Trie Hybride}{3}
-\contentsline {section}{\numberline {1.1}Implantation}{3}
-\contentsline {subsection}{\numberline {1.1.1}Structure}{3}
-\contentsline {section}{\numberline {1.2}Description des algorithmes}{4}
-\contentsline {subsection}{\numberline {1.2.1}Algorithmes triviaux}{4}
-\contentsline {subsection}{\numberline {1.2.2}AjoutMot}{4}
-\contentsline {subsection}{\numberline {1.2.3}Suppression}{5}
-\contentsline {section}{\numberline {1.3}Complexit\IeC {\'e}}{5}
-\contentsline {subsection}{\numberline {1.3.1}Recherche}{5}
-\contentsline {subsection}{\numberline {1.3.2}Comptage Mots}{5}
-\contentsline {subsection}{\numberline {1.3.3}Liste Mots}{5}
-\contentsline {subsection}{\numberline {1.3.4}Comptage Nil}{5}
-\contentsline {subsection}{\numberline {1.3.5}Hauteur}{6}
-\contentsline {subsection}{\numberline {1.3.6}Profondeur Moyenne}{6}
-\contentsline {subsection}{\numberline {1.3.7}Pr\IeC {\'e}fixe}{6}
-\contentsline {subsection}{\numberline {1.3.8}Suppression}{6}
-\contentsline {chapter}{\numberline {2}Patricia Trie}{7}
-\contentsline {section}{\numberline {2.1}Implantation}{7}
-\contentsline {section}{\numberline {2.2}Complexit\IeC {\'e}}{7}
-\contentsline {subsection}{\numberline {2.2.1}Recherche}{7}
-\contentsline {subsection}{\numberline {2.2.2}Comptage Mots}{7}
-\contentsline {subsection}{\numberline {2.2.3}Liste Mots}{7}
-\contentsline {subsection}{\numberline {2.2.4}Comptage Nil}{7}
-\contentsline {subsection}{\numberline {2.2.5}Hauteur}{7}
-\contentsline {subsection}{\numberline {2.2.6}Profondeur Moyenne}{7}
-\contentsline {subsection}{\numberline {2.2.7}Pr\IeC {\'e}fixe}{7}
-\contentsline {subsection}{\numberline {2.2.8}Suppression}{7}
-\contentsline {chapter}{\numberline {3}Fonctions complexes}{8}
-\contentsline {section}{\numberline {3.1}Implantation}{8}
-\contentsline {section}{\numberline {3.2}Complexit\IeC {\'e}}{8}
-\contentsline {subsection}{\numberline {3.2.1}Fusion de Patricia Trie}{8}
-\contentsline {subsection}{\numberline {3.2.2}Conversion de Patricia Trie en Trie Hybride}{8}
-\contentsline {subsection}{\numberline {3.2.3}Conversion de Trie Hybride en Patricia Trie}{8}
-\contentsline {subsection}{\numberline {3.2.4}R\IeC {\'e}\IeC {\'e}quilibrage de Trie Hybride}{8}
-\contentsline {chapter}{\numberline {4}Etude exp\IeC {\'e}rimentale}{9}
+\contentsline {chapter}{\numberline {0}Introduction}{3}
+\contentsline {chapter}{\numberline {1}Trie Hybride}{4}
+\contentsline {section}{\numberline {1.1}Implantation}{4}
+\contentsline {subsection}{\numberline {1.1.1}Structure}{4}
+\contentsline {section}{\numberline {1.2}Description des algorithmes}{5}
+\contentsline {subsection}{\numberline {1.2.1}Algorithmes triviaux}{5}
+\contentsline {subsection}{\numberline {1.2.2}AjoutMot}{5}
+\contentsline {subsection}{\numberline {1.2.3}Suppression}{6}
+\contentsline {section}{\numberline {1.3}Complexit\IeC {\'e}}{6}
+\contentsline {subsection}{\numberline {1.3.1}Recherche}{6}
+\contentsline {subsection}{\numberline {1.3.2}Comptage Mots}{6}
+\contentsline {subsection}{\numberline {1.3.3}Liste Mots}{6}
+\contentsline {subsection}{\numberline {1.3.4}Comptage Nil}{6}
+\contentsline {subsection}{\numberline {1.3.5}Hauteur}{7}
+\contentsline {subsection}{\numberline {1.3.6}Profondeur Moyenne}{7}
+\contentsline {subsection}{\numberline {1.3.7}Pr\IeC {\'e}fixe}{7}
+\contentsline {subsection}{\numberline {1.3.8}Suppression}{7}
+\contentsline {chapter}{\numberline {2}Patricia Trie}{8}
+\contentsline {section}{\numberline {2.1}Implantation}{8}
+\contentsline {section}{\numberline {2.2}Complexit\IeC {\'e}}{8}
+\contentsline {subsection}{\numberline {2.2.1}Recherche}{8}
+\contentsline {subsection}{\numberline {2.2.2}Comptage Mots}{8}
+\contentsline {subsection}{\numberline {2.2.3}Liste Mots}{8}
+\contentsline {subsection}{\numberline {2.2.4}Comptage Nil}{8}
+\contentsline {subsection}{\numberline {2.2.5}Hauteur}{8}
+\contentsline {subsection}{\numberline {2.2.6}Profondeur Moyenne}{8}
+\contentsline {subsection}{\numberline {2.2.7}Pr\IeC {\'e}fixe}{8}
+\contentsline {subsection}{\numberline {2.2.8}Suppression}{8}
+\contentsline {chapter}{\numberline {3}Fonctions complexes}{9}
+\contentsline {section}{\numberline {3.1}Implantation}{9}
+\contentsline {subsection}{\numberline {3.1.1}Fusion de Patricia Trie}{9}
+\contentsline {subsection}{\numberline {3.1.2}Conversion de Patricia Trie en Trie Hybride}{9}
+\contentsline {subsection}{\numberline {3.1.3}Conversion de Trie Hybride en Patricia Trie}{9}
+\contentsline {subsection}{\numberline {3.1.4}R\IeC {\'e}\IeC {\'e}quilibrage de Trie Hybride}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {section}{\numberline {3.2}Complexit\IeC {\'e}}{10}
+\contentsline {subsection}{\numberline {3.2.1}Fusion de Patricia Trie}{10}
+\contentsline {subsection}{\numberline {3.2.2}Conversion de Patricia Trie en Trie Hybride}{10}
+\contentsline {subsection}{\numberline {3.2.3}Conversion de Trie Hybride en Patricia Trie}{10}
+\contentsline {subsection}{\numberline {3.2.4}R\IeC {\'e}\IeC {\'e}quilibrage de Trie Hybride}{10}
+\contentsline {paragraph}{checkBalance}{10}
+\contentsline {paragraph}{balanceTrieHybride}{10}
+\contentsline {chapter}{\numberline {4}Etude exp\IeC {\'e}rimentale}{11}
+\contentsline {section}{\numberline {4.1}Temps de construction}{11}
+\contentsline {section}{\numberline {4.2}Temps d'ajout d'un mot}{11}
+\contentsline {section}{\numberline {4.3}Temps de suppression}{11}
+\contentsline {section}{\numberline {4.4}Profondeur moyenne des structures}{11}
+\contentsline {section}{\numberline {4.5}Hauteur}{12}

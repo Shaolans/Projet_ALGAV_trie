@@ -151,6 +151,11 @@ Les étapes sont donc:
  \item si le Trie Hybride courant est un pointeur null alors on a un cas d'arrêt
  \item si le mot est réduit à une lettre alors on vérifie que le caractère du mot et du Trie Hybride courant, s'ils ne sont
  pas égaux alors on fait un appel récursif sur le fils gauche ou droit suivant la comparaison de l'ordre alphabétique des lettres
+ \item dans le cas général, on compare le caractère du mot et le caractère du Trie Hybride courant, si les lettres
+ concordent alors on appel récursivement sur le fils central, s'ils sont différents on fait un appel récursif sur le
+ fils gauche ou droit suivant l'ordre alphabétique des caractères.
+ \item on calcul le nombre de mots issus de chaque fils, s'il existe un fils dont le nombre de mots est égal à 0, alors on détruit
+ le fils en question.
 \end{itemize}
 
 
@@ -163,50 +168,138 @@ en prenant la comparaison de caractère comme mesure, on obtient une complexité
  \item en $\Theta$(n) sinon.
 \end{itemize}
 Sinon on a une complexité en $\Theta$(n) dans le pire cas.
+
 \subsection{Comptage Mots}
 Le comptage de mots revient à faire un parcours de l'arbre en entier.
 Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du noeud comme mesure,
 on a donc une complexité $\Theta$(n).
+
 \subsection{Liste Mots}
 La récupération des mots dans un Trie Hybride correspond aussi à un parcours de l'arbre en entier en gardant le \textit{préfixe}
 en argument dans les appels de fonctions.
 Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du noeud comme mesure,
 on a donc une complexité en $\Theta$(n).
+
 \subsection{Comptage Nil}
 Le comptage de pointeur vers null correspond à un parcours de tout les noeuds pour compter le nombre de fils null.
 Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du noeud comme mesure,
 on a une complexité en $\Theta$(n) puisque pour \textit{n} noeuds, on a un nombre de comparaison $\le$ \textit{3n}.
+
 \subsection{Hauteur}
 La détermination de la hauteur du Trie Hybride est un parcours complet de l'arbre, en prenant l'existence de fils comme mesure
 , on obtient une complexité en $\Theta$(n).
+
 \subsection{Profondeur Moyenne}
 La profondeur moyenne d'un Trie Hybride est un parcours jusqu'aux feuilles dont on ajoute la profondeur dans une liste et on effectue
 une division. En prenant la comparaison d'existence de fils comme mesure, on obtient une complexité de $\Theta$(n).
+
 \subsection{Préfixe}
 La recherche du préfixe peut dans le pire des cas en $\Theta$(n) puisque le pire des cas est atteint lorsque le Trie Hybride
 revient à être une ``liste chaînée'' et donc à hauteur \textit{h}=n.
+
 \subsection{Suppression}
 La suppression d'un mot est une recherche dans le Trie Hybride, ce qui correspond à une complexité en $\Theta$(n) comparaison
 dans le pire cas, cependant il y a aussi 3 appels à la fonction comptageMots de complexité $\Theta$(n).
 On a donc une complexité en $\mathcal{O}$($n^2$).
+
 \chapter{Patricia Trie}
 \section{Implantation}
 \section{Complexité}
 \subsection{Recherche}
+
+
 \subsection{Comptage Mots}
+
 \subsection{Liste Mots}
+
 \subsection{Comptage Nil}
+
 \subsection{Hauteur}
+
 \subsection{Profondeur Moyenne}
+
 \subsection{Préfixe}
+
 \subsection{Suppression}
+
 \chapter{Fonctions complexes}
 \section{Implantation}
+\subsection{Fusion de Patricia Trie}
+
+\subsection{Conversion de Patricia Trie en Trie Hybride}
+
+\subsection{Conversion de Trie Hybride en Patricia Trie}
+
+\subsection{Rééquilibrage de Trie Hybride}
+\paragraph{}
+Après plusieurs ajouts successifs dans un Trie Hybride, ce dernier pourraitre être plutôt déséquilibré. Nous avons donc implantée
+une fonction permettant d'identifier si un Trie Hybride est équilibré et le rééquilibrage de celui-ci dans le cas échéant.
+Nous remarquons dans un Trie Hybride qu'il n'est pas modifiable dans la profondeur des fils centraux mais qu'il l'est, à
+partir d'un noeud courant, pour ses fils gauche et droit. En effet, ceux-ci sont ``intervertibles'' entre eux, nous pouvons donc
+considérer comme un équilibrage d'AVL dont le fils gauche et droit correspondent respectivement au fils gauche et droit d'un AVL.
+La fonction checkBalance(arbre) $\rightarrow$ booléen, permet d'identifier si un Trie Hybride est équilibré ou non, celui-ci
+calcul dans tout le Trie Hybride s'il existe un noeud dont le nombre de successions de fils gauche ou droit dans le fils gauche ou 
+droit du noeud courant diffère de plus de 1. S'il diffère alors le Trie Hybride est déséquilibré.
+
+\paragraph{}
+La fonction de réequilibrage est balanceTrieHybride(arbre) $\rightarrow$ void, elle se décompose en ces étapes:
+\begin{itemize}
+ \item le cas de base si le Trie Hybride est null
+ \item on calcul si le Trie Hybride est déjà équilibré, s'il est équilibré alors on récupère tout les fils centraux de la
+ successions de fils gauche et droit du noeud courant et on effectue des appels recursifs sur ces fils
+ \item on extrait la succession des fils gauche et droit du noeud courant et on effectue un tri dans l'ordre alphabétique
+ \item on retire dans ces noeuds les liens fils gauche et droit
+ \item on calcul le noeud qui sera au milieu, l'élément qui coupe en deux sous tableaux de taille égal
+ \item étant donné que nous manipulons des pointeurs et ne possédant pas de pointeur sur le père, nous remplaçons le contenu
+ dans l'ancien noeud courant par le nouveau noeud milieu et vice-versa
+ \item on effectue un appel à la fonction splitting(arbre,arbre[],arbre[]), celui-ci permet pour un noeud courant d'attribuer le
+ fils gauche et droit. le premier tableau correspond a l'ensemble des fils gauche que peut prendre le noeud courant et le second
+ tableau correspond à l'ensemble des fils droit que peut prendre le noeud courant. Ainsi cette fonction récursive, calcul par
+ dichotomie, les fils gauche et droit des noeuds.
+ \item on récupère tout les fils centraux du chemin de fils gauche et droit pour faire des appels récursifs
+\end{itemize}
+Il est important de noter que le nombre maximal de noeuds d'un chemin de fils gauche et droit est majoré par une contante (26
+pour les lettres de l'alphabet).
+
 \section{Complexité}
 \subsection{Fusion de Patricia Trie}
-\subsection{Conversion de Patricia Trie en Trie Hybride}
-\subsection{Conversion de Trie Hybride en Patricia Trie}
-\subsection{Rééquilibrage de Trie Hybride}
-\chapter{Etude expérimentale}
 
+\subsection{Conversion de Patricia Trie en Trie Hybride}
+
+\subsection{Conversion de Trie Hybride en Patricia Trie}
+
+\subsection{Rééquilibrage de Trie Hybride}
+\paragraph{checkBalance}
+La fonction qui vérifie si un Trie Hybride équilibré, s'appui sur la fonction checkBalanceAux qui lui même utilise countLRNode.
+Les complexités sont donc:
+\begin{itemize}
+ \item countLRNode est en $\Theta$(26) donc en $\Theta$(1), car le plus long chemin de fils gauche et droit est majoré par 26
+ \item checkBalanceAux est donc aussi en $\Theta$(1), puiqu'il calcul pour le fils gauche et droit du noeud courant
+ \item checkBalance est en $\Theta$($\log_{26}$(n)) donc en $\Theta$($\log_{}$(n)), puisqu'il fait appel à checkBalanceAux 
+pour tout les noeuds sauf les noeuds du chemin de fils gauche et droit.
+\end{itemize}
+
+\paragraph{balanceTrieHybride}
+De la même manière que checkBalance, la fonction balanceTrieHybride est en $\Theta$($\log_{}$(n)), puisque toutes les opérations
+sont des opérations en $\Theta$(1) sauf pour les appels récursifs.
+
+\chapter{Etude expérimentale}
+\section{Temps de construction}
+Nous avons calculé, le temps de construction des différentes implantations réalisées. Nous avons chargé avec un pas de 1000,
+tout les mots contenu dans l'oeuvre de Shakespeare, en repartant d'un Trie vide à chaque pas.
+\begin{figure}[!htbp]
+\caption{Courbe du temps de calcul en fonction du nombre d'ajouts}
+\end{figure}
+
+\section{Temps d'ajout d'un mot}
+Nous avons aussi calculé le temps d'ajout d'un mot dans des Trie qui avaient les oeuvres de Shakespeare déjà chargé, nous avons
+ajouté des mots français de longueur croissante, dont le plus long mot est composé de 25 lettres.
+\begin{figure}[!htbp]
+\caption{Courbe du temps de calcul en fonction de la longueur du mot}
+\end{figure}
+\section{Temps de suppression}
+
+
+\section{Profondeur des structures}
+\section{Hauteur}
 \end{document}
