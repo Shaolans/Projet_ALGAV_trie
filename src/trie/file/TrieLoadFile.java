@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import patriciaTrie.structure.PatriciaTrie;
 import trieHybride.implementation.TrieHybridePrimitive;
 import trieHybride.interfaces.ITrieHybride;
 
@@ -85,5 +86,50 @@ public class TrieLoadFile {
 			listword.addAll(TrieLoadFile.loadWords(prefix+"/"+file));
 		}
 		return listword;
+	}
+	
+	public static PatriciaTrie loadFilePatriciaTrie(String file) {
+		File f = new File(file);
+		Scanner sc = null;
+		String word;
+		PatriciaTrie construction = new PatriciaTrie();
+		
+		try{
+			sc = new Scanner(f);
+			while(sc.hasNext()){
+				word = sc.next();
+				PatriciaTrie.ajouterMot(construction, word.toLowerCase());
+			}
+		}catch(Exception ex){
+			ex.printStackTrace();
+		}finally {
+			sc.close();
+		}
+		return construction;
+	}
+	
+	public static PatriciaTrie loadFileShakespearePatriciaTrie() {
+		String prefix = "files/Shakespeare";
+		File folder = new File(prefix);
+		Scanner sc = null;
+		File f = null;
+		String word;
+		String[] listOfFiles = folder.list();
+		PatriciaTrie construction = new PatriciaTrie();
+		try{
+			for(String file: listOfFiles){
+				f = new File(prefix+"/"+file);
+				sc = new Scanner(f);
+				while(sc.hasNext()){
+					word = sc.next();
+					PatriciaTrie.ajouterMot(construction, word.toLowerCase());
+				}
+				sc.close();
+			}
+		}catch(Exception ex){
+			ex.printStackTrace();
+			sc.close();
+		}
+		return construction;
 	}
 }

@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import patriciaTrie.structure.PatriciaTrie;
+import trie.file.TrieLoadFile;
 import trieHybride.implementation.TrieHybridePrimitive;
 
 public class PrimitiveTest {
@@ -69,7 +70,8 @@ public class PrimitiveTest {
 		PatriciaTrie.ajouterMot(pt4,"marcher");
 		PatriciaTrie.ajouterMot(pt4,"mar");
 		trie.visualizer.TrieVisualizer.visualizePatriciaTrie(pt4);
-
+		
+		PatriciaTrie pt6 = TrieLoadFile.loadFileShakespearePatriciaTrie();
 		
 	}
 	
