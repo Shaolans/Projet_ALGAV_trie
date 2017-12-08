@@ -20,8 +20,7 @@ public class TempsSuppression {
 		Long debut;
 		Long fin;
 		Long elapsed;
-		TrieLoadFile.loadFileShakespeareTrieHybride(root);
-		List<String> supp = TrieHybridePrimitive.listeMots(root);
+		List<String> supp = TrieLoadFile.loadWordsShakespeare();
 		max = supp.size();
 		
 		while(max >= cpt+pas){

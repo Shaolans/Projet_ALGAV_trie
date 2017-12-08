@@ -71,7 +71,9 @@ public class PrimitiveTest {
 		PatriciaTrie.ajouterMot(pt4,"mar");
 		trie.visualizer.TrieVisualizer.visualizePatriciaTrie(pt4);
 		
-		PatriciaTrie pt6 = TrieLoadFile.loadFileShakespearePatriciaTrie();
+		//PatriciaTrie pt6 = TrieLoadFile.loadFileShakespearePatriciaTrie();
+		PatriciaTrie pt6 = TrieLoadFile.loadFilePatriciaTrie("files/Shakespeare/1henryiv.txt");
+		//PatriciaTrie pt6 = TrieLoadFile.loadFilePatriciaTrie("files/exemple_de_base");
 		
 	}
 	
