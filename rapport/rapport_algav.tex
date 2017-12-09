@@ -282,20 +282,23 @@ sont des opérations en $\Theta$(1) sauf pour les appels récursifs.
 \chapter{Etude expérimentale}
 \section{Temps de construction}
 Nous avons calculé le temps de construction des différentes implantations réalisées. Nous avons chargé avec un pas de 1000,
-tous les mots contenus dans l’œuvre de Shakespeare, en repartant d'un trie vide à chaque pas.
+tous les mots contenus dans l’œuvre de Shakespeare, en repartant d'un trie vide à chaque pas.\\
+\includegraphics{../comparaison/courbe_temps_construction.png}
 \begin{figure}[!htbp]
 \caption{Courbe du temps de calcul en fonction du nombre d'ajouts}
 \end{figure}
 
 \section{Temps d'ajout d'un mot}
 Nous avons aussi calculé le temps d'ajout d'un mot dans des tries qui avaient les œuvres de Shakespeare déjà chargées. Nous avons alors
-ajouté des mots français de longueur croissante, dont le plus long mot est composé de 25 lettres.
+ajouté des mots français de longueur croissante, dont le plus long mot est composé de 25 lettres.\\
+\includegraphics{../comparaison/courbe_ajout_mot.png}
 \begin{figure}[!htbp]
 \caption{Courbe du temps de calcul en fonction de la longueur du mot}
 \end{figure}
 \section{Temps de suppression}
 Le temps de suppression en chargeant dans les tries les œuvres de Shakespeare et en supprimant un ensemble de mot avec un pas
-de 1000.
+de 1000.\\
+\includegraphics{../comparaison/courbe_temps_suppression.png}
 \begin{figure}[!htbp]
 \caption{Courbe du temps de calcul en fonction du nombre de suppression}
 \end{figure}
@@ -303,13 +306,15 @@ de 1000.
 \section{Profondeur moyenne des structures}
 Cette étude de la profondeur des structures permet de mettre en évidence l'évolution de la profondeur moyenne des structures
 suivant le nombre de mots contenus. Nous avons chargé les œuvres de Shakespeare avec un pas de 1000 et en calculant la profondeur
-moyenne entre ces ajouts.
+moyenne entre ces ajouts.\\
+\includegraphics{../comparaison/courbe_profondeur_moyenne.png}
 \begin{figure}[!htbp]
 \caption{Courbe de la profondeur moyenne en fonction du nombre d'ajouts}
 \end{figure}
 \section{Hauteur}
 De la même manière que pour le calcul de la profondeur moyenne, nous avons chargé les œuvres et Shakespeare avec un pas de 1000
-et en calculant la hauteur entre ces ajouts.
+et en calculant la hauteur entre ces ajouts.\\
+\includegraphics{../comparaison/courbe_hauteur.png}
 \begin{figure}[!htbp]
 \caption{Courbe de la hauteur en fonction du nombre d'ajouts}
 \end{figure}

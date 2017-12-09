@@ -1,0 +1,6 @@
+plot "trie_hybride_temps_ajout_mot.txt" using 1:2 lt rgb "blue" with lines
+replot "patricia_trie_temps_ajout_mot.txt" using 1:2 lt rgb "red" with lines
+set term png
+set output "courbe_ajout_mot.png"
+set title "Temps d'ajout des tries en fonction de la longueur du mot"
+replot

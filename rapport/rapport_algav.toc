@@ -44,7 +44,7 @@
 \contentsline {paragraph}{balanceTrieHybride}{10}
 \contentsline {chapter}{\numberline {4}Etude exp\IeC {\'e}rimentale}{11}
 \contentsline {section}{\numberline {4.1}Temps de construction}{11}
-\contentsline {section}{\numberline {4.2}Temps d'ajout d'un mot}{11}
-\contentsline {section}{\numberline {4.3}Temps de suppression}{11}
-\contentsline {section}{\numberline {4.4}Profondeur moyenne des structures}{11}
-\contentsline {section}{\numberline {4.5}Hauteur}{12}
+\contentsline {section}{\numberline {4.2}Temps d'ajout d'un mot}{12}
+\contentsline {section}{\numberline {4.3}Temps de suppression}{12}
+\contentsline {section}{\numberline {4.4}Profondeur moyenne des structures}{13}
+\contentsline {section}{\numberline {4.5}Hauteur}{14}

@@ -1,0 +1,6 @@
+plot "trie_hybride_temps_construction.txt" using 1:2 lt rgb "blue" with lines
+replot "patricia_trie_temps_construction.txt" using 1:2 lt rgb "red" with lines
+set term png
+set output "courbe_temps_construction.png"
+set title "Temps de construction des tries en fonction du nombre de mots ajoutes"
+replot

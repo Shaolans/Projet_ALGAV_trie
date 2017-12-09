@@ -1,0 +1,7 @@
+plot "trie_hybride_profondeur_moyenne.txt" using 1:2 lt rgb "blue" with lines
+replot "trie_hybride_reequilibrage_profondeur_moyenne.txt" using 1:2 lt rgb "purple" with lines
+replot "patricia_trie_profondeur_moyenne.txt" using 1:2 lt rgb "red" with lines
+set term png
+set output "courbe_profondeur_moyenne.png"
+set title "Profondeur moyenne des tries en fonction du nombre de mots ajoutes"
+replot

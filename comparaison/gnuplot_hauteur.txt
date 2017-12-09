@@ -1,0 +1,7 @@
+plot "trie_hybride_hauteur.txt" using 1:2 lt rgb "blue" with lines
+replot "trie_hybride_reequilibrage_hauteur.txt" using 1:2 lt rgb "purple" with lines
+replot "patricia_trie_hauteur.txt" using 1:2 lt rgb "red" with lines
+set term png
+set output "courbe_hauteur.png"
+set title "Hauteur des tries en fonction du nombre de mots ajoutes"
+replot
