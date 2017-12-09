@@ -10568,9 +10568,9 @@ and
 lords
 king
 john
-[to
+to
 queen
-elinor]
+elinor
 so
 shall
 it
@@ -10618,9 +10618,9 @@ with
 grief
 king
 john
-[to
+to
 the
-bastard]
+bastard
 cousin
 away
 for
@@ -13018,7 +13018,7 @@ love
 me
 hubert
 hubert
-[aside]
+aside
 if
 i
 talk
@@ -13083,7 +13083,7 @@ you
 do
 me
 hubert
-[aside]
+aside
 his
 words
 do
@@ -13445,7 +13445,6 @@ with
 a
 cord
 irons
-&
 c
 do
 as

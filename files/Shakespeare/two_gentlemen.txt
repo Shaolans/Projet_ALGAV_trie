@@ -916,8 +916,8 @@ what
 said
 she
 speed
-[first
-nodding]
+first
+nodding
 ay
 proteus
 nod
@@ -3939,7 +3939,7 @@ here
 she
 comes
 speed
-[aside]
+aside
 o
 excellent
 motion
@@ -3963,7 +3963,7 @@ thousand
 good
 morrows
 speed
-[aside]
+aside
 o
 give
 ye
@@ -3985,7 +3985,7 @@ you
 two
 thousand
 speed
-[aside]
+aside
 he
 should
 give
@@ -4130,7 +4130,7 @@ you
 no
 more
 speed
-[aside]
+aside
 and
 yet
 you
@@ -11045,7 +11045,7 @@ be
 thy
 speed
 speed
-[reads]
+reads
 imprimis
 she
 can
@@ -13935,7 +13935,7 @@ she
 is
 dead
 julia
-[aside]
+aside
 twere
 false
 if
@@ -14035,7 +14035,7 @@ hers
 sepulchre
 thine
 julia
-[aside]
+aside
 he
 heard
 not
@@ -14102,7 +14102,7 @@ make
 true
 love
 julia
-[aside]
+aside
 if
 twere
 a
@@ -16579,7 +16579,7 @@ it
 somewhat
 rounder
 julia
-[aside]
+aside
 but
 love
 will
@@ -16635,7 +16635,7 @@ beauteous
 ladies
 eyes
 julia
-[aside]
+aside
 tis
 true
 such
@@ -16678,7 +16678,7 @@ love
 and
 peace
 julia
-[aside]
+aside
 but
 better
 indeed
@@ -16704,7 +16704,7 @@ doubt
 of
 that
 julia
-[aside]
+aside
 she
 needs
 not
@@ -16727,7 +16727,7 @@ are
 well
 derived
 julia
-[aside]
+aside
 true
 from
 a
@@ -16749,7 +16749,7 @@ them
 thurio
 wherefore
 julia
-[aside]
+aside
 that
 such
 an
@@ -17337,7 +17337,7 @@ you
 cannot
 give
 valentine
-[aside]
+aside
 how
 like
 a
@@ -17389,7 +17389,7 @@ me
 most
 unhappy
 julia
-[aside]
+aside
 and
 me
 when

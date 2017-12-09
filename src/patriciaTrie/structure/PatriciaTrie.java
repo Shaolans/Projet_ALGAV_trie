@@ -3,7 +3,16 @@ package patriciaTrie.structure;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Un PATRICIA trie est représenté par :
+ * - une valeur, qui est un préfixe 
+ * - un indice qui est le numéro de la prochaine lettre à évaluer dans les mots de même préfixe.
+ * 		Cet indice est aussi la taille du prefixe
+ * - un booléen, indiquant si ce noeud est une feuille ou non. Dans le cas où le noeud est une feuille,
+ * 		le préfixe est en fait le mot en entier.
+ * - un tableau de 27 PATRICIA tries fils, un pour chaque lettre de l'alphabet (le 27ème représente le caractère de fin de mot)  
+ *
+ */
 public class PatriciaTrie {
 
 	private PatriciaTrie[] patTries = new PatriciaTrie[27];
@@ -22,16 +31,33 @@ public class PatriciaTrie {
 		this.feuille=feuille;
 	}
 
-	
+	/**
+	 * Fonction de l'ajout d'un mot
+	 * Renvoie true si le mot est effectivement ajouté, false sinon.
+	 * En d'autres termes, renvoie true si le mot n'est pas déjà dans le pat trie, false sinon
+	 * @param p
+	 * @param word
+	 * @return
+	 */
 	public static boolean ajouterMot(PatriciaTrie p, String word) {
 		
+		/*
+		 *si la taille du mot à ajouter équivaut à celle du préfixe
+		 *et que la pat trie de fin de mot est déjà crée, on renvoie false 
+		 */
 		if(p.ind==word.length() && p.patTries[26]!=null)
 			return false;
+		
 		else{
+			/*
+			 * Si la taille du mot est égale à celle du préfixe,
+			 * on crée un nouveau pat trie de fin de mot
+			 */
 			if(p.ind==word.length())
 				p.patTries[26] = new PatriciaTrie(p.ind, word, true);
 			
 			else{
+				
 				char c = word.charAt(p.ind);
 				if(p.patTries[c-97]==null){
 					p.patTries[c-97] = new PatriciaTrie(p.ind+1, word, true);
@@ -59,19 +85,17 @@ public class PatriciaTrie {
 								}
 							}
 							
-							int val, indDiff;
+							int val;
 							
 							if(j==mot1.length()){
 								val = 26;
-								indDiff = -j; 
 							}
 							else{
 								val = word.charAt(j)-97;
-								indDiff = -j+1;
 							}
 									
 							String s = p.patTries[c-97].val;
-							PatriciaTrie np = new PatriciaTrie(p.patTries[c-97].ind+indDiff, s.substring(0, j), false);
+							PatriciaTrie np = new PatriciaTrie(j, s.substring(0, j), false);
 							np.patTries[s.charAt(j)-97] = p.patTries[c-97];
 							np.patTries[val]=new PatriciaTrie(p.patTries[c-97].ind, word, true);
 							p.patTries[c-97] = np;
@@ -168,13 +192,18 @@ public class PatriciaTrie {
 	public static boolean supprimerMot(PatriciaTrie p, String word) {		
 		
 		boolean res = true;
+		char c ;
 	
 		if(word.length()==p.ind){
-			p.patTries[26]=null;
+			c= '{';
 		}
 		else{
 			
-			char c = word.charAt(p.ind);
+			if(word.length()<p.ind)
+				return false;
+			
+			c = word.charAt(p.ind);	
+		}
 			
 			if(p.patTries[c-97]==null)
 				return false;
@@ -194,6 +223,7 @@ public class PatriciaTrie {
 					}
 					if(patTriesOqp==1){
 						if(!p.patTries[autrePat].feuille){
+							p.val = p.patTries[autrePat].val;
 							p.ind = p.patTries[autrePat].ind;
 							p.patTries = p.patTries[autrePat].patTries;
 						}
@@ -208,7 +238,6 @@ public class PatriciaTrie {
 			else{
 				res = supprimerMot(p.patTries[c-97], word);
 			}
-		}
 		
 		return res;
 	}

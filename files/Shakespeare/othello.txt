@@ -2625,7 +2625,7 @@ in
 fearful
 sense
 sailor
-[within]
+within
 what
 ho
 what
@@ -3172,8 +3172,8 @@ t
 duke
 of
 venice
-[to
-othello]
+to
+othello
 what
 in
 your
@@ -5028,7 +5028,6 @@ of
 venice
 senators
 officers
-&
 c
 othello
 my
@@ -7435,7 +7434,7 @@ in
 the
 scholar
 iago
-[aside]
+aside
 he
 takes
 her
@@ -7730,7 +7729,7 @@ hearts
 shall
 make
 iago
-[aside]
+aside
 o
 you
 are
@@ -9900,9 +9899,9 @@ true
 enter
 roderigo
 iago
-[aside
+aside
 to
-him]
+him
 how
 now
 roderigo
@@ -10061,9 +10060,9 @@ drunk
 they
 fight
 iago
-[aside
+aside
 to
-roderigo]
+roderigo
 away
 i
 say
@@ -14725,7 +14724,7 @@ leave
 me
 iago
 iago
-[going]
+going
 my
 lord
 i
@@ -14751,7 +14750,7 @@ than
 he
 unfolds
 iago
-[returning]
+returning
 my
 lord
 i
@@ -15382,8 +15381,8 @@ me
 filch
 it
 iago
-[snatching
-it]
+snatching
+it
 why
 what
 s
@@ -19971,7 +19970,7 @@ more
 exit
 cassio
 othello
-[advancing]
+advancing
 how
 shall
 i
@@ -20440,7 +20439,7 @@ desdemona
 my
 lord
 othello
-[reads]
+reads
 this
 fail
 you
@@ -20551,8 +20550,8 @@ why
 sweet
 othello
 othello
-[striking
-her]
+striking
+her
 devil
 desdemona
 i
@@ -21182,8 +21181,8 @@ fancy
 s
 this
 othello
-[to
-emilia]
+to
+emilia
 some
 of
 your
@@ -23442,7 +23441,7 @@ his
 nether
 lip
 desdemona
-[singing]
+singing
 the
 poor
 soul
@@ -23547,7 +23546,7 @@ s
 the
 wind
 desdemona
-[singing]
+singing
 i
 call
 d
@@ -24964,8 +24963,8 @@ know
 the
 man
 iago
-[to
-bianca]
+to
+bianca
 what
 look
 you
@@ -25976,7 +25975,7 @@ he
 stifles
 her
 emilia
-[within]
+within
 my
 lord
 my
@@ -26017,7 +26016,7 @@ pain
 so
 so
 emilia
-[within]
+within
 what
 ho
 my
@@ -26029,7 +26028,7 @@ who
 s
 there
 emilia
-[within]
+within
 o
 good
 my
@@ -26139,7 +26138,7 @@ yawn
 at
 alteration
 emilia
-[within]
+within
 i
 do
 beseech
@@ -26996,7 +26995,7 @@ lift
 up
 eye
 othello
-[rising]
+rising
 o
 she
 was
@@ -27508,7 +27507,7 @@ must
 come
 forth
 gratiano
-[within]
+within
 if
 thou
 attempt
@@ -28446,8 +28445,8 @@ great
 of
 heart
 lodovico
-[to
-iago]
+to
+iago
 o
 spartan
 dog

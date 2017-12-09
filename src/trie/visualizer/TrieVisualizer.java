@@ -64,41 +64,43 @@ public class TrieVisualizer {
 		String tableau = "[";
 		PatriciaTrie pattable[] = pt.getPatTries();
 		
-		//genere la string de tableau
-		for(int i = 0; i < 27; i++) {
-			if(pattable[i] != null) {
-				tableau += (char)(i+97)+"│";
-			}
-		}
-		
-		//retire le "|" en trop s'il y a
-		if(tableau.length() > 1) {
-			tableau = tableau.substring(0, tableau.length()-1);
-		}
-		tableau += "]";
-		
-		//affiche le tableau
-		System.out.println(prefix + "    " + (isLast?" ":"│" ) + "   " + tableau);
-		
-		//recherche du dernier element pour fermer "'|---"
-		int last = 0;
-		for(int i = 0; i < 27; i++) {
-			if(pattable[i] != null) {
-				last = i;
-			}
-		}
-		
-		//appel recursif
-		for(int i = 0; i < 27; i++) {
-			if(pattable[i] != null && last != i) {
-				TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "│   "), false, pattable[i]);
+		if(!pt.isFeuille()){
+			//genere la string de tableau
+			for(int i = 0; i < 27; i++) {
+				if(pattable[i] != null) {
+					tableau += (char)(i+97)+"│";
+				}
 			}
 			
-		}
-		
-		//appel du dernier element
-		if(pattable[last] != null) {
-			TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "│   "), true, pattable[last]);
+			//retire le "|" en trop s'il y a
+			if(tableau.length() > 1) {
+				tableau = tableau.substring(0, tableau.length()-1);
+			}
+			tableau += "]";
+			
+			//affiche le tableau
+			System.out.println(prefix + "    " + (isLast?" ":"│" ) + "   " + tableau);
+			
+			//recherche du dernier element pour fermer "'|---"
+			int last = 0;
+			for(int i = 0; i < 27; i++) {
+				if(pattable[i] != null) {
+					last = i;
+				}
+			}
+			
+			//appel recursif
+			for(int i = 0; i < 27; i++) {
+				if(pattable[i] != null && last != i) {
+					TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "│   "), false, pattable[i]);
+				}
+				
+			}
+			
+			//appel du dernier element
+			if(pattable[last] != null) {
+				TrieVisualizer.visualizePatriciaTrieAux(prefix +"    "+ (isLast ? "    " : "│   "), true, pattable[last]);
+			}
 		}
 		
 	}

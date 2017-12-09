@@ -2006,7 +2006,7 @@ and
 my
 son
 hamlet
-[aside]
+aside
 a
 little
 more
@@ -6507,17 +6507,17 @@ sworn
 t
 marcellus
 horatio
-[within]
+within
 my
 lord
 my
 lord
 marcellus
-[within]
+within
 lord
 hamlet
 horatio
-[within]
+within
 heaven
 secure
 him
@@ -6526,7 +6526,7 @@ so
 be
 it
 horatio
-[within]
+within
 hillo
 ho
 ho
@@ -6844,7 +6844,7 @@ my
 sword
 indeed
 ghost
-[beneath]
+beneath
 swear
 hamlet
 ah
@@ -6891,7 +6891,7 @@ by
 my
 sword
 ghost
-[beneath]
+beneath
 swear
 hamlet
 hic
@@ -6928,7 +6928,7 @@ by
 my
 sword
 ghost
-[beneath]
+beneath
 swear
 hamlet
 well
@@ -7095,7 +7095,7 @@ help
 you
 swear
 ghost
-[beneath]
+beneath
 swear
 hamlet
 rest
@@ -9191,7 +9191,6 @@ excellent
 white
 bosom
 these
-&
 c
 queen
 gertrude
@@ -9556,12 +9555,12 @@ i
 know
 lord
 polonius
-[pointing
+pointing
 to
 his
 head
 and
-shoulder]
+shoulder
 take
 this
 from
@@ -9840,7 +9839,7 @@ to
 t
 lord
 polonius
-[aside]
+aside
 how
 say
 you
@@ -10006,7 +10005,7 @@ go
 backward
 lord
 polonius
-[aside]
+aside
 though
 this
 be
@@ -10146,8 +10145,8 @@ there
 he
 is
 rosencrantz
-[to
-polonius]
+to
+polonius
 god
 save
 you
@@ -10705,14 +10704,14 @@ for
 or
 no
 rosencrantz
-[aside
+aside
 to
-guildenstern]
+guildenstern
 what
 say
 you
 hamlet
-[aside]
+aside
 nay
 then
 i
@@ -11683,7 +11682,7 @@ passing
 well
 lord
 polonius
-[aside]
+aside
 still
 on
 my
@@ -13750,7 +13749,7 @@ devil
 himself
 king
 claudius
-[aside]
+aside
 o
 tis
 too
@@ -15956,9 +15955,9 @@ more
 attractive
 lord
 polonius
-[to
+to
 king
-claudius]
+claudius
 o
 ho
 do
@@ -16649,7 +16648,7 @@ d
 the
 first
 hamlet
-[aside]
+aside
 wormwood
 wormwood
 player
@@ -19193,7 +19192,7 @@ days
 exit
 king
 claudius
-[rising]
+rising
 my
 words
 fly
@@ -19271,7 +19270,7 @@ round
 with
 him
 hamlet
-[within]
+within
 mother
 mother
 mother
@@ -19443,14 +19442,14 @@ help
 ho
 lord
 polonius
-[behind]
+behind
 what
 ho
 help
 help
 help
 hamlet
-[drawing]
+drawing
 how
 now
 a
@@ -19468,7 +19467,7 @@ the
 arras
 lord
 polonius
-[behind]
+behind
 o
 i
 am
@@ -20706,8 +20705,8 @@ of
 nature
 and
 either
-[
-]
+
+
 the
 devil
 or
@@ -21527,7 +21526,7 @@ safely
 stowed
 rosencrantz
 guildenstern
-[within]
+within
 hamlet
 lord
 hamlet
@@ -23156,7 +23155,7 @@ how
 now
 ophelia
 ophelia
-[sings]
+sings
 how
 should
 i
@@ -23245,7 +23244,7 @@ here
 my
 lord
 ophelia
-[sings]
+sings
 larded
 with
 sweet
@@ -24198,7 +24197,7 @@ to
 your
 eye
 danes
-[within]
+within
 let
 her
 come
@@ -24299,7 +24298,7 @@ thing
 it
 loves
 ophelia
-[sings]
+sings
 they
 bore
 him
@@ -24342,7 +24341,7 @@ not
 move
 thus
 ophelia
-[sings]
+sings
 you
 must
 sing
@@ -24494,7 +24493,7 @@ and
 to
 prettiness
 ophelia
-[sings]
+sings
 and
 will
 he
@@ -24840,7 +24839,7 @@ know
 it
 is
 horatio
-[reads]
+reads
 horatio
 when
 thou
@@ -26761,7 +26760,6 @@ two
 clowns
 with
 spades
-&
 c
 first
 clown
@@ -27351,7 +27349,7 @@ daintier
 sense
 first
 clown
-[sings]
+sings
 but
 age
 with
@@ -27548,7 +27546,7 @@ on
 t
 first
 clown
-[sings]
+sings
 a
 pick
 axe
@@ -28616,7 +28614,6 @@ the
 king
 enter
 priest
-&
 c
 in
 procession
@@ -28634,7 +28631,6 @@ queen
 gertrude
 their
 trains
-&
 c
 the
 queen
@@ -28944,7 +28940,7 @@ of
 blue
 olympus
 hamlet
-[advancing]
+advancing
 what
 is
 he
@@ -31233,7 +31229,6 @@ and
 attendants
 with
 foils
-&
 c
 king
 claudius
@@ -31849,7 +31844,7 @@ pardon
 me
 king
 claudius
-[aside]
+aside
 it
 is
 the
@@ -31894,7 +31889,7 @@ not
 think
 t
 laertes
-[aside]
+aside
 and
 yet
 tis

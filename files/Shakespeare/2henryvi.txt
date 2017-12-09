@@ -328,7 +328,7 @@ welcome
 my
 love
 all
-[kneeling]
+kneeling
 long
 live
 queen
@@ -374,7 +374,7 @@ concluded
 by
 consent
 gloucester
-[reads]
+reads
 imprimis
 it
 is
@@ -496,7 +496,7 @@ pray
 read
 on
 cardinal
-[reads]
+reads
 item
 it
 is
@@ -1668,7 +1668,7 @@ of
 his
 country
 york
-[aside]
+aside
 and
 so
 says
@@ -3178,7 +3178,7 @@ lord
 protector
 queen
 margaret
-[reading]
+reading
 to
 my
 lord
@@ -3271,9 +3271,9 @@ our
 whole
 township
 peter
-[giving
+giving
 his
-petition]
+petition
 against
 my
 master
@@ -5208,7 +5208,6 @@ southwell
 reads
 conjuro
 te
-&
 c
 it
 thunders
@@ -5506,7 +5505,6 @@ with
 margaret
 jourdain
 southwell
-&
 c
 york
 lord
@@ -6049,9 +6047,9 @@ with
 my
 sword
 gloucester
-[aside
+aside
 to
-cardinal]
+cardinal
 faith
 holy
 uncle
@@ -6061,17 +6059,17 @@ come
 to
 that
 cardinal
-[aside
+aside
 to
-gloucester]
+gloucester
 marry
 when
 thou
 darest
 gloucester
-[aside
+aside
 to
-cardinal]
+cardinal
 make
 up
 no
@@ -6088,9 +6086,9 @@ answer
 thy
 abuse
 cardinal
-[aside
+aside
 to
-gloucester]
+gloucester
 ay
 where
 thou
@@ -6150,9 +6148,9 @@ gloucester
 true
 uncle
 cardinal
-[aside
+aside
 to
-gloucester]
+gloucester
 are
 ye
 advised
@@ -6163,9 +6161,9 @@ of
 the
 grove
 gloucester
-[aside
+aside
 to
-cardinal]
+cardinal
 cardinal
 i
 am
@@ -6210,9 +6208,9 @@ fence
 shall
 fail
 cardinal
-[aside
+aside
 to
-gloucester]
+gloucester
 medice
 teipsum
 protector
@@ -7164,7 +7162,6 @@ exeunt
 wife
 beadle
 mayor
-&
 c
 cardinal
 duke
@@ -7302,9 +7299,9 @@ grace
 shall
 understand
 cardinal
-[aside
+aside
 to
-gloucester]
+gloucester
 and
 so
 my
@@ -10970,7 +10967,7 @@ will
 be
 done
 york
-[aside]
+aside
 cold
 news
 for
@@ -15619,10 +15616,10 @@ me
 mighty
 sovereign
 salisbury
-[to
+to
 the
 commons
-entering]
+entering
 sirs
 stand
 apart
@@ -15841,7 +15838,7 @@ bereft
 of
 life
 commons
-[within]
+within
 an
 answer
 from
@@ -15909,7 +15906,7 @@ to
 the
 king
 commons
-[within]
+within
 an
 answer
 from
@@ -18957,7 +18954,7 @@ our
 supposed
 father
 dick
-[aside]
+aside
 or
 rather
 of
@@ -18995,7 +18992,7 @@ was
 a
 mortimer
 dick
-[aside]
+aside
 he
 was
 an
@@ -19011,7 +19008,7 @@ mother
 a
 plantagenet
 dick
-[aside]
+aside
 i
 knew
 her
@@ -19028,7 +19025,7 @@ of
 the
 lacies
 dick
-[aside]
+aside
 she
 was
 indeed
@@ -19041,7 +19038,7 @@ sold
 many
 laces
 smith
-[aside]
+aside
 but
 now
 of
@@ -19068,7 +19065,7 @@ an
 honourable
 house
 dick
-[aside]
+aside
 ay
 by
 my
@@ -19100,7 +19097,7 @@ valiant
 i
 am
 smith
-[aside]
+aside
 a
 must
 needs
@@ -19116,7 +19113,7 @@ to
 endure
 much
 dick
-[aside]
+aside
 no
 question
 of
@@ -19139,7 +19136,7 @@ sword
 nor
 fire
 smith
-[aside]
+aside
 he
 need
 not
@@ -19153,7 +19150,7 @@ is
 of
 proof
 dick
-[aside]
+aside
 but
 methinks
 he
@@ -19933,7 +19930,7 @@ taught
 you
 this
 cade
-[aside]
+aside
 he
 lies
 for
@@ -21318,7 +21315,7 @@ of
 your
 mouth
 holland
-[aside]
+aside
 mass
 twill
 be
@@ -21341,7 +21338,7 @@ not
 whole
 yet
 smith
-[aside]
+aside
 nay
 john
 it
@@ -21384,7 +21381,7 @@ parliament
 of
 england
 holland
-[aside]
+aside
 then
 we
 are
@@ -22111,7 +22108,7 @@ let
 me
 live
 cade
-[aside]
+aside
 i
 feel
 remorse
@@ -24529,7 +24526,7 @@ near
 the
 court
 york
-[aside]
+aside
 scarce
 can
 i

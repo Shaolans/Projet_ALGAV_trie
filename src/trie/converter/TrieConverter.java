@@ -5,10 +5,18 @@ import trieHybride.implementation.TrieHybride;
 import trieHybride.interfaces.ITrieHybride;
 
 public class TrieConverter {
-
+	
+	/**
+	 * Conversion d'un Patricia Trie vers un Trie Hybride
+	 * @param p
+	 * @return
+	 */
 	public static ITrieHybride patToHybridTrie(PatriciaTrie p){
+		
 		if(p==null)
 			return null;
+		
+		//appel à la méthode privée 
 		return  patToHybridTrie( p, null);
 	}
 
@@ -111,23 +119,38 @@ private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 		return th;
 	}
 
-	
+	/**
+	 * Conversion d'un Trie Hybride vers un Patricia Trie
+	 * @param th
+	 * @return
+	 */
 	public static PatriciaTrie hybrideTrieToPatricia(ITrieHybride th){
+		
 		if(th==null)
 			return null;
+		
+		//appel à la méthode privée
 		return hybrideTrieToPatricia(th, new PatriciaTrie());
 	}
 	
-	
+	/**
+	 * Conversion d'un Trie Hybride vers un Patricia Trie
+	 * @param th
+	 * @param pat
+	 * @return
+	 */
 	private static PatriciaTrie hybrideTrieToPatricia(ITrieHybride th, PatriciaTrie pat){
 		
-		StringBuilder prefixe = new StringBuilder();
+		StringBuilder prefixe = new StringBuilder(); //prefixe courant
 		PatriciaTrie [] patTries = pat.getPatTries();
 		ITrieHybride pTh = th;
 		ITrieHybride pThWord = th;
 		PatriciaTrie patBis = null;
 		ITrieHybride filsGauche, filsDroit;
 		
+		/*
+		 * Si le noeud courant un/des fils droit ou/et gauche, on fait les appels récursifs sur ce/ces fils.
+		 */
 		if(th.getfd()!=null){
 			pat = hybrideTrieToPatricia(pTh.getfd(), pat);
 		}
@@ -135,16 +158,39 @@ private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 			pat = hybrideTrieToPatricia(pTh.getfg(), pat);
 		}
 		
+		//le prefixe courant est la valeur du patricia trie actuel
 		prefixe.append(pat.getVal());
 		
+		/*
+		 * Boucle do while : tant que le noeud n'a pas de fils gauche ni droit,
+		 * c'est-à-dire tant qu'on a qu'une suite de noeuds centraux.
+		 */
 		do{
-			prefixe.append(pTh.getChar());
+			prefixe.append(pTh.getChar()); //on ajoute la valeur du noeud courant au préfixe
+			
+			/*
+			 * Si le noeud courant n'a pas de fils central,
+			 * alors le prefixe est en faire le mot en entier.
+			 * On ajoute alors au patricia trie courant un patricia trie fils, qui est donc une feuille,
+			 * et on le renvoie.
+			 */
 			if(pTh.getfc()==null){
 				int ind = pat.getInd()+pat.getVal().length();
 				patTries[pThWord.getChar()-97] = new PatriciaTrie(ind, prefixe.toString(), true);
 				return pat;
 			}
 			
+			/*
+			 * Sinon, le noeud courant possède un fils central
+			 */
+			
+			/*
+			 * Si le noeud signale la fin d'un mot, on crée un nouveau patricia trie fils du pat trie courant.
+			 * Ce nouveau fils a pour valeur le prefixe et n'est pas une feuille.
+			 * A ce nouveau fils, on crée un pat trie à la case de mot de pat trie formant un mot, de valeur prefixe 
+			 * (et qui est une feuille).
+			 * 
+			 */
 			if(pTh.isWord()){
 				
 				patTries[pThWord.getChar()-97] = new PatriciaTrie(prefixe.length(), prefixe.toString(), false);
@@ -155,11 +201,17 @@ private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 				
 			}
 			
+			//On prend le noeud du fils central comme noeud courant
 			pTh = pTh.getfc();
 			
 			filsDroit = pTh.getfd();
 			filsGauche = pTh.getfg();
 			
+			/*
+			 * Si on vient de créer un noeud mot, alors on regarde si le noeud courant a des fils gauche ou droit. 
+			 * Le cas échéant, on doit alors faire des appels recursifs sur ces fils, avec le nouveau patricia trie fils.
+			 *   
+			 */
 			if(pThWord==pTh){
 				if(filsDroit!=null){
 					patBis = hybrideTrieToPatricia(pTh.getfd(), patBis);
@@ -172,7 +224,12 @@ private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 			}
 			
 		}while(filsDroit==null && filsGauche==null);
-
+		
+		/*
+		 * on crée un nouveau patricia trie fils au patricia trie courant de valeur prefixe
+		 * comme ce noeud a au moins soit un fils droit ou un fils gauche, ce pat trie n'est pas une feuille,
+		 * et on fait les appels récursifs. 
+		 */
 		patTries[th.getChar()-97]=new PatriciaTrie(prefixe.length(), prefixe.toString(), false);
 		
 		patTries[th.getChar()-97] = hybrideTrieToPatricia(pTh, patTries[th.getChar()-97]);

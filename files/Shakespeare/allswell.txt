@@ -628,8 +628,8 @@ farewell
 bertram
 exit
 bertram
-[to
-helena]
+to
+helena
 the
 best
 wishes
@@ -1394,8 +1394,8 @@ not
 my
 virginity
 yet
-[
-]
+
+
 there
 shall
 your
@@ -5183,8 +5183,8 @@ and
 parolles
 retire
 parolles
-[to
-bertram]
+to
+bertram
 use
 a
 more
@@ -5282,7 +5282,7 @@ parolles
 enter
 lafeu
 lafeu
-[kneeling]
+kneeling
 pardon
 my
 lord
@@ -8027,8 +8027,8 @@ known
 thee
 already
 helena
-[to
-bertram]
+to
+bertram
 i
 dare
 not
@@ -8740,7 +8740,7 @@ lafeu
 and
 parolles
 lafeu
-[advancing]
+advancing
 do
 you
 hear
@@ -10355,8 +10355,8 @@ amity
 enter
 parolles
 parolles
-[to
-bertram]
+to
+bertram
 these
 things
 shall
@@ -10392,9 +10392,9 @@ very
 good
 tailor
 bertram
-[aside
+aside
 to
-parolles]
+parolles
 is
 she
 gone
@@ -11425,7 +11425,7 @@ have
 there
 exit
 countess
-[reads]
+reads
 i
 have
 sent
@@ -11902,7 +11902,7 @@ wing
 of
 speed
 helena
-[reads]
+reads
 till
 i
 have
@@ -12541,7 +12541,7 @@ read
 it
 again
 steward
-[reads]
+reads
 i
 am
 saint
@@ -14127,9 +14127,9 @@ enter
 parolles
 second
 lord
-[aside
+aside
 to
-bertram]
+bertram
 o
 for
 the
@@ -17887,7 +17887,7 @@ to
 live
 first
 soldier
-[reads]
+reads
 first
 demand
 of
@@ -18127,7 +18127,7 @@ marvellous
 poor
 first
 soldier
-[reads]
+reads
 demand
 of
 him
@@ -18560,7 +18560,7 @@ lord
 excellently
 first
 soldier
-[reads]
+reads
 dian
 the
 count
@@ -18681,7 +18681,7 @@ sides
 rogue
 first
 soldier
-[reads]
+reads
 when
 he
 swears
@@ -19337,7 +19337,7 @@ know
 his
 pleasure
 parolles
-[aside]
+aside
 i
 ll
 no
@@ -23028,7 +23028,7 @@ highness
 with
 herself
 king
-[reads]
+reads
 upon
 his
 many
@@ -24626,7 +24626,6 @@ by
 me
 with
 child
-&
 c
 this
 is

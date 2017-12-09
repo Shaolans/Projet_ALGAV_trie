@@ -3078,7 +3078,7 @@ is
 signior
 antonio
 shylock
-[aside]
+aside
 how
 like
 a
@@ -4987,7 +4987,7 @@ master
 jew
 s
 launcelot
-[aside]
+aside
 o
 heavens
 this
@@ -12056,7 +12056,7 @@ be
 the
 consequence
 portia
-[aside]
+aside
 how
 all
 the
@@ -13762,7 +13762,7 @@ of
 your
 friend
 bassanio
-[reads]
+reads
 sweet
 bassanio
 my
@@ -16986,7 +16986,7 @@ bellario
 s
 letter
 clerk
-[reads]
+reads
 your
 grace
 shall
@@ -19783,9 +19783,9 @@ keep
 for
 ever
 portia
-[aside
+aside
 to
-nerissa]
+nerissa
 thou
 mayst
 i
@@ -21037,8 +21037,8 @@ this
 breathing
 courtesy
 gratiano
-[to
-nerissa]
+to
+nerissa
 by
 yonder
 moon
@@ -21376,7 +21376,7 @@ mad
 at
 it
 bassanio
-[aside]
+aside
 why
 i
 were

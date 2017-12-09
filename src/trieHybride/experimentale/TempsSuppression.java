@@ -21,7 +21,7 @@ public class TempsSuppression {
 		Long fin;
 		Long elapsed;
 		List<String> supp = TrieLoadFile.loadWordsShakespeare();
-		max = supp.size();
+		max = 23000;
 		
 		while(max >= cpt+pas){
 			root = new TrieHybride();

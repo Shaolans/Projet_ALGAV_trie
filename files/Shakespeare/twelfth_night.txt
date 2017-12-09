@@ -6263,7 +6263,7 @@ for
 good
 life
 clown
-[sings]
+sings
 o
 mistress
 mine
@@ -6316,7 +6316,7 @@ belch
 good
 good
 clown
-[sings]
+sings
 what
 is
 love
@@ -6634,7 +6634,7 @@ natural
 sir
 toby
 belch
-[sings]
+sings
 o
 the
 twelfth
@@ -9349,7 +9349,7 @@ s
 why
 that
 malvolio
-[reads]
+reads
 to
 the
 unknown
@@ -9394,7 +9394,7 @@ liver
 and
 all
 malvolio
-[reads]
+reads
 jove
 knows
 i
@@ -9436,7 +9436,7 @@ hang
 thee
 brock
 malvolio
-[reads]
+reads
 i
 may
 command
@@ -12654,8 +12654,8 @@ and
 thanks
 and
 ever
-[
-]
+
+
 oft
 good
 turns
@@ -14184,7 +14184,7 @@ valiant
 sir
 toby
 belch
-[reads]
+reads
 wonder
 not
 nor
@@ -14224,7 +14224,7 @@ law
 sir
 toby
 belch
-[reads]
+reads
 thou
 comest
 to
@@ -14266,7 +14266,7 @@ less
 sir
 toby
 belch
-[reads]
+reads
 i
 will
 waylay
@@ -14287,7 +14287,7 @@ good
 sir
 toby
 belch
-[reads]
+reads
 thou
 killest
 me
@@ -14312,7 +14312,7 @@ good
 sir
 toby
 belch
-[reads]
+reads
 fare
 thee
 well
@@ -15533,8 +15533,8 @@ heels
 sir
 toby
 belch
-[to
-viola]
+to
+viola
 there
 s
 no
@@ -15585,7 +15585,7 @@ not
 hurt
 you
 viola
-[aside]
+aside
 pray
 god
 defend
@@ -17218,7 +17218,7 @@ a
 good
 knave
 malvolio
-[within]
+within
 who
 calls
 there
@@ -17632,7 +17632,7 @@ belch
 and
 maria
 clown
-[singing]
+singing
 hey
 robin
 jolly
@@ -18010,7 +18010,7 @@ prithee
 be
 gone
 clown
-[singing]
+singing
 i
 am
 gone
@@ -20581,8 +20581,8 @@ and
 this
 lord
 sebastian
-[to
-olivia]
+to
+olivia
 so
 comes
 it
@@ -20946,7 +20946,7 @@ sirrah
 to
 fabian
 fabian
-[reads]
+reads
 by
 the
 lord
@@ -21718,7 +21718,7 @@ all
 except
 clown
 clown
-[sings]
+sings
 when
 that
 i
@@ -21761,7 +21761,6 @@ estate
 with
 hey
 ho
-&
 c
 gainst
 knaves
@@ -21774,7 +21773,6 @@ gate
 for
 the
 rain
-&
 c
 but
 when
@@ -21786,7 +21784,6 @@ wive
 with
 hey
 ho
-&
 c
 by
 swaggering
@@ -21797,7 +21794,6 @@ thrive
 for
 the
 rain
-&
 c
 but
 when
@@ -21809,7 +21805,6 @@ beds
 with
 hey
 ho
-&
 c
 with
 toss
@@ -21821,7 +21816,6 @@ heads
 for
 the
 rain
-&
 c
 a
 great
@@ -21833,7 +21827,6 @@ begun
 with
 hey
 ho
-&
 c
 but
 that

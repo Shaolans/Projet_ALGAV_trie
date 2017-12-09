@@ -1046,7 +1046,7 @@ thee
 from
 shame
 biron
-[reads]
+reads
 item
 that
 no
@@ -1811,7 +1811,7 @@ after
 the
 flesh
 ferdinand
-[reads]
+reads
 great
 deputy
 the
@@ -1842,7 +1842,7 @@ of
 costard
 yet
 ferdinand
-[reads]
+reads
 so
 it
 is
@@ -1891,7 +1891,7 @@ i
 beseech
 you
 ferdinand
-[reads]
+reads
 so
 it
 is
@@ -2049,7 +2049,7 @@ mirth
 costard
 me
 ferdinand
-[reads]
+reads
 that
 unlettered
 small
@@ -2058,7 +2058,7 @@ soul
 costard
 me
 ferdinand
-[reads]
+reads
 that
 shallow
 vassal
@@ -2066,7 +2066,7 @@ costard
 still
 me
 ferdinand
-[reads]
+reads
 which
 as
 i
@@ -2077,7 +2077,7 @@ costard
 o
 me
 ferdinand
-[reads]
+reads
 sorted
 and
 consorted
@@ -2107,7 +2107,7 @@ with
 a
 wench
 ferdinand
-[reads]
+reads
 with
 a
 child
@@ -2174,7 +2174,7 @@ am
 anthony
 dull
 ferdinand
-[reads]
+reads
 for
 jaquenetta
 so
@@ -2779,7 +2779,7 @@ to
 be
 crossed
 moth
-[aside]
+aside
 he
 speaks
 the
@@ -3481,7 +3481,7 @@ she
 deserves
 well
 moth
-[aside]
+aside
 to
 be
 whipped
@@ -9989,7 +9989,7 @@ a
 rare
 talent
 dull
-[aside]
+aside
 if
 a
 talent
@@ -10330,7 +10330,7 @@ lege
 domine
 sir
 nathaniel
-[reads]
+reads
 if
 love
 make
@@ -11112,7 +11112,7 @@ ferdinand
 ay
 me
 biron
-[aside]
+aside
 shot
 by
 heaven
@@ -11135,7 +11135,7 @@ in
 faith
 secrets
 ferdinand
-[reads]
+reads
 so
 sweet
 a
@@ -11817,7 +11817,7 @@ can
 vary
 wit
 dumain
-[reads]
+reads
 on
 a
 day
@@ -11985,7 +11985,7 @@ alike
 do
 dote
 longaville
-[advancing]
+advancing
 dumain
 thy
 love
@@ -12012,7 +12012,7 @@ taken
 napping
 so
 ferdinand
-[advancing]
+advancing
 come
 sir
 you
@@ -12672,8 +12672,8 @@ up
 the
 pieces
 biron
-[to
-costard]
+to
+costard
 ah
 you
 whoreson
@@ -14516,9 +14516,9 @@ military
 sir
 salutation
 moth
-[aside
+aside
 to
-costard]
+costard
 they
 have
 been
@@ -14583,8 +14583,8 @@ don
 adriano
 de
 armado
-[to
-holofernes]
+to
+holofernes
 monsieur
 are
 you
@@ -16929,9 +16929,9 @@ to
 mortal
 views
 biron
-[aside
+aside
 to
-moth]
+moth
 their
 eyes
 villain
@@ -16964,9 +16964,9 @@ not
 to
 behold
 biron
-[aside
+aside
 to
-moth]
+moth
 once
 to
 behold
@@ -20637,9 +20637,9 @@ take
 away
 alisander
 costard
-[to
+to
 sir
-nathaniel]
+nathaniel
 o
 sir
 you
@@ -21359,18 +21359,18 @@ grace
 s
 slipper
 boyet
-[aside
+aside
 to
-dumain]
+dumain
 loves
 her
 by
 the
 foot
 dumain
-[aside
+aside
 to
-boyet]
+boyet
 he
 may
 not
@@ -22961,8 +22961,8 @@ in
 an
 hospital
 princess
-[to
-ferdinand]
+to
+ferdinand
 ay
 sweet
 my

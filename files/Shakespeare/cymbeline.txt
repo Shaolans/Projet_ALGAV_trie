@@ -1735,7 +1735,7 @@ hurt
 him
 second
 lord
-[aside]
+aside
 no
 faith
 not
@@ -1772,7 +1772,7 @@ not
 hurt
 second
 lord
-[aside]
+aside
 his
 steel
 was
@@ -1794,7 +1794,7 @@ stand
 me
 second
 lord
-[aside]
+aside
 no
 but
 he
@@ -1827,7 +1827,7 @@ some
 ground
 second
 lord
-[aside]
+aside
 as
 many
 inches
@@ -1847,7 +1847,7 @@ between
 us
 second
 lord
-[aside]
+aside
 so
 would
 i
@@ -1877,7 +1877,7 @@ refuse
 me
 second
 lord
-[aside]
+aside
 if
 it
 be
@@ -1923,7 +1923,7 @@ her
 wit
 second
 lord
-[aside]
+aside
 she
 shines
 not
@@ -1951,7 +1951,7 @@ hurt
 done
 second
 lord
-[aside]
+aside
 i
 wish
 not
@@ -4143,7 +4143,7 @@ your
 own
 way
 cornelius
-[aside]
+aside
 i
 do
 suspect
@@ -4156,14 +4156,14 @@ do
 no
 harm
 queen
-[to
-pisanio]
+to
+pisanio
 hark
 thee
 a
 word
 cornelius
-[aside]
+aside
 i
 do
 not
@@ -4810,7 +4810,7 @@ re
 kindly
 welcome
 iachimo
-[aside]
+aside
 all
 of
 her
@@ -4866,7 +4866,7 @@ rather
 directly
 fly
 imogen
-[reads]
+reads
 he
 is
 one
@@ -6542,7 +6542,7 @@ your
 bowl
 second
 lord
-[aside]
+aside
 if
 his
 wit
@@ -6608,7 +6608,7 @@ my
 rank
 second
 lord
-[aside]
+aside
 to
 have
 smelt
@@ -6677,7 +6677,7 @@ can
 match
 second
 lord
-[aside]
+aside
 you
 are
 cock
@@ -6769,7 +6769,7 @@ on
 t
 second
 lord
-[aside]
+aside
 he
 s
 a
@@ -6850,7 +6850,7 @@ i
 think
 second
 lord
-[aside]
+aside
 you
 are
 a
@@ -13288,7 +13288,7 @@ d
 of
 fortune
 imogen
-[reads]
+reads
 thy
 mistress
 pisanio
@@ -15452,7 +15452,7 @@ come
 about
 him
 queen
-[aside]
+aside
 all
 the
 better
@@ -15743,7 +15743,7 @@ to
 augustus
 throne
 pisanio
-[aside]
+aside
 or
 this
 or
@@ -15768,7 +15768,7 @@ danger
 cloten
 hum
 pisanio
-[aside]
+aside
 i
 ll
 write
@@ -16680,10 +16680,10 @@ be
 cook
 d
 belarius
-[looking
+looking
 into
 the
-cave]
+cave
 stay
 come
 not
@@ -17612,8 +17612,8 @@ arviragus
 and
 imogen
 belarius
-[to
-imogen]
+to
+imogen
 you
 are
 not
@@ -17631,8 +17631,8 @@ you
 after
 hunting
 arviragus
-[to
-imogen]
+to
+imogen
 brother
 stay
 here
@@ -17847,7 +17847,7 @@ not
 this
 youth
 belarius
-[aside]
+aside
 o
 noble
 strain
@@ -17913,7 +17913,7 @@ please
 you
 sir
 imogen
-[aside]
+aside
 these
 are
 kind
@@ -20262,7 +20262,7 @@ guiderius
 and
 arviragus
 imogen
-[awaking]
+awaking
 yes
 sir
 to
@@ -24676,7 +24676,7 @@ apparitions
 vanish
 posthumus
 leonatus
-[waking]
+waking
 sleep
 thou
 hast
@@ -26637,7 +26637,7 @@ s
 see
 further
 pisanio
-[aside]
+aside
 it
 is
 my
@@ -26728,7 +26728,7 @@ this
 ring
 posthumus
 leonatus
-[aside]
+aside
 what
 s
 that
@@ -27348,7 +27348,7 @@ him
 now
 posthumus
 leonatus
-[advancing]
+advancing
 ay
 so
 thou
@@ -27853,15 +27853,15 @@ speak
 to
 me
 imogen
-[kneeling]
+kneeling
 your
 blessing
 sir
 belarius
-[to
+to
 guiderius
 and
-arviragus]
+arviragus
 though
 you
 did
@@ -29176,7 +29176,7 @@ made
 you
 finish
 iachimo
-[kneeling]
+kneeling
 i
 am
 down
@@ -29379,7 +29379,7 @@ declare
 the
 meaning
 soothsayer
-[reads]
+reads
 when
 as
 a

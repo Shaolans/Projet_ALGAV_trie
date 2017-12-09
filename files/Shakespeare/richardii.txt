@@ -5655,7 +5655,6 @@ the
 duke
 of
 york
-&
 c
 john
 of
@@ -21726,7 +21725,7 @@ desire
 duke
 of
 york
-[within]
+within
 my
 liege
 beware
@@ -21766,7 +21765,7 @@ fear
 duke
 of
 york
-[within]
+within
 open
 the
 door
@@ -22034,7 +22033,7 @@ death
 duchess
 of
 york
-[within]
+within
 what
 ho
 my

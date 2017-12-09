@@ -1584,7 +1584,7 @@ have
 overthrown
 him
 macbeth
-[aside]
+aside
 glamis
 and
 thane
@@ -1680,7 +1680,7 @@ i
 pray
 you
 macbeth
-[aside]
+aside
 two
 truths
 are
@@ -1800,7 +1800,7 @@ partner
 s
 rapt
 macbeth
-[aside]
+aside
 if
 chance
 will
@@ -1837,7 +1837,7 @@ aid
 of
 use
 macbeth
-[aside]
+aside
 come
 what
 come
@@ -2336,7 +2336,7 @@ my
 worthy
 cawdor
 macbeth
-[aside]
+aside
 the
 prince
 of
@@ -4816,7 +4816,7 @@ live
 or
 die
 macbeth
-[within]
+within
 who
 s
 there
@@ -6520,9 +6520,9 @@ to
 the
 lady
 malcolm
-[aside
+aside
 to
-donalbain]
+donalbain
 why
 do
 we
@@ -6538,9 +6538,9 @@ argument
 for
 ours
 donalbain
-[aside
+aside
 to
-malcolm]
+malcolm
 what
 should
 be
@@ -6570,9 +6570,9 @@ yet
 brew
 d
 malcolm
-[aside
+aside
 to
-donalbain]
+donalbain
 nor
 our
 strong
@@ -9027,7 +9027,7 @@ i
 hear
 horses
 banquo
-[within]
+within
 give
 us
 a
@@ -10797,7 +10797,6 @@ come
 away
 come
 away
-&
 c
 hark
 i
@@ -11580,7 +11579,6 @@ a
 song
 black
 spirits
-&
 c
 hecate
 retires
@@ -16882,7 +16880,7 @@ come
 to
 dunsinane
 doctor
-[aside]
+aside
 were
 i
 from

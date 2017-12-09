@@ -7011,8 +7011,8 @@ breaks
 a
 biscuit
 ajax
-[beating
-him]
+beating
+him
 you
 whoreson
 cur
@@ -7108,8 +7108,8 @@ you
 scurvy
 lord
 ajax
-[beating
-him]
+beating
+him
 you
 cur
 thersites
@@ -8534,7 +8534,7 @@ our
 native
 place
 cassandra
-[within]
+within
 cry
 trojans
 cry
@@ -8556,7 +8556,7 @@ know
 her
 voice
 cassandra
-[within]
+within
 cry
 trojans
 hector
@@ -11044,9 +11044,9 @@ go
 to
 him
 nestor
-[aside
+aside
 to
-diomedes]
+diomedes
 o
 this
 is
@@ -11058,9 +11058,9 @@ vein
 of
 him
 diomedes
-[aside
+aside
 to
-nestor]
+nestor
 and
 how
 his
@@ -11234,8 +11234,8 @@ ambition
 is
 dry
 ulysses
-[to
-agamemnon]
+to
+agamemnon
 my
 lord
 you
@@ -17913,7 +17913,7 @@ s
 one
 up
 pandarus
-[within]
+within
 what
 s
 all
@@ -19207,7 +19207,7 @@ of
 broken
 tears
 aeneas
-[within]
+within
 my
 lord
 is
@@ -19605,7 +19605,7 @@ their
 changeful
 potency
 aeneas
-[within]
+within
 nay
 good
 my
@@ -19618,7 +19618,7 @@ let
 us
 part
 paris
-[within]
+within
 brother
 troilus
 troilus
@@ -21570,8 +21570,8 @@ most
 imperious
 agamemnon
 agamemnon
-[to
-troilus]
+to
+troilus
 my
 well
 famed
@@ -23353,9 +23353,9 @@ me
 your
 hand
 ulysses
-[aside
+aside
 to
-troilus]
+troilus
 follow
 his
 torch
@@ -23518,7 +23518,7 @@ here
 ho
 speak
 calchas
-[within]
+within
 who
 calls
 diomedes
@@ -23530,7 +23530,7 @@ s
 your
 daughter
 calchas
-[within]
+within
 she
 comes
 to

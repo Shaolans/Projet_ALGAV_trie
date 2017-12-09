@@ -3976,8 +3976,8 @@ day
 is
 long
 antonio
-[to
-hero]
+to
+hero
 well
 niece
 i
@@ -7895,7 +7895,6 @@ then
 sigh
 not
 so
-&
 c
 don
 pedro
@@ -9062,8 +9061,8 @@ claudio
 and
 leonato
 benedick
-[coming
-forward]
+coming
+forward
 this
 can
 be
@@ -10399,8 +10398,8 @@ hero
 and
 ursula
 beatrice
-[coming
-forward]
+coming
+forward
 what
 fire
 is
@@ -11181,8 +11180,8 @@ the
 matter
 don
 john
-[to
-claudio]
+to
+claudio
 means
 your
 lordship
@@ -12363,7 +12362,7 @@ borachio
 what
 conrade
 watchman
-[aside]
+aside
 peace
 stir
 not
@@ -12432,7 +12431,7 @@ all
 to
 thee
 watchman
-[aside]
+aside
 some
 treason
 masters
@@ -12565,7 +12564,7 @@ this
 fashion
 is
 watchman
-[aside]
+aside
 i
 know
 that
@@ -18978,9 +18977,9 @@ from
 a
 challenge
 benedick
-[aside
+aside
 to
-claudio]
+claudio
 you
 are
 a
@@ -20566,9 +20565,9 @@ mourn
 with
 hero
 leonato
-[to
+to
 the
-watch]
+watch
 bring
 you
 these
@@ -21436,11 +21435,11 @@ is
 my
 lord
 claudio
-[reading
+reading
 out
 of
 a
-scroll]
+scroll
 done
 to
 death
@@ -22321,7 +22320,7 @@ which
 is
 beatrice
 beatrice
-[unmasking]
+unmasking
 i
 answer
 to

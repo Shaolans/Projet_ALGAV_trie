@@ -2907,7 +2907,7 @@ at
 your
 pleasure
 gremio
-[aside]
+aside
 to
 cart
 her
@@ -11250,7 +11250,7 @@ gamut
 of
 hortensio
 bianca
-[reads]
+reads
 gamut
 i
 am
@@ -11450,8 +11450,8 @@ and
 others
 attendants
 baptista
-[to
-tranio]
+to
+tranio
 signior
 lucentio
 this
@@ -14898,7 +14898,6 @@ all
 throws
 the
 meat
-&
 c
 about
 the
@@ -16174,7 +16173,7 @@ doth
 resemble
 you
 biondello
-[aside]
+aside
 as
 much
 as
@@ -16800,7 +16799,7 @@ bear
 you
 company
 petruchio
-[aside]
+aside
 eat
 it
 up
@@ -16998,7 +16997,7 @@ not
 till
 then
 hortensio
-[aside]
+aside
 that
 will
 not
@@ -17200,7 +17199,7 @@ st
 thou
 this
 hortensio
-[aside]
+aside
 i
 see
 she
@@ -17537,7 +17536,7 @@ i
 said
 so
 tailor
-[reads]
+reads
 imprimis
 a
 loose
@@ -17577,7 +17576,7 @@ gown
 petruchio
 proceed
 tailor
-[reads]
+reads
 with
 a
 small
@@ -17589,7 +17588,7 @@ confess
 the
 cape
 tailor
-[reads]
+reads
 with
 a
 trunk
@@ -17600,7 +17599,7 @@ confess
 two
 sleeves
 tailor
-[reads]
+reads
 the
 sleeves
 curiously
@@ -17780,7 +17779,7 @@ fie
 fie
 fie
 petruchio
-[aside]
+aside
 hortensio
 say
 thou
@@ -18064,7 +18063,7 @@ say
 it
 is
 hortensio
-[aside]
+aside
 why
 so
 this
@@ -19949,8 +19948,8 @@ may
 believe
 her
 petruchio
-[to
-vincentio]
+to
+vincentio
 why
 how
 now
@@ -20021,8 +20020,8 @@ brought
 to
 nothing
 vincentio
-[seeing
-biondello]
+seeing
+biondello
 come
 hither
 crack
@@ -20532,7 +20531,7 @@ are
 all
 undone
 lucentio
-[kneeling]
+kneeling
 pardon
 sweet
 father

@@ -5577,7 +5577,7 @@ ginn
 dromio
 of
 syracuse
-[within]
+within
 mome
 malt
 horse
@@ -5639,7 +5639,7 @@ street
 dromio
 of
 syracuse
-[within]
+within
 let
 him
 walk
@@ -5668,7 +5668,7 @@ door
 dromio
 of
 syracuse
-[within]
+within
 right
 sir
 i
@@ -5697,7 +5697,7 @@ day
 dromio
 of
 syracuse
-[within]
+within
 nor
 to
 day
@@ -5728,7 +5728,7 @@ owe
 dromio
 of
 syracuse
-[within]
+within
 the
 porter
 for
@@ -5791,7 +5791,7 @@ for
 an
 ass
 luce
-[within]
+within
 what
 a
 coil
@@ -5813,7 +5813,7 @@ master
 in
 luce
 luce
-[within]
+within
 faith
 no
 he
@@ -5846,7 +5846,7 @@ in
 my
 staff
 luce
-[within]
+within
 have
 at
 you
@@ -5861,7 +5861,7 @@ tell
 dromio
 of
 syracuse
-[within]
+within
 if
 thy
 name
@@ -5891,7 +5891,7 @@ hope
 of
 ephesus
 luce
-[within]
+within
 i
 thought
 to
@@ -5901,7 +5901,7 @@ you
 dromio
 of
 syracuse
-[within]
+within
 and
 you
 said
@@ -5928,7 +5928,7 @@ let
 me
 in
 luce
-[within]
+within
 can
 you
 tell
@@ -5944,7 +5944,7 @@ the
 door
 hard
 luce
-[within]
+within
 let
 him
 knock
@@ -5967,7 +5967,7 @@ the
 door
 down
 luce
-[within]
+within
 what
 needs
 all
@@ -5981,7 +5981,7 @@ in
 the
 town
 adriana
-[within]
+within
 who
 is
 that
@@ -5996,7 +5996,7 @@ noise
 dromio
 of
 syracuse
-[within]
+within
 by
 my
 troth
@@ -6020,7 +6020,7 @@ have
 come
 before
 adriana
-[within]
+within
 your
 wife
 sir
@@ -6152,7 +6152,7 @@ gate
 dromio
 of
 syracuse
-[within]
+within
 break
 any
 breaking
@@ -6198,7 +6198,7 @@ behind
 dromio
 of
 syracuse
-[within]
+within
 it
 seems
 thou
@@ -6228,7 +6228,7 @@ in
 dromio
 of
 syracuse
-[within]
+within
 ay
 when
 fowls

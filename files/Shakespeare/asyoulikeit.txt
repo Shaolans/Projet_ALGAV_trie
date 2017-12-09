@@ -9559,7 +9559,6 @@ not
 heigh
 ho
 sing
-&
 c
 duke
 senior
@@ -10832,7 +10831,7 @@ reading
 stand
 aside
 celia
-[reads]
+reads
 why
 should
 this
@@ -12098,9 +12097,9 @@ melancholy
 exit
 jaques
 rosalind
-[aside
+aside
 to
-celia]
+celia
 i
 will
 speak
@@ -13317,7 +13316,7 @@ among
 the
 goths
 jaques
-[aside]
+aside
 o
 knowledge
 ill
@@ -13491,7 +13490,7 @@ sauce
 to
 sugar
 jaques
-[aside]
+aside
 a
 material
 fool
@@ -13602,7 +13601,7 @@ to
 couple
 us
 jaques
-[aside]
+aside
 i
 would
 fain
@@ -13839,7 +13838,7 @@ is
 not
 lawful
 jaques
-[advancing]
+advancing
 proceed
 proceed
 i
@@ -13987,7 +13986,7 @@ timber
 warp
 warp
 touchstone
-[aside]
+aside
 i
 am
 not
@@ -18180,7 +18179,7 @@ you
 this
 railing
 rosalind
-[reads]
+reads
 why
 thy
 godhead
@@ -21100,7 +21099,6 @@ lie
 in
 spring
 time
-&
 c
 this
 carol
@@ -21129,7 +21127,6 @@ flower
 in
 spring
 time
-&
 c
 and
 therefore
@@ -21157,7 +21154,6 @@ prime
 in
 spring
 time
-&
 c
 touchstone
 truly
@@ -22239,9 +22235,9 @@ his
 bosom
 is
 rosalind
-[to
+to
 duke
-senior]
+senior
 to
 you
 i

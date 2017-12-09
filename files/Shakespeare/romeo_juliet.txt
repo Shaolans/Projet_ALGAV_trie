@@ -522,9 +522,9 @@ at
 us
 sir
 sampson
-[aside
+aside
 to
-gregory]
+gregory
 is
 the
 law
@@ -5366,9 +5366,9 @@ two
 years
 ago
 romeo
-[to
+to
 a
-servingman]
+servingman
 what
 lady
 is
@@ -5815,8 +5815,8 @@ bitter
 gall
 exit
 romeo
-[to
-juliet]
+to
+juliet
 if
 i
 profane
@@ -7123,7 +7123,7 @@ be
 a
 capulet
 romeo
-[aside]
+aside
 shall
 i
 hear
@@ -8125,7 +8125,7 @@ throughout
 the
 world
 nurse
-[within]
+within
 madam
 juliet
 i
@@ -8143,7 +8143,7 @@ do
 beseech
 thee
 nurse
-[within]
+within
 madam
 juliet
 by
@@ -13383,7 +13383,6 @@ exit
 romeo
 enter
 citizens
-&
 c
 first
 citizen
@@ -15797,7 +15796,7 @@ s
 your
 will
 nurse
-[within]
+within
 let
 me
 come
@@ -17539,7 +17538,7 @@ him
 back
 lady
 capulet
-[within]
+within
 ho
 daughter
 are
@@ -17707,7 +17706,7 @@ same
 villain
 romeo
 juliet
-[aside]
+aside
 villain
 and
 he
@@ -19282,7 +19281,7 @@ this
 haste
 friar
 laurence
-[aside]
+aside
 i
 would
 i
@@ -23831,7 +23830,7 @@ bid
 thee
 go
 page
-[aside]
+aside
 i
 am
 almost
@@ -23944,7 +23943,6 @@ with
 a
 torch
 mattock
-&
 c
 romeo
 give
@@ -24124,7 +24122,7 @@ farewell
 good
 fellow
 balthasar
-[aside]
+aside
 for
 all
 this
@@ -25228,7 +25226,7 @@ are
 warm
 first
 watchman
-[within]
+within
 lead
 boy
 which

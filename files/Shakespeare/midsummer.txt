@@ -5304,7 +5304,6 @@ offence
 philomel
 with
 melody
-&
 c
 fairy
 hence
@@ -5938,7 +5937,7 @@ good
 sir
 awake
 lysander
-[awaking]
+awaking
 and
 run
 through
@@ -6286,7 +6285,7 @@ her
 knight
 exit
 hermia
-[awaking]
+awaking
 help
 me
 lysander
@@ -7472,7 +7471,7 @@ with
 little
 quill
 titania
-[awaking]
+awaking
 what
 angel
 wakes
@@ -7482,7 +7481,7 @@ my
 flowery
 bed
 bottom
-[sings]
+sings
 the
 finch
 the
@@ -9183,7 +9182,7 @@ loves
 not
 you
 demetrius
-[awaking]
+awaking
 o
 helena
 goddess
@@ -10204,8 +10203,8 @@ no
 no
 he
 ll
-[
-]
+
+
 seem
 to
 break
@@ -12341,7 +12340,7 @@ sleep
 enter
 puck
 oberon
-[advancing]
+advancing
 welcome
 good
 robin
@@ -13601,7 +13600,7 @@ our
 dreams
 exeunt
 bottom
-[awaking]
+awaking
 when
 my
 cue
@@ -14547,7 +14546,7 @@ giving
 a
 paper
 theseus
-[reads]
+reads
 the
 battle
 with
@@ -16387,7 +16386,7 @@ is
 my
 love
 lion
-[roaring]
+roaring
 oh
 thisbe
 runs
@@ -16896,8 +16895,8 @@ and
 wall
 too
 bottom
-[starting
-up]
+starting
+up
 no
 assure
 you

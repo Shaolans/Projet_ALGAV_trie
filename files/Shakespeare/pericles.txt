@@ -1232,7 +1232,7 @@ love
 my
 head
 antiochus
-[aside]
+aside
 heaven
 that
 i
@@ -1766,9 +1766,9 @@ palace
 enter
 pericles
 pericles
-[to
+to
 lords
-without]
+without
 let
 none
 disturb
@@ -2274,7 +2274,7 @@ life
 from
 thee
 helicanus
-[kneeling]
+kneeling
 i
 have
 ground
@@ -3022,7 +3022,7 @@ gone
 to
 travel
 thaliard
-[aside]
+aside
 how
 the
 king
@@ -3057,7 +3057,7 @@ being
 at
 antioch
 thaliard
-[aside]
+aside
 what
 from
 antioch
@@ -3116,7 +3116,7 @@ life
 or
 death
 thaliard
-[aside]
+aside
 well
 i
 perceive
@@ -4809,7 +4809,7 @@ bells
 and
 all
 pericles
-[aside]
+aside
 a
 pretty
 moral
@@ -4890,7 +4890,7 @@ of
 my
 mind
 pericles
-[aside]
+aside
 simonides
 third
 fisherman
@@ -4910,7 +4910,7 @@ of
 her
 honey
 pericles
-[aside]
+aside
 how
 from
 the
@@ -5304,7 +5304,7 @@ with
 third
 fisherman
 pericles
-[aside]
+aside
 how
 well
 this
@@ -5979,7 +5979,6 @@ of
 king
 princess
 lords
-&
 c
 enter
 simonides
@@ -7144,7 +7143,7 @@ move
 me
 else
 thaisa
-[aside]
+aside
 now
 by
 the
@@ -8409,7 +8408,7 @@ this
 writing
 else
 pericles
-[aside]
+aside
 what
 s
 here
@@ -8531,7 +8530,7 @@ return
 the
 lie
 simonides
-[aside]
+aside
 now
 by
 the
@@ -13006,8 +13005,8 @@ pirates
 and
 marina
 boult
-[to
-marina]
+to
+marina
 come
 your
 ways
@@ -13605,8 +13604,8 @@ with
 this
 sign
 bawd
-[to
-marina]
+to
+marina
 pray
 you
 come
@@ -15315,8 +15314,8 @@ beseech
 you
 do
 bawd
-[to
-marina]
+to
+marina
 first
 i
 would
@@ -16805,11 +16804,11 @@ them
 helicanus
 tyrian
 sailor
-[to
+to
 the
 sailor
 of
-mytilene]
+mytilene
 where
 is
 lord

@@ -585,7 +585,7 @@ your
 house
 here
 page
-[within]
+within
 who
 s
 there
@@ -3239,8 +3239,8 @@ havior
 of
 reputation
 falstaff
-[to
-robin]
+to
+robin
 hold
 sirrah
 bear
@@ -3808,7 +3808,6 @@ down
 down
 adown
 a
-&
 c
 enter
 doctor
@@ -4195,9 +4194,9 @@ while
 writes
 mistress
 quickly
-[aside
+aside
 to
-simple]
+simple
 i
 am
 glad
@@ -4279,10 +4278,10 @@ do
 all
 myself
 simple
-[aside
+aside
 to
 mistress
-quickly]
+quickly
 tis
 a
 great
@@ -4296,9 +4295,9 @@ s
 hand
 mistress
 quickly
-[aside
+aside
 to
-simple]
+simple
 are
 you
 avised
@@ -4599,7 +4598,7 @@ i
 thank
 heaven
 fenton
-[within]
+within
 who
 s
 within
@@ -5972,7 +5971,7 @@ speaks
 sense
 exit
 ford
-[aside]
+aside
 i
 will
 be
@@ -5983,8 +5982,8 @@ find
 out
 this
 nym
-[to
-page]
+to
+page
 and
 this
 is
@@ -6227,10 +6226,10 @@ paltry
 knight
 mistress
 ford
-[aside
+aside
 to
 mistress
-page]
+page
 trust
 me
 i
@@ -6585,8 +6584,8 @@ my
 bully
 rook
 shallow
-[to
-page]
+to
+page
 will
 you
 go
@@ -10515,7 +10514,6 @@ vagram
 posies
 to
 shallow
-&
 c
 re
 enter
@@ -10619,7 +10617,7 @@ it
 is
 wonderful
 slender
-[aside]
+aside
 ah
 sweet
 anne
@@ -10842,7 +10840,7 @@ fight
 with
 him
 shallow
-[aside]
+aside
 o
 sweet
 anne
@@ -10924,10 +10922,10 @@ me
 sir
 hugh
 evans
-[aside
+aside
 to
 doctor
-caius]
+caius
 pray
 you
 use
@@ -10952,10 +10950,10 @@ ape
 sir
 hugh
 evans
-[aside
+aside
 to
 doctor
-caius]
+caius
 pray
 you
 let
@@ -11198,7 +11196,7 @@ follow
 gentlemen
 follow
 slender
-[aside]
+aside
 o
 sweet
 anne
@@ -11726,7 +11724,6 @@ and
 rugby
 shallow
 page
-&
 c
 well
 met
@@ -12066,7 +12063,7 @@ with
 him
 exit
 ford
-[aside]
+aside
 i
 think
 i
@@ -12797,7 +12794,7 @@ in
 that
 mind
 robin
-[within]
+within
 mistress
 ford
 mistress
@@ -13209,8 +13206,8 @@ shall
 i
 do
 falstaff
-[coming
-forward]
+coming
+forward
 let
 me
 see
@@ -13756,10 +13753,10 @@ not
 compass
 mistress
 page
-[aside
+aside
 to
 mistress
-ford]
+ford
 heard
 you
 that
@@ -17017,7 +17014,7 @@ sir
 john
 mistress
 page
-[within]
+within
 what
 ho
 gossip
@@ -19872,7 +19869,7 @@ thine
 ephesian
 calls
 falstaff
-[above]
+above
 how
 now
 mine
@@ -23542,7 +23539,7 @@ her
 daughter
 mistress
 page
-[aside]
+aside
 doctors
 doubt
 that

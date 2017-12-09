@@ -43,7 +43,6 @@ bishop
 of
 winchester
 heralds
-&
 c
 bedford
 hung
@@ -2911,7 +2910,7 @@ that
 calls
 first
 warder
-[within]
+within
 who
 s
 there
@@ -2931,7 +2930,7 @@ of
 gloucester
 second
 warder
-[within]
+within
 whoe
 er
 he
@@ -2954,7 +2953,7 @@ lord
 protector
 first
 warder
-[within]
+within
 the
 lord
 protect
@@ -10135,7 +10134,7 @@ the
 king
 richard
 plantagenet
-[aside]
+aside
 plantagenet
 i
 see
@@ -10794,7 +10793,7 @@ hand
 i
 give
 gloucester
-[aside]
+aside
 ay
 but
 i
@@ -10836,7 +10835,7 @@ not
 bishop
 of
 winchester
-[aside]
+aside
 so
 help
 me
@@ -10913,7 +10912,6 @@ exeunt
 serving
 men
 mayor
-&
 c
 warwick
 accept
@@ -11146,7 +11144,7 @@ duke
 of
 york
 somerset
-[aside]
+aside
 perish
 base
 prince
@@ -11467,7 +11465,7 @@ ll
 knock
 knocks
 watch
-[within]
+within
 qui
 est
 la
@@ -13380,7 +13378,7 @@ thee
 joan
 la
 pucelle
-[aside]
+aside
 done
 like
 a
@@ -15815,7 +15813,6 @@ departure
 out
 exeunt
 general
-&
 c
 talbot
 he
@@ -19151,7 +19148,7 @@ leisure
 cardinal
 of
 winchester
-[aside]
+aside
 now
 winchester
 will

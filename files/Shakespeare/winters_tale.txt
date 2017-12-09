@@ -1399,7 +1399,7 @@ while
 a
 friend
 leontes
-[aside]
+aside
 too
 hot
 too
@@ -6300,7 +6300,7 @@ raise
 us
 all
 antigonus
-[aside]
+aside
 to
 laughter
 as
@@ -9066,7 +9066,7 @@ read
 the
 indictment
 officer
-[reads]
+reads
 hermione
 queen
 to
@@ -10077,7 +10077,7 @@ seals
 and
 read
 officer
-[reads]
+reads
 hermione
 is
 chaste
@@ -13366,7 +13366,7 @@ the
 wool
 to
 autolycus
-[aside]
+aside
 if
 the
 springe
@@ -13709,9 +13709,9 @@ now
 canst
 stand
 autolycus
-[picking
+picking
 his
-pocket]
+pocket
 softly
 dear
 sir
@@ -14783,8 +14783,8 @@ flock
 shall
 prosper
 perdita
-[to
-polixenes]
+to
+polixenes
 sir
 welcome
 it
@@ -19939,7 +19939,7 @@ you
 a
 word
 camillo
-[aside]
+aside
 what
 i
 do
@@ -20356,7 +20356,7 @@ much
 an
 ounce
 autolycus
-[aside]
+aside
 very
 wisely
 puppies
@@ -20380,7 +20380,7 @@ scratch
 his
 beard
 autolycus
-[aside]
+aside
 i
 know
 not
@@ -20404,7 +20404,7 @@ be
 at
 palace
 autolycus
-[aside]
+aside
 though
 i
 am

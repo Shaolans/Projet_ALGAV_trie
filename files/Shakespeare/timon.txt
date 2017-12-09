@@ -154,9 +154,9 @@ but
 for
 that
 poet
-[reciting
+reciting
 to
-himself]
+himself
 when
 we
 for
@@ -1197,8 +1197,8 @@ s
 in
 youth
 timon
-[to
-lucilius]
+to
+lucilius
 love
 you
 the
@@ -4011,7 +4011,7 @@ show
 them
 entertainment
 flavius
-[aside]
+aside
 i
 scarce
 know
@@ -4112,7 +4112,7 @@ without
 fair
 reward
 flavius
-[aside]
+aside
 what
 will
 this
@@ -5145,7 +5145,6 @@ timon
 alcibiades
 and
 lords
-&
 c
 timon
 so
@@ -5618,9 +5617,9 @@ my
 mistress
 page
 page
-[to
+to
 the
-fool]
+fool
 why
 how
 now
@@ -6633,7 +6632,7 @@ said
 my
 lord
 flavius
-[aside]
+aside
 lord
 lucius
 and
@@ -7027,7 +7026,7 @@ s
 my
 lord
 lucullus
-[aside]
+aside
 one
 of
 lord
@@ -9418,7 +9417,7 @@ for
 answer
 sir
 flaminius
-[within]
+within
 servilius
 help
 my
@@ -10967,7 +10966,7 @@ we
 your
 lordship
 timon
-[aside]
+aside
 nor
 more
 willingly
@@ -11611,7 +11610,6 @@ enter
 the
 lords
 senators
-&
 c
 first
 lord
@@ -17379,7 +17377,7 @@ his
 cave
 behind
 timon
-[aside]
+aside
 excellent
 workman
 thou
@@ -17433,7 +17431,7 @@ youth
 and
 opulency
 timon
-[aside]
+aside
 must
 thou
 needs
@@ -17508,7 +17506,7 @@ d
 light
 come
 timon
-[aside]
+aside
 i
 ll
 meet
@@ -20005,9 +20003,9 @@ my
 poor
 ignorance
 alcibiades
-[reads
+reads
 the
-epitaph]
+epitaph
 here
 lies
 a

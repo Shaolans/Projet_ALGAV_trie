@@ -2168,8 +2168,8 @@ to
 me
 titus
 andronicus
-[to
-tamora]
+to
+tamora
 now
 madam
 are
@@ -3350,7 +3350,7 @@ adorn
 thy
 tomb
 all
-[kneeling]
+kneeling
 no
 man
 shed
@@ -4564,7 +4564,7 @@ lavinia
 s
 love
 aaron
-[aside]
+aside
 clubs
 clubs
 these
@@ -4643,8 +4643,8 @@ brave
 they
 draw
 aaron
-[coming
-forward]
+coming
+forward
 why
 how
 now
@@ -5009,7 +5009,7 @@ vulcan
 s
 badge
 aaron
-[aside]
+aside
 ay
 and
 as
@@ -5409,7 +5409,6 @@ titus
 andronicus
 with
 hunters
-&
 c
 marcus
 lucius
@@ -7428,7 +7427,7 @@ made
 heart
 lament
 aaron
-[aside]
+aside
 now
 will
 i
@@ -7975,7 +7974,7 @@ saturninus
 a
 letter
 saturninus
-[reads]
+reads
 an
 if
 we
@@ -8080,8 +8079,8 @@ bag
 of
 gold
 saturninus
-[to
-titus]
+to
+titus
 two
 of
 thy
@@ -8963,7 +8962,6 @@ lieth
 down
 the
 judges
-&
 c
 pass
 by
@@ -10514,7 +10512,7 @@ give
 thee
 mine
 aaron
-[aside]
+aside
 if
 that
 be
@@ -13579,7 +13577,7 @@ the
 news
 young
 lucius
-[aside]
+aside
 that
 you
 are
@@ -13920,7 +13918,7 @@ in
 her
 pains
 aaron
-[aside]
+aside
 pray
 to
 the
@@ -19756,10 +19754,10 @@ revenge
 but
 lucius
 tamora
-[aside
+aside
 to
 her
-sons]
+sons
 what
 say
 you
@@ -19804,7 +19802,7 @@ turn
 again
 titus
 andronicus
-[aside]
+aside
 i
 know
 them
@@ -19982,7 +19980,6 @@ to
 cry
 exit
 publius
-&
 c
 lay
 hold

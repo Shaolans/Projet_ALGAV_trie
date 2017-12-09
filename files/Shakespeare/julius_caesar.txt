@@ -5208,7 +5208,6 @@ see
 thyself
 shall
 rome
-&
 c
 speak
 strike
@@ -5233,7 +5232,6 @@ them
 up
 shall
 rome
-&
 c
 thus
 must
@@ -8747,7 +8745,7 @@ straightway
 go
 together
 brutus
-[aside]
+aside
 that
 every
 like
@@ -9369,9 +9367,9 @@ publius
 and
 others
 caesar
-[to
+to
 the
-soothsayer]
+soothsayer
 the
 ides
 of
@@ -16455,7 +16453,7 @@ leave
 you
 so
 poet
-[within]
+within
 let
 me
 go
@@ -16477,7 +16475,7 @@ they
 be
 alone
 lucilius
-[within]
+within
 you
 shall
 not
@@ -16485,7 +16483,7 @@ come
 to
 them
 poet
-[within]
+within
 nothing
 but
 death
@@ -18628,8 +18626,8 @@ word
 with
 you
 lucilius
-[standing
-forth]
+standing
+forth
 my
 lord
 brutus
@@ -18640,8 +18638,8 @@ apart
 cassius
 messala
 messala
-[standing
-forth]
+standing
+forth
 what
 says
 my
@@ -19400,7 +19398,7 @@ sirrah
 what
 news
 pindarus
-[above]
+above
 o
 my
 lord
@@ -19408,7 +19406,7 @@ cassius
 what
 news
 pindarus
-[above]
+above
 titinius
 is
 enclosed

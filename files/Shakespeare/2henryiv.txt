@@ -8119,7 +8119,7 @@ how
 be
 writes
 poins
-[reads]
+reads
 john
 falstaff
 knight
@@ -8215,7 +8215,7 @@ to
 the
 letter
 poins
-[reads]
+reads
 sir
 john
 falstaff
@@ -8243,7 +8243,7 @@ prince
 henry
 peace
 poins
-[reads]
+reads
 i
 will
 imitate
@@ -9569,7 +9569,7 @@ john
 enter
 falstaff
 falstaff
-[singing]
+singing
 when
 arthur
 first
@@ -12413,9 +12413,9 @@ door
 for
 you
 falstaff
-[to
+to
 the
-page]
+page
 pay
 the
 musicians
@@ -12523,7 +12523,7 @@ fare
 thee
 well
 bardolph
-[within]
+within
 mistress
 tearsheet
 mistress
@@ -12533,7 +12533,7 @@ s
 the
 matter
 bardolph
-[within]
+within
 good
 mistress
 tearsheet
@@ -15954,7 +15954,6 @@ away
 exeunt
 bardolph
 recruits
-&
 c
 as
 i
@@ -24463,7 +24462,7 @@ ill
 laid
 up
 shallow
-[within]
+within
 sir
 john
 falstaff
@@ -26300,7 +26299,7 @@ off
 a
 bumper
 silence
-[singing]
+singing
 do
 me
 right
@@ -27745,7 +27744,6 @@ exeunt
 king
 henry
 v
-&
 c
 falstaff
 master

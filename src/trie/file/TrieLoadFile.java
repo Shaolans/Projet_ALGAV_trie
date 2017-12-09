@@ -122,7 +122,7 @@ public class TrieLoadFile {
 				sc = new Scanner(f);
 				while(sc.hasNext()){
 					word = sc.next();
-					PatriciaTrie.ajouterMot(construction, word.toLowerCase());
+					PatriciaTrie.ajouterMot(construction, word);
 				}
 				sc.close();
 			}

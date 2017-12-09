@@ -527,7 +527,7 @@ i
 love
 you
 cordelia
-[aside]
+aside
 what
 shall
 cordelia
@@ -655,7 +655,7 @@ dear
 highness
 love
 cordelia
-[aside]
+aside
 then
 poor
 cordelia
@@ -3061,7 +3061,7 @@ of
 my
 virtue
 gloucester
-[reads]
+reads
 this
 policy
 and
@@ -5555,8 +5555,8 @@ out
 of
 nothing
 fool
-[to
-kent]
+to
+kent
 prithee
 tell
 him
@@ -6618,8 +6618,8 @@ be
 patient
 king
 lear
-[to
-goneril]
+to
+goneril
 detested
 kite
 thou
@@ -11835,7 +11835,7 @@ my
 sister
 king
 lear
-[rising]
+rising
 never
 regan
 she
@@ -14309,7 +14309,7 @@ yet
 for
 thee
 fool
-[singing]
+singing
 he
 that
 has
@@ -15074,7 +15074,7 @@ heavens
 more
 just
 edgar
-[within]
+within
 fathom
 and
 half
@@ -16508,7 +16508,7 @@ for
 our
 apprehension
 edmund
-[aside]
+aside
 if
 i
 find
@@ -17057,7 +17057,7 @@ boasted
 to
 retain
 edgar
-[aside]
+aside
 my
 tears
 begin
@@ -18762,7 +18762,7 @@ who
 s
 there
 edgar
-[aside]
+aside
 o
 gods
 who
@@ -18790,7 +18790,7 @@ poor
 mad
 tom
 edgar
-[aside]
+aside
 and
 worse
 i
@@ -18896,7 +18896,7 @@ for
 their
 sport
 edgar
-[aside]
+aside
 how
 should
 this
@@ -19045,7 +19045,7 @@ come
 hither
 fellow
 edgar
-[aside]
+aside
 and
 yet
 i
@@ -19370,8 +19370,8 @@ what
 like
 offensive
 goneril
-[to
-edmund]
+to
+edmund
 then
 shall
 you
@@ -19981,7 +19981,7 @@ from
 your
 sister
 goneril
-[aside]
+aside
 one
 way
 i
@@ -21521,7 +21521,7 @@ to
 cure
 it
 gloucester
-[kneeling]
+kneeling
 o
 you
 mighty
@@ -24792,7 +24792,7 @@ goneril
 and
 soldiers
 goneril
-[aside]
+aside
 i
 had
 rather
@@ -24945,7 +24945,7 @@ go
 with
 us
 goneril
-[aside]
+aside
 o
 ho
 i
@@ -25415,7 +25415,6 @@ cordelia
 prisoners
 captain
 soldiers
-&
 c
 edmund
 some
@@ -26158,8 +26157,8 @@ blooded
 fellow
 yes
 regan
-[to
-edmund]
+to
+edmund
 let
 the
 drum
@@ -26296,7 +26295,7 @@ sick
 o
 sick
 goneril
-[aside]
+aside
 if
 not
 i
@@ -26421,7 +26420,7 @@ a
 trumpet
 sounds
 herald
-[reads]
+reads
 if
 any
 man
@@ -27866,7 +27865,7 @@ i
 have
 felt
 kent
-[kneeling]
+kneeling
 o
 my
 good
