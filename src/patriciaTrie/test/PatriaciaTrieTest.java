@@ -14,18 +14,22 @@ public class PatriaciaTrieTest {
 		PatriciaTrie.ajouterMot(p, "youro");
 		PatriciaTrie.ajouterMot(p, "you");
 		PatriciaTrie.ajouterMot(p, "youri");
-		//PatriciaTrie.ajouterMot(p, "yohu");
+		PatriciaTrie.ajouterMot(p, "yohu");
 		PatriciaTrie.ajouterMot(p, "yan");
 		PatriciaTrie.ajouterMot(p, "y");
-		System.out.println(p);
+		System.out.println(PatriciaTrie.prefixe(p, "yo"));
 		
-		PatriciaTrie.supprimerMot(p, "yan");
-		PatriciaTrie.supprimerMot(p, "y");
-
-		PatriciaTrie.supprimerMot(p, "you");
+		PatriciaTrie p2 = new PatriciaTrie();
+		PatriciaTrie.ajouterMot(p2, "amelo");
+		PatriciaTrie p3 = new PatriciaTrie();
+		PatriciaTrie.ajouterMot(p3, "ameliorer");
+		PatriciaTrie.ajouterMot(p3, "ameli");
+		
+		TrieVisualizer.visualizePatriciaTrie(p3);
+		TrieVisualizer.visualizePatriciaTrie(PatriciaTrie.fusion(p3, p2));
 		
 		
-		TrieVisualizer.visualizePatriciaTrie(p);
+		
 		
 	}
 }
