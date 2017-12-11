@@ -1,1 +1,1 @@
-dot -Tps $1.dot -o $1.ps
+dot -Tpng $1.dot -o $1.png
