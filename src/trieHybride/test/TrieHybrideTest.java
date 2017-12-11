@@ -30,7 +30,7 @@ public class TrieHybrideTest {
 		//System.out.println(TrieHybridePrimitive.recherche(root, "quel"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motorise"));
 		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
-		root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
+		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
 		/*TrieHybridePrimitive.ajoutMot("ling", root);
 		TrieHybridePrimitive.ajoutMot("lune", root);
@@ -43,7 +43,11 @@ public class TrieHybrideTest {
 		/*System.out.println(TrieHybridePrimitive.prefixe(root, "li"));
 		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
 		TrieVisualizer.visualizeTrieHybride(root);
-		TrieHybridePrimitive.supression(root, "ling");*/
+		TrieHybridePrimitive.supression(root, "ling");
+		TrieHybridePrimitive.supression(root, "li");
+		TrieHybridePrimitive.supression(root, "la");
+		TrieHybridePrimitive.supression(root, "lune");
+		TrieVisualizer.visualizeTrieHybride(root);*/
 		
 		
 		/*TrieHybridePrimitive.ajoutMot("th", root);
