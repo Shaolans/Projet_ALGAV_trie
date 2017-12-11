@@ -3,6 +3,7 @@ package trieHybride.test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import trie.file.GraphvizPrint;
 import trie.file.TrieLoadFile;
 import trie.file.TriePrintFile;
 import trie.visualizer.TrieVisualizer;
@@ -13,7 +14,6 @@ public class TrieHybrideTest {
 
 	public static void main(String[] args) {
 		ITrieHybride root = TrieHybridePrimitive.initTrieHybride();
-		
 		/*TrieHybridePrimitive.ajoutMot("n", root);
 		TrieHybridePrimitive.ajoutMot("en", root);
 		TrieHybridePrimitive.ajoutMot("or", root);
@@ -29,13 +29,14 @@ public class TrieHybrideTest {
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motar"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "quel"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motorise"));
-		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
+		root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
 		/*TrieHybridePrimitive.ajoutMot("ling", root);
 		TrieHybridePrimitive.ajoutMot("lune", root);
 		TrieHybridePrimitive.ajoutMot("li", root);
 		TrieHybridePrimitive.ajoutMot("la", root);*/
+		
 		/*System.out.println(TrieHybridePrimitive.comptageMots(root));
 		System.out.println(TrieHybridePrimitive.comptageNil(root));
 		System.out.println(TrieHybridePrimitive.hauteur(root));*/
@@ -46,8 +47,8 @@ public class TrieHybrideTest {
 		TrieHybridePrimitive.supression(root, "ling");
 		TrieHybridePrimitive.supression(root, "li");
 		TrieHybridePrimitive.supression(root, "la");
-		TrieHybridePrimitive.supression(root, "lune");
-		TrieVisualizer.visualizeTrieHybride(root);*/
+		TrieHybridePrimitive.supression(root, "lune");*/
+		TrieVisualizer.visualizeTrieHybride(root);
 		
 		
 		/*TrieHybridePrimitive.ajoutMot("th", root);

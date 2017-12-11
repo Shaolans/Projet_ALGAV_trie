@@ -135,5 +135,11 @@ public class TrieHybride implements ITrieHybride {
 	public static void resetCpt(){
 		cpt=0;
 	}
+	
+	public String parsePointer() {
+		String name = super.toString();
+		name = name.replaceAll("[.,@]", "");
+		return name;
+	}
 
 }

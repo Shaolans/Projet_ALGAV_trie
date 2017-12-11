@@ -792,4 +792,10 @@ public class PatriciaTrie {
 	public void setFeuille(boolean feuille) {
 		this.feuille = feuille;
 	}
+	
+	public String parsePointer() {
+		String name = super.toString();
+		name = name.replaceAll("[.,@]", "");
+		return name;
+	}
 }

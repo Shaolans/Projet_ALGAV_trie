@@ -40,4 +40,6 @@ public interface ITrieHybride {
 	public boolean existfc();
 	//transforme le noeud en mot
 	public void turnIntoWord();
+	
+	public String parsePointer();
 	}
