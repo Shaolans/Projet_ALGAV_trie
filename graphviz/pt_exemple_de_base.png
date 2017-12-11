@@ -1,0 +1,1910 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 2309 564
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 2273 528 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% patriciaTriestructurePatriciaTrie7291c18f
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1290.53 482 112.36 38.37 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1287.03 493.8 moveto 7 (0) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1219.03 462.8 moveto 143 ([a|c|d|e|f|g|l|m|n|p|q|r|s|t|u]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie34a245ab
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+110.53 370.34 29.9 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+107.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+107.03 366.64 moveto 7 (a) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+97.53 351.64 moveto 26 ([p|{]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie34a245ab
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1179.14 476.14 moveto
+998.26 467.46 629.67 446.47 319.53 407.81 curveto
+260.06 400.4 191.75 387.67 149.87 379.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 150.3 375.9 moveto
+139.81 377.38 lineto
+148.93 382.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 150.3 375.9 moveto
+139.81 377.38 lineto
+148.93 382.77 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie12edcd21
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+368.53 370.34 39.7 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+365.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+365.03 366.64 moveto 7 (c) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+348.53 351.64 moveto 40 ([h|i|l|o]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie12edcd21
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1185.21 468.47 moveto
+986.54 444.84 563.38 394.51 418.44 377.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 418.43 373.75 moveto
+408.09 376.04 lineto
+417.61 380.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 418.43 373.75 moveto
+408.09 376.04 lineto
+417.61 380.7 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie27bc2616
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+745.53 370.34 35.21 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+742.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+742.03 366.64 moveto 7 (d) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+728.53 351.64 moveto 34 ([a|e|u]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie27bc2616
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1191.83 463.56 moveto
+1113.28 449.4 1000.63 428.45 902.53 407.81 curveto
+864.35 399.78 821.19 389.68 789.8 382.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 790.59 378.73 moveto
+780.05 379.79 lineto
+788.95 385.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 790.59 378.73 moveto
+780.05 379.79 lineto
+788.95 385.54 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie30dae81
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+938.53 370.34 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+935.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+935.03 366.64 moveto 7 (e) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+927.53 351.64 moveto 22 ([c|l]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie30dae81
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1195.63 461.5 moveto
+1140.66 448.9 1070.66 430.61 1010.53 407.81 curveto
+997.71 402.95 984.17 396.48 972.33 390.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 973.73 387.11 moveto
+963.25 385.52 lineto
+970.45 393.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 973.73 387.11 moveto
+963.25 385.52 lineto
+970.45 393.3 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie70177ecd
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1046.53 370.34 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1043.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1037.03 366.64 moveto 19 (fait) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1041.53 351.64 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie70177ecd
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1200.47 459.06 moveto
+1162.28 447.35 1118.41 430.57 1082.53 407.81 curveto
+1079.75 406.05 1077.02 404.03 1074.38 401.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 1076.59 399.16 moveto
+1066.81 395.09 lineto
+1071.92 404.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1076.59 399.16 moveto
+1066.81 395.09 lineto
+1071.92 404.37 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie1e80bfe8
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1118.53 370.34 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1115.03 381.64 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1108.53 366.64 moveto 20 (gen) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1108.03 351.64 moveto 21 ([i|r]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie1e80bfe8
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1238.45 447.8 moveto
+1210.28 429.83 1176.31 408.18 1151.73 392.5 curveto
+stroke
+0 0 0 edgecolor
+newpath 1153.44 389.44 moveto
+1143.12 387.02 lineto
+1149.68 395.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1153.44 389.44 moveto
+1143.12 387.02 lineto
+1149.68 395.35 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTriecc34f4d
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1216.53 370.34 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1213.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1211.53 366.64 moveto 10 (la) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1211.53 351.64 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTriecc34f4d
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1265.89 444.48 moveto
+1257.7 432.35 1248.6 418.86 1240.47 406.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 1243.24 404.66 moveto
+1234.74 398.33 lineto
+1237.43 408.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1243.24 404.66 moveto
+1234.74 398.33 lineto
+1237.43 408.57 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie17a7cec2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1290.53 370.34 28.98 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1287.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1284.53 366.64 moveto 12 (m) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1278.03 351.64 moveto 25 ([a|o]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie17a7cec2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1290.53 443.56 moveto
+1290.53 435.36 1290.53 426.58 1290.53 418.06 curveto
+stroke
+0 0 0 edgecolor
+newpath 1294.03 417.86 moveto
+1290.53 407.86 lineto
+1287.03 417.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1294.03 417.86 moveto
+1290.53 407.86 lineto
+1287.03 417.86 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie79fc0f2f
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1367.53 370.34 29.9 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1364.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1354.53 366.64 moveto 26 (nous) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1362.53 351.64 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie79fc0f2f
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1315.95 444.79 moveto
+1324.41 432.74 1333.83 419.33 1342.28 407.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 1345.34 409.02 moveto
+1348.23 398.82 lineto
+1339.62 405 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1345.34 409.02 moveto
+1348.23 398.82 lineto
+1339.62 405 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie50040f0c
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1471.53 370.34 41.94 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1468.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1468.03 366.64 moveto 7 (p) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1450.03 351.64 moveto 43 ([a|h|r|u]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie50040f0c
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1344.34 448.39 moveto
+1371.28 432.07 1403.44 412.59 1428.68 397.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 1430.56 400.25 moveto
+1437.3 392.07 lineto
+1426.94 394.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1430.56 400.25 moveto
+1437.3 392.07 lineto
+1426.94 394.26 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie49097b5d
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1649.53 370.34 27.65 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1646.03 381.64 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1639.53 366.64 moveto 20 (que) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1638.03 351.64 moveto 23 ([l|{]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie49097b5d
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1372.89 455.84 moveto
+1448.31 432.8 1556.47 399.76 1612.58 382.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 1613.9 385.88 moveto
+1622.44 379.61 lineto
+1611.85 379.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1613.9 385.88 moveto
+1622.44 379.61 lineto
+1611.85 379.19 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7e6cbb7a
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1747.53 370.34 52.15 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1744.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1718.53 366.64 moveto 58 (redevables) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1742.53 351.64 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie7e6cbb7a
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1398.78 471.49 moveto
+1479.99 461.88 1592.82 443.17 1686.53 407.81 curveto
+1691.31 406.01 1696.14 403.83 1700.89 401.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 1702.68 404.46 moveto
+1709.85 396.67 lineto
+1699.38 398.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1702.68 404.46 moveto
+1709.85 396.67 lineto
+1699.38 398.29 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7c3df479
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1938.53 370.34 29.9 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1935.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1935.53 366.64 moveto 6 (s) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1925.53 351.64 moveto 26 ([o|u]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie7c3df479
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1397.4 470.11 moveto
+1502.65 458.4 1667.64 437.39 1808.53 407.81 curveto
+1839.72 401.26 1874.44 391.38 1900.15 383.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 1901.36 386.85 moveto
+1909.88 380.56 lineto
+1899.3 380.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1901.36 386.85 moveto
+1909.88 380.56 lineto
+1899.3 380.16 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie6576fe71
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2078.53 370.34 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2075.03 381.64 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2069.53 366.64 moveto 18 (tou) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2067.53 351.64 moveto 22 ([c|t]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie6576fe71
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1402.24 477.33 moveto
+1539.32 470.96 1778.09 453.74 1977.53 407.81 curveto
+1999.96 402.65 2024.25 393.98 2043.39 386.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 2044.93 389.54 moveto
+2052.89 382.54 lineto
+2042.3 383.05 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2044.93 389.54 moveto
+2052.89 382.54 lineto
+2042.3 383.05 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie1f17ae12
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2150.53 370.34 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2147.03 381.64 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2143.53 366.64 moveto 14 (un) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2145.53 351.64 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7291c18f->patriciaTriestructurePatriciaTrie1f17ae12
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1403.14 480.49 moveto
+1598.55 478.06 1991.34 465.85 2114.53 407.81 curveto
+2117.51 406.41 2120.37 404.65 2123.1 402.67 curveto
+stroke
+0 0 0 edgecolor
+newpath 2125.43 405.28 moveto
+2130.84 396.18 lineto
+2120.93 399.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2125.43 405.28 moveto
+2130.84 396.18 lineto
+2120.93 399.92 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7cc355be
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+32.53 259.38 32.55 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+29.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+17.53 255.68 moveto 30 (appel) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+27.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie34a245ab->patriciaTriestructurePatriciaTrie7cc355be
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 90.84 341.84 moveto
+81.19 328.35 69.41 311.91 58.98 297.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 61.69 295.1 moveto
+53.02 289.01 lineto
+56 299.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 61.69 295.1 moveto
+53.02 289.01 lineto
+56 299.18 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie6e8cf4c6
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+110.53 259.38 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+107.03 270.68 moveto 7 (1) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+107.03 255.68 moveto 7 (a) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+105.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie34a245ab->patriciaTriestructurePatriciaTrie6e8cf4c6
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 110.53 332.75 moveto
+110.53 324.58 110.53 315.8 110.53 307.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 114.03 307.06 moveto
+110.53 297.06 lineto
+107.03 307.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 114.03 307.06 moveto
+110.53 297.06 lineto
+107.03 307.06 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie34c45dca
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+198.53 259.38 43.27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+195.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+176.03 255.68 moveto 45 (chacune) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+193.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie12edcd21->patriciaTriestructurePatriciaTrie34c45dca
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 335.38 349.72 moveto
+311.54 335.43 278.76 315.41 250.53 296.86 curveto
+247 294.54 243.37 292.11 239.74 289.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 241.55 286.63 moveto
+231.33 283.84 lineto
+237.58 292.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 241.55 286.63 moveto
+231.33 283.84 lineto
+237.58 292.4 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie52cc8049
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+286.53 259.38 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+283.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+281.53 255.68 moveto 10 (ci) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+281.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie12edcd21->patriciaTriestructurePatriciaTrie52cc8049
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 345.9 339.28 moveto
+335.36 325.27 322.78 308.55 311.91 294.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 314.55 291.8 moveto
+305.74 285.92 lineto
+308.96 296.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 314.55 291.8 moveto
+305.74 285.92 lineto
+308.96 296.01 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie5b6f7412
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+368.53 259.38 37.45 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+365.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+350.03 255.68 moveto 37 (clavier) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+363.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie12edcd21->patriciaTriestructurePatriciaTrie5b6f7412
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 368.53 332.75 moveto
+368.53 324.58 368.53 315.8 368.53 307.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 372.03 307.06 moveto
+368.53 297.06 lineto
+365.03 307.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 372.03 307.06 moveto
+368.53 297.06 lineto
+365.03 307.06 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie27973e9b
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+452.53 259.38 28.98 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+449.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+446.03 255.68 moveto 13 (co) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+440.03 240.68 moveto 25 ([e|n]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie12edcd21->patriciaTriestructurePatriciaTrie27973e9b
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 391.48 339.56 moveto
+402.12 325.77 414.83 309.28 425.89 294.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 428.85 296.83 moveto
+432.18 286.78 lineto
+423.3 292.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 428.85 296.83 moveto
+432.18 286.78 lineto
+423.3 292.56 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie312b1dae
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+319.53 148.43 33.47 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+316.03 159.73 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+304.03 144.73 moveto 31 (coeur) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+314.53 129.73 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie27973e9b->patriciaTriestructurePatriciaTrie312b1dae
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 429.78 235.36 moveto
+424.89 230.75 419.64 226.05 414.53 221.91 curveto
+392.4 203.98 384.09 203.27 361.53 185.91 curveto
+358.76 183.78 355.95 181.53 353.14 179.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 355.25 176.43 moveto
+345.34 172.69 lineto
+350.75 181.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 355.25 176.43 moveto
+345.34 172.69 lineto
+350.75 181.79 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7530d0a
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+410.53 148.43 39.7 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+407.03 159.73 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+390.53 144.73 moveto 40 (connait) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+405.53 129.73 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie27973e9b->patriciaTriestructurePatriciaTrie7530d0a
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 439.81 225.4 moveto
+435.93 215.33 431.6 204.09 427.48 193.41 curveto
+stroke
+0 0 0 edgecolor
+newpath 430.64 191.89 moveto
+423.78 183.81 lineto
+424.11 194.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 430.64 191.89 moveto
+423.78 183.81 lineto
+424.11 194.4 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie3941a79c
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+621.53 259.38 39.7 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+618.03 270.68 moveto 7 (7) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+601.53 255.68 moveto 40 (dactylo) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+608.53 240.68 moveto 26 ([g|{]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie27bc2616->patriciaTriestructurePatriciaTrie3941a79c
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 718.62 345.7 moveto
+700.76 330 677.11 309.22 657.62 292.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 659.93 289.47 moveto
+650.11 285.49 lineto
+655.31 294.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 659.93 289.47 moveto
+650.11 285.49 lineto
+655.31 294.72 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie9807454
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+708.53 259.38 28.98 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+705.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+702.03 255.68 moveto 13 (de) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+696.03 240.68 moveto 25 ([s|{]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie27bc2616->patriciaTriestructurePatriciaTrie9807454
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 733.82 334.86 moveto
+730.45 324.94 726.73 313.99 723.21 303.61 curveto
+stroke
+0 0 0 edgecolor
+newpath 726.43 302.23 moveto
+719.9 293.89 lineto
+719.81 304.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 726.43 302.23 moveto
+719.9 293.89 lineto
+719.81 304.48 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7cd84586
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+782.53 259.38 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+779.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+775.53 255.68 moveto 14 (du) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+777.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie27bc2616->patriciaTriestructurePatriciaTrie7cd84586
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 757.23 334.86 moveto
+760.67 324.74 764.47 313.56 768.06 302.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 771.37 304.11 moveto
+771.27 293.52 lineto
+764.75 301.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 771.37 304.11 moveto
+771.27 293.52 lineto
+764.75 301.86 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie506e1b77
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+536.53 148.43 68.68 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+533.03 159.73 moveto 7 (8) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+496.03 144.73 moveto 81 (dactylographie) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+531.53 129.73 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie3941a79c->patriciaTriestructurePatriciaTrie506e1b77
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 598.3 228.61 moveto
+589.35 217.14 578.95 203.81 569.27 191.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 571.94 189.13 moveto
+563.03 183.4 lineto
+566.42 193.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 571.94 189.13 moveto
+563.03 183.4 lineto
+566.42 193.44 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie4fca772d
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+662.53 148.43 39.7 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+659.03 159.73 moveto 7 (7) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+642.53 144.73 moveto 40 (dactylo) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+657.53 129.73 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie3941a79c->patriciaTriestructurePatriciaTrie4fca772d
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 634.5 223.91 moveto
+638.13 214.27 642.12 203.66 645.92 193.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 649.25 194.65 moveto
+649.5 184.05 lineto
+642.7 192.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 649.25 194.65 moveto
+649.5 184.05 lineto
+642.7 192.18 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie3d494fbf
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+749.53 148.43 28.98 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+746.03 159.73 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+740.03 144.73 moveto 19 (des) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+737.03 129.73 moveto 25 ([s|{]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie9807454->patriciaTriestructurePatriciaTrie3d494fbf
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 720.94 225.4 moveto
+724.88 214.93 729.29 203.21 733.45 192.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 736.77 193.27 moveto
+737.01 182.68 lineto
+730.22 190.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 736.77 193.27 moveto
+737.01 182.68 lineto
+730.22 190.81 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrieb1bc7ed
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+823.53 148.43 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+820.03 159.73 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+817.03 144.73 moveto 13 (de) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+818.53 129.73 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie9807454->patriciaTriestructurePatriciaTrieb1bc7ed
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 731.68 235.84 moveto
+736.55 231.19 741.68 226.36 746.53 221.91 curveto
+764.39 205.51 769.89 202.55 787.53 185.91 curveto
+789.92 183.65 792.38 181.28 794.82 178.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 797.45 181.21 moveto
+802.07 171.67 lineto
+792.51 176.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 797.45 181.21 moveto
+802.07 171.67 lineto
+792.51 176.24 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie1ddc4ec2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+705.53 37.48 41.94 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+702.03 48.78 moveto 7 (4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+684.03 33.78 moveto 43 (dessous) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+700.53 18.78 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie3d494fbf->patriciaTriestructurePatriciaTrie1ddc4ec2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 736.33 114.74 moveto
+732.21 104.56 727.61 93.16 723.24 82.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 726.47 81 moveto
+719.48 73.04 lineto
+719.98 83.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 726.47 81 moveto
+719.48 73.04 lineto
+719.98 83.62 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie133314b
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+792.53 37.48 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+789.03 48.78 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+783.03 33.78 moveto 19 (des) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+787.53 18.78 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie3d494fbf->patriciaTriestructurePatriciaTrie133314b
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 762.43 114.74 moveto
+766.72 103.87 771.56 91.61 776.08 80.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 779.37 81.35 moveto
+779.78 70.77 lineto
+772.86 78.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 779.37 81.35 moveto
+779.78 70.77 lineto
+772.86 78.78 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie1b2c6ec2
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+860.53 259.38 33.47 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+857.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+845.03 255.68 moveto 31 (ecrire) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+855.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie30dae81->patriciaTriestructurePatriciaTrie1b2c6ec2
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 919.84 343.24 moveto
+909.96 329.43 897.65 312.24 886.82 297.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 889.64 295.04 moveto
+880.97 288.94 lineto
+883.95 299.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 889.64 295.04 moveto
+880.97 288.94 lineto
+883.95 299.11 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie4edde6e5
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+938.53 259.38 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+935.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+928.53 255.68 moveto 20 (elle) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+933.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie30dae81->patriciaTriestructurePatriciaTrie4edde6e5
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 938.53 332.75 moveto
+938.53 324.58 938.53 315.8 938.53 307.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 942.03 307.06 moveto
+938.53 297.06 lineto
+935.03 307.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 942.03 307.06 moveto
+938.53 297.06 lineto
+935.03 307.06 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie66a29884
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1018.53 259.38 35.21 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1015.03 270.68 moveto 7 (4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1001.53 255.68 moveto 34 (genial) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1013.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie1e80bfe8->patriciaTriestructurePatriciaTrie66a29884
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1097.56 346.5 moveto
+1083.76 331.45 1065.43 311.48 1049.9 294.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 1052.33 292.03 moveto
+1042.99 287.03 lineto
+1047.17 296.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1052.33 292.03 moveto
+1042.99 287.03 lineto
+1047.17 296.77 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie4769b07b
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1105.53 259.38 33.47 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1102.03 270.68 moveto 7 (4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1090.03 255.68 moveto 31 (genre) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1100.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie1e80bfe8->patriciaTriestructurePatriciaTrie4769b07b
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1114.2 333.06 moveto
+1113.2 324.69 1112.12 315.68 1111.08 306.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 1114.54 306.39 moveto
+1109.88 296.88 lineto
+1107.59 307.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1114.54 306.39 moveto
+1109.88 296.88 lineto
+1107.59 307.22 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie65b3120a
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1201.53 259.38 44.6 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1198.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1178.03 255.68 moveto 47 (machine) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1196.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie17a7cec2->patriciaTriestructurePatriciaTrie65b3120a
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1269.66 343.79 moveto
+1258.74 330.42 1245.13 313.77 1232.96 298.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1235.41 296.33 moveto
+1226.38 290.8 lineto
+1229.99 300.76 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1235.41 296.33 moveto
+1226.38 290.8 lineto
+1229.99 300.76 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie6f539caf
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1304.53 259.38 40.11 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1301.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1284.03 255.68 moveto 41 (modele) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1299.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie17a7cec2->patriciaTriestructurePatriciaTrie6f539caf
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1295.19 333.06 moveto
+1296.26 324.69 1297.42 315.68 1298.54 306.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 1302.03 307.24 moveto
+1299.84 296.88 lineto
+1295.09 306.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1302.03 307.24 moveto
+1299.84 296.88 lineto
+1295.09 306.35 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie2dda6444
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1389.53 259.38 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1386.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1380.53 255.68 moveto 18 (par) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1384.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie50040f0c->patriciaTriestructurePatriciaTrie2dda6444
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1448.47 338.7 moveto
+1438.01 324.81 1425.62 308.34 1414.9 294.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 1417.62 291.9 moveto
+1408.81 286.01 lineto
+1412.03 296.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1417.62 291.9 moveto
+1408.81 286.01 lineto
+1412.03 296.1 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie5e9f23b4
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1471.53 259.38 36.54 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1468.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1453.53 255.68 moveto 36 (phrase) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1466.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie50040f0c->patriciaTriestructurePatriciaTrie5e9f23b4
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1471.53 332.75 moveto
+1471.53 324.58 1471.53 315.8 1471.53 307.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 1475.03 307.06 moveto
+1471.53 297.06 lineto
+1468.03 307.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1475.03 307.06 moveto
+1471.53 297.06 lineto
+1468.03 307.06 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie4783da3f
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1577.53 259.38 51.74 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1574.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1549.03 255.68 moveto 57 (professeur) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1572.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie50040f0c->patriciaTriestructurePatriciaTrie4783da3f
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1498.55 341.56 moveto
+1511.5 328.25 1527.21 312.1 1541.19 297.73 curveto
+stroke
+0 0 0 edgecolor
+newpath 1543.86 300.01 moveto
+1548.32 290.4 lineto
+1538.84 295.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1543.86 300.01 moveto
+1548.32 290.4 lineto
+1538.84 295.13 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie378fd1ac
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1688.53 259.38 41.94 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1685.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1667.03 255.68 moveto 43 (puisque) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1683.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie50040f0c->patriciaTriestructurePatriciaTrie378fd1ac
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1510.15 355.37 moveto
+1544.77 342.22 1596.42 320.96 1638.53 296.86 curveto
+1641.99 294.87 1645.51 292.7 1648.99 290.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 1651.2 293.15 moveto
+1657.5 284.63 lineto
+1647.26 287.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1651.2 293.15 moveto
+1657.5 284.63 lineto
+1647.26 287.37 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie6e2c634b
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1776.53 259.38 28.07 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1773.03 270.68 moveto 7 (4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1764.53 255.68 moveto 24 (quel) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1771.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie49097b5d->patriciaTriestructurePatriciaTrie6e2c634b
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1671.22 346.66 moveto
+1676.1 341.93 1681.37 337.1 1686.53 332.86 curveto
+1708.53 314.79 1717.52 314.93 1739.53 296.86 curveto
+1742.04 294.8 1744.57 292.6 1747.08 290.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 1749.53 292.83 moveto
+1754.44 283.44 lineto
+1744.75 287.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1749.53 292.83 moveto
+1754.44 283.44 lineto
+1744.75 287.72 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie37a71e93
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1849.53 259.38 27 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1846.03 270.68 moveto 7 (3) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1839.53 255.68 moveto 20 (que) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1844.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie49097b5d->patriciaTriestructurePatriciaTrie37a71e93
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1670.29 345.33 moveto
+1675.23 340.68 1680.76 336.22 1686.53 332.86 curveto
+1737.23 303.34 1763.03 326.73 1813.53 296.86 curveto
+1816.36 295.18 1819.13 293.23 1821.79 291.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 1824.22 293.64 moveto
+1829.41 284.4 lineto
+1819.59 288.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1824.22 293.64 moveto
+1829.41 284.4 lineto
+1819.59 288.39 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7106e68e
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1938.53 259.38 43.68 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1935.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1915.53 255.68 moveto 46 (sommes) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1933.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7c3df479->patriciaTriestructurePatriciaTrie7106e68e
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1938.53 332.75 moveto
+1938.53 324.58 1938.53 315.8 1938.53 307.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 1942.03 307.06 moveto
+1938.53 297.06 lineto
+1935.03 307.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1942.03 307.06 moveto
+1938.53 297.06 lineto
+1935.03 307.06 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie7eda2dbb
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2042.53 259.38 41.94 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2039.03 270.68 moveto 7 (2) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2021.03 255.68 moveto 43 (superbe) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2037.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie7c3df479->patriciaTriestructurePatriciaTrie7eda2dbb
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1961.09 345.7 moveto
+1974.98 331.15 1993.04 312.23 2008.62 295.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 2011.21 298.26 moveto
+2015.58 288.61 lineto
+2006.14 293.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2011.21 298.26 moveto
+2015.58 288.61 lineto
+2006.14 293.43 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie76fb509a
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2143.53 259.38 41.02 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2140.03 270.68 moveto 7 (4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2122.53 255.68 moveto 42 (touches) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2138.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie6576fe71->patriciaTriestructurePatriciaTrie76fb509a
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2095.44 340.99 moveto
+2102.59 329.01 2111.06 314.81 2118.88 301.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 2122.06 303.2 moveto
+2124.17 292.82 lineto
+2116.04 299.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2122.06 303.2 moveto
+2124.17 292.82 lineto
+2116.04 299.62 lineto
+closepath stroke
+grestore
+% patriciaTriestructurePatriciaTrie300ffa5d
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2233.53 259.38 31.23 37.45 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2230.03 270.68 moveto 7 (4) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2219.53 255.68 moveto 28 (toute) alignedtext
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2228.53 240.68 moveto 10 ([]) alignedtext
+grestore
+% patriciaTriestructurePatriciaTrie6576fe71->patriciaTriestructurePatriciaTrie300ffa5d
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2099.06 345.96 moveto
+2103.84 341.27 2109.13 336.63 2114.53 332.86 curveto
+2146.16 310.76 2161.33 318.12 2193.53 296.86 curveto
+2196.44 294.94 2199.35 292.81 2202.19 290.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 2204.56 293.15 moveto
+2209.99 284.05 lineto
+2200.07 287.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2204.56 293.15 moveto
+2209.99 284.05 lineto
+2200.07 287.78 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 2309 564
+end
+restore
+%%EOF
