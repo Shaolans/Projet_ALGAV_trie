@@ -28,7 +28,7 @@ public class TempsSuppression {
 			TrieLoadFile.loadFileShakespeareTrieHybride(root);
 			debut = System.currentTimeMillis();
 			for(int i = 0; i < cpt; i++){
-				TrieHybridePrimitive.supression(root, supp.get(i));
+				TrieHybridePrimitive.suppression(root, supp.get(i));
 			}
 			fin = System.currentTimeMillis();
 			System.out.println(cpt);

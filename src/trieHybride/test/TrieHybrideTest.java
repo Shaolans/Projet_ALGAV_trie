@@ -44,10 +44,10 @@ public class TrieHybrideTest {
 		/*System.out.println(TrieHybridePrimitive.prefixe(root, "li"));
 		System.out.println(TrieHybridePrimitive.profondeurMoyenne(root));
 		TrieVisualizer.visualizeTrieHybride(root);
-		TrieHybridePrimitive.supression(root, "ling");
-		TrieHybridePrimitive.supression(root, "li");
-		TrieHybridePrimitive.supression(root, "la");
-		TrieHybridePrimitive.supression(root, "lune");*/
+		TrieHybridePrimitive.suppression(root, "ling");
+		TrieHybridePrimitive.suppression(root, "li");
+		TrieHybridePrimitive.suppression(root, "la");
+		TrieHybridePrimitive.suppression(root, "lune");*/
 		TrieVisualizer.visualizeTrieHybride(root);
 		
 		
@@ -78,17 +78,17 @@ public class TrieHybrideTest {
 		
 		
 		/*
-		TrieHybridePrimitive.supression(root,"t");
-		TrieHybridePrimitive.supression(root,"th");
-		TrieHybridePrimitive.supression(root,"the");
-		TrieHybridePrimitive.supression(root,"them");
-		TrieHybridePrimitive.supression(root,"themeselves");
+		TrieHybridePrimitive.suppression(root,"t");
+		TrieHybridePrimitive.suppression(root,"th");
+		TrieHybridePrimitive.suppression(root,"the");
+		TrieHybridePrimitive.suppression(root,"them");
+		TrieHybridePrimitive.suppression(root,"themeselves");
 		System.out.println(TrieHybridePrimitive.recherche(root, "theme"));
-		TrieHybridePrimitive.supression(root,"theme");
+		TrieHybridePrimitive.suppression(root,"theme");
 		System.out.println(TrieHybridePrimitive.recherche(root, "theme"));
 		*/
 		//TrieVisualizer.visualizeTrieHybride(root);
-		//TrieHybridePrimitive.supression(root, "genial");
+		//TrieHybridePrimitive.suppression(root, "genial");
 		//System.out.println(TrieHybridePrimitive.listeMots(root));
 		//System.out.println(root.getChar());
 		/*for(String word: TrieLoadFile.loadWordsShakespeare()){

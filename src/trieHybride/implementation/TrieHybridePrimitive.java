@@ -395,7 +395,7 @@ public class TrieHybridePrimitive {
 	 * @param word le mot a supprimer
 	 * @return TH sans le mot
 	 */
-	public static ITrieHybride supression(ITrieHybride th, String word){
+	public static ITrieHybride suppression(ITrieHybride th, String word){
 		TrieHybridePrimitive.suppressionAux(th, th, word);
 		//TrieHybridePrimitive.purgeNoWordsBranch(th);
 		return th;
