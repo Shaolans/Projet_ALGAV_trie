@@ -18,6 +18,9 @@ public class GraphvizMain {
 		root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		GraphvizPrint.printTrieHybrideGraph("graphviz/th_exemple_de_base.dot", root);
 		
+		TrieHybridePrimitive.balanceTrieHybride(root);
+		GraphvizPrint.printTrieHybrideGraph("graphviz/th_reequilibrage_exemple_de_base.dot", root);
+		
 		PatriciaTrie pt = new PatriciaTrie();
 		pt = TrieLoadFile.loadFilePatriciaTrie("files/exemple_de_base");
 		GraphvizPrint.printPatriciaTrieGraph("graphviz/pt_exemple_de_base.dot", pt);
@@ -34,6 +37,9 @@ public class GraphvizMain {
 		TrieHybridePrimitive.ajoutMot("structure", root);
 		TrieHybridePrimitive.ajoutMot("reprise", root);
 		GraphvizPrint.printTrieHybrideGraph("graphviz/th_exemple_1.dot", root);
+		
+		TrieHybridePrimitive.balanceTrieHybride(root);
+		GraphvizPrint.printTrieHybrideGraph("graphviz/th_reequilibrage_exemple_1.dot", root);
 		
 		PatriciaTrie pt = new PatriciaTrie();
 		PatriciaTrie.ajouterMot(pt, "ceci");
