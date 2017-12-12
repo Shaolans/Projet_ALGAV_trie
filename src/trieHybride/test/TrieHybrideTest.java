@@ -14,7 +14,7 @@ public class TrieHybrideTest {
 
 	public static void main(String[] args) {
 		ITrieHybride root = TrieHybridePrimitive.initTrieHybride();
-		/*TrieHybridePrimitive.ajoutMot("n", root);
+		TrieHybridePrimitive.ajoutMot("n", root);
 		TrieHybridePrimitive.ajoutMot("en", root);
 		TrieHybridePrimitive.ajoutMot("or", root);
 		TrieHybridePrimitive.ajoutMot("a", root);
@@ -22,14 +22,14 @@ public class TrieHybrideTest {
 		TrieHybridePrimitive.ajoutMot("mot", root);
 		TrieHybridePrimitive.ajoutMot("de", root);
 		TrieHybridePrimitive.ajoutMot("du", root);
-		TrieHybridePrimitive.ajoutMot("der", root);*/
+		TrieHybridePrimitive.ajoutMot("der", root);
 		//System.out.println(root.getfc());
 		//System.out.println(root.getfc().getfd());
 		//TrieHybridePrimitive.parcours2(root);
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motar"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "quel"));
 		//System.out.println(TrieHybridePrimitive.recherche(root, "motorise"));
-		root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
+		//root = TrieLoadFile.loadFileTrieHybride("files/exemple_de_base");
 		//root = TrieLoadFile.loadFileShakespeareTrieHybride(null);
 		
 		/*TrieHybridePrimitive.ajoutMot("ling", root);
