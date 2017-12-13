@@ -9,9 +9,23 @@ public class GraphvizMain {
 	public static void main(String[] args) {
 		GraphvizMain.graphExempleDeBase();
 		GraphvizMain.graphTest1();
+		GraphvizMain.graphTest2();
 		
 	}
 	
+	
+	public static void graphTest2(){
+		ITrieHybride root = TrieHybridePrimitive.initTrieHybride();
+		TrieHybridePrimitive.ajoutMot("un", root);
+		TrieHybridePrimitive.ajoutMot("bon", root);
+		TrieHybridePrimitive.ajoutMot("trie", root);
+		TrieHybridePrimitive.ajoutMot("est", root);
+		TrieHybridePrimitive.ajoutMot("ici", root);
+		TrieHybridePrimitive.ajoutMot("la", root);
+		TrieHybridePrimitive.balanceTrieHybride(root);
+		GraphvizPrint.printTrieHybrideGraph("graphviz/th_exemple_2.dot", root);
+		
+	}
 	
 	public static void graphExempleDeBase() {
 		ITrieHybride root = TrieHybridePrimitive.initTrieHybride();

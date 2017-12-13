@@ -1,99 +1,99 @@
 digraph G{
-patriciaTriestructurePatriciaTrie4b9af9a9 [label="0\n\n[a|c|d|e|f|g|l|m|n|p|q|r|s|t|u]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie5387f9e0
-patriciaTriestructurePatriciaTrie5387f9e0 [label="1\na\n[p|{]"]
+patriciaTriestructurePatriciaTrie5387f9e0 [label="0\n\n[a|c|d|e|f|g|l|m|n|p|q|r|s|t|u]"]
 patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie6e5e91e4
-patriciaTriestructurePatriciaTrie6e5e91e4 [label="2\nappel\n[]"]
-patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie2cdf8d8a
-patriciaTriestructurePatriciaTrie2cdf8d8a [label="1\na\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie30946e09
-patriciaTriestructurePatriciaTrie30946e09 [label="1\nc\n[h|i|l|o]"]
-patriciaTriestructurePatriciaTrie30946e09 -> patriciaTriestructurePatriciaTrie5cb0d902
-patriciaTriestructurePatriciaTrie5cb0d902 [label="2\nchacune\n[]"]
-patriciaTriestructurePatriciaTrie30946e09 -> patriciaTriestructurePatriciaTrie46fbb2c1
-patriciaTriestructurePatriciaTrie46fbb2c1 [label="2\nci\n[]"]
-patriciaTriestructurePatriciaTrie30946e09 -> patriciaTriestructurePatriciaTrie1698c449
-patriciaTriestructurePatriciaTrie1698c449 [label="2\nclavier\n[]"]
-patriciaTriestructurePatriciaTrie30946e09 -> patriciaTriestructurePatriciaTrie5ef04b5
-patriciaTriestructurePatriciaTrie5ef04b5 [label="2\nco\n[e|n]"]
-patriciaTriestructurePatriciaTrie5ef04b5 -> patriciaTriestructurePatriciaTrie5f4da5c3
-patriciaTriestructurePatriciaTrie5f4da5c3 [label="3\ncoeur\n[]"]
-patriciaTriestructurePatriciaTrie5ef04b5 -> patriciaTriestructurePatriciaTrie443b7951
-patriciaTriestructurePatriciaTrie443b7951 [label="3\nconnait\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie14514713
-patriciaTriestructurePatriciaTrie14514713 [label="1\nd\n[a|e|u]"]
-patriciaTriestructurePatriciaTrie14514713 -> patriciaTriestructurePatriciaTrie69663380
-patriciaTriestructurePatriciaTrie69663380 [label="7\ndactylo\n[g|{]"]
+patriciaTriestructurePatriciaTrie6e5e91e4 [label="1\na\n[p|{]"]
+patriciaTriestructurePatriciaTrie6e5e91e4 -> patriciaTriestructurePatriciaTrie2cdf8d8a
+patriciaTriestructurePatriciaTrie2cdf8d8a [label="2\nappel\n[]"]
+patriciaTriestructurePatriciaTrie6e5e91e4 -> patriciaTriestructurePatriciaTrie30946e09
+patriciaTriestructurePatriciaTrie30946e09 [label="1\na\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie5cb0d902
+patriciaTriestructurePatriciaTrie5cb0d902 [label="1\nc\n[h|i|l|o]"]
+patriciaTriestructurePatriciaTrie5cb0d902 -> patriciaTriestructurePatriciaTrie46fbb2c1
+patriciaTriestructurePatriciaTrie46fbb2c1 [label="2\nchacune\n[]"]
+patriciaTriestructurePatriciaTrie5cb0d902 -> patriciaTriestructurePatriciaTrie1698c449
+patriciaTriestructurePatriciaTrie1698c449 [label="2\nci\n[]"]
+patriciaTriestructurePatriciaTrie5cb0d902 -> patriciaTriestructurePatriciaTrie5ef04b5
+patriciaTriestructurePatriciaTrie5ef04b5 [label="2\nclavier\n[]"]
+patriciaTriestructurePatriciaTrie5cb0d902 -> patriciaTriestructurePatriciaTrie5f4da5c3
+patriciaTriestructurePatriciaTrie5f4da5c3 [label="2\nco\n[e|n]"]
+patriciaTriestructurePatriciaTrie5f4da5c3 -> patriciaTriestructurePatriciaTrie443b7951
+patriciaTriestructurePatriciaTrie443b7951 [label="3\ncoeur\n[]"]
+patriciaTriestructurePatriciaTrie5f4da5c3 -> patriciaTriestructurePatriciaTrie14514713
+patriciaTriestructurePatriciaTrie14514713 [label="3\nconnait\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie69663380
+patriciaTriestructurePatriciaTrie69663380 [label="1\nd\n[a|e|u]"]
 patriciaTriestructurePatriciaTrie69663380 -> patriciaTriestructurePatriciaTrie5b37e0d2
-patriciaTriestructurePatriciaTrie5b37e0d2 [label="8\ndactylographie\n[]"]
-patriciaTriestructurePatriciaTrie69663380 -> patriciaTriestructurePatriciaTrie4459eb14
-patriciaTriestructurePatriciaTrie4459eb14 [label="7\ndactylo\n[]"]
-patriciaTriestructurePatriciaTrie14514713 -> patriciaTriestructurePatriciaTrie5a2e4553
-patriciaTriestructurePatriciaTrie5a2e4553 [label="2\nde\n[s|{]"]
-patriciaTriestructurePatriciaTrie5a2e4553 -> patriciaTriestructurePatriciaTrie28c97a5
-patriciaTriestructurePatriciaTrie28c97a5 [label="3\ndes\n[s|{]"]
+patriciaTriestructurePatriciaTrie5b37e0d2 [label="7\ndactylo\n[g|{]"]
+patriciaTriestructurePatriciaTrie5b37e0d2 -> patriciaTriestructurePatriciaTrie4459eb14
+patriciaTriestructurePatriciaTrie4459eb14 [label="8\ndactylographie\n[]"]
+patriciaTriestructurePatriciaTrie5b37e0d2 -> patriciaTriestructurePatriciaTrie5a2e4553
+patriciaTriestructurePatriciaTrie5a2e4553 [label="7\ndactylo\n[]"]
+patriciaTriestructurePatriciaTrie69663380 -> patriciaTriestructurePatriciaTrie28c97a5
+patriciaTriestructurePatriciaTrie28c97a5 [label="2\nde\n[s|{]"]
 patriciaTriestructurePatriciaTrie28c97a5 -> patriciaTriestructurePatriciaTrie6659c656
-patriciaTriestructurePatriciaTrie6659c656 [label="4\ndessous\n[]"]
-patriciaTriestructurePatriciaTrie28c97a5 -> patriciaTriestructurePatriciaTrie6d5380c2
-patriciaTriestructurePatriciaTrie6d5380c2 [label="3\ndes\n[]"]
-patriciaTriestructurePatriciaTrie5a2e4553 -> patriciaTriestructurePatriciaTrie45ff54e6
-patriciaTriestructurePatriciaTrie45ff54e6 [label="2\nde\n[]"]
-patriciaTriestructurePatriciaTrie14514713 -> patriciaTriestructurePatriciaTrie2328c243
-patriciaTriestructurePatriciaTrie2328c243 [label="2\ndu\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTriebebdb06
-patriciaTriestructurePatriciaTriebebdb06 [label="1\ne\n[c|l]"]
-patriciaTriestructurePatriciaTriebebdb06 -> patriciaTriestructurePatriciaTrie7a4f0f29
-patriciaTriestructurePatriciaTrie7a4f0f29 [label="2\necrire\n[]"]
-patriciaTriestructurePatriciaTriebebdb06 -> patriciaTriestructurePatriciaTrie45283ce2
-patriciaTriestructurePatriciaTrie45283ce2 [label="2\nelle\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie2077d4de
-patriciaTriestructurePatriciaTrie2077d4de [label="1\nfait\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie7591083d
-patriciaTriestructurePatriciaTrie7591083d [label="3\ngen\n[i|r]"]
-patriciaTriestructurePatriciaTrie7591083d -> patriciaTriestructurePatriciaTrie77a567e1
-patriciaTriestructurePatriciaTrie77a567e1 [label="4\ngenial\n[]"]
-patriciaTriestructurePatriciaTrie7591083d -> patriciaTriestructurePatriciaTrie736e9adb
-patriciaTriestructurePatriciaTrie736e9adb [label="4\ngenre\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie6d21714c
-patriciaTriestructurePatriciaTrie6d21714c [label="1\nla\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie108c4c35
-patriciaTriestructurePatriciaTrie108c4c35 [label="1\nm\n[a|o]"]
-patriciaTriestructurePatriciaTrie108c4c35 -> patriciaTriestructurePatriciaTrie4ccabbaa
-patriciaTriestructurePatriciaTrie4ccabbaa [label="2\nmachine\n[]"]
-patriciaTriestructurePatriciaTrie108c4c35 -> patriciaTriestructurePatriciaTrie4bf558aa
-patriciaTriestructurePatriciaTrie4bf558aa [label="2\nmodele\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie2d38eb89
-patriciaTriestructurePatriciaTrie2d38eb89 [label="1\nnous\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie5fa7e7ff
-patriciaTriestructurePatriciaTrie5fa7e7ff [label="1\np\n[a|h|r|u]"]
-patriciaTriestructurePatriciaTrie5fa7e7ff -> patriciaTriestructurePatriciaTrie4629104a
-patriciaTriestructurePatriciaTrie4629104a [label="2\npar\n[]"]
-patriciaTriestructurePatriciaTrie5fa7e7ff -> patriciaTriestructurePatriciaTrie27f8302d
-patriciaTriestructurePatriciaTrie27f8302d [label="2\nphrase\n[]"]
-patriciaTriestructurePatriciaTrie5fa7e7ff -> patriciaTriestructurePatriciaTrie4d76f3f8
-patriciaTriestructurePatriciaTrie4d76f3f8 [label="2\nprofesseur\n[]"]
-patriciaTriestructurePatriciaTrie5fa7e7ff -> patriciaTriestructurePatriciaTrie2d8e6db6
-patriciaTriestructurePatriciaTrie2d8e6db6 [label="2\npuisque\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie23ab930d
-patriciaTriestructurePatriciaTrie23ab930d [label="3\nque\n[l|{]"]
-patriciaTriestructurePatriciaTrie23ab930d -> patriciaTriestructurePatriciaTrie4534b60d
-patriciaTriestructurePatriciaTrie4534b60d [label="4\nquel\n[]"]
-patriciaTriestructurePatriciaTrie23ab930d -> patriciaTriestructurePatriciaTrie3fa77460
-patriciaTriestructurePatriciaTrie3fa77460 [label="3\nque\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie619a5dff
-patriciaTriestructurePatriciaTrie619a5dff [label="1\nredevables\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie1ed6993a
-patriciaTriestructurePatriciaTrie1ed6993a [label="1\ns\n[o|u]"]
-patriciaTriestructurePatriciaTrie1ed6993a -> patriciaTriestructurePatriciaTrie7e32c033
-patriciaTriestructurePatriciaTrie7e32c033 [label="2\nsommes\n[]"]
-patriciaTriestructurePatriciaTrie1ed6993a -> patriciaTriestructurePatriciaTrie7ab2bfe1
-patriciaTriestructurePatriciaTrie7ab2bfe1 [label="2\nsuperbe\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie497470ed
-patriciaTriestructurePatriciaTrie497470ed [label="3\ntou\n[c|t]"]
-patriciaTriestructurePatriciaTrie497470ed -> patriciaTriestructurePatriciaTrie63c12fb0
-patriciaTriestructurePatriciaTrie63c12fb0 [label="4\ntouches\n[]"]
-patriciaTriestructurePatriciaTrie497470ed -> patriciaTriestructurePatriciaTrieb1a58a3
-patriciaTriestructurePatriciaTrieb1a58a3 [label="4\ntoute\n[]"]
-patriciaTriestructurePatriciaTrie4b9af9a9 -> patriciaTriestructurePatriciaTrie6438a396
-patriciaTriestructurePatriciaTrie6438a396 [label="1\nun\n[]"]
+patriciaTriestructurePatriciaTrie6659c656 [label="3\ndes\n[s|{]"]
+patriciaTriestructurePatriciaTrie6659c656 -> patriciaTriestructurePatriciaTrie6d5380c2
+patriciaTriestructurePatriciaTrie6d5380c2 [label="4\ndessous\n[]"]
+patriciaTriestructurePatriciaTrie6659c656 -> patriciaTriestructurePatriciaTrie45ff54e6
+patriciaTriestructurePatriciaTrie45ff54e6 [label="3\ndes\n[]"]
+patriciaTriestructurePatriciaTrie28c97a5 -> patriciaTriestructurePatriciaTrie2328c243
+patriciaTriestructurePatriciaTrie2328c243 [label="2\nde\n[]"]
+patriciaTriestructurePatriciaTrie69663380 -> patriciaTriestructurePatriciaTriebebdb06
+patriciaTriestructurePatriciaTriebebdb06 [label="2\ndu\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie7a4f0f29
+patriciaTriestructurePatriciaTrie7a4f0f29 [label="1\ne\n[c|l]"]
+patriciaTriestructurePatriciaTrie7a4f0f29 -> patriciaTriestructurePatriciaTrie45283ce2
+patriciaTriestructurePatriciaTrie45283ce2 [label="2\necrire\n[]"]
+patriciaTriestructurePatriciaTrie7a4f0f29 -> patriciaTriestructurePatriciaTrie2077d4de
+patriciaTriestructurePatriciaTrie2077d4de [label="2\nelle\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie7591083d
+patriciaTriestructurePatriciaTrie7591083d [label="1\nfait\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie77a567e1
+patriciaTriestructurePatriciaTrie77a567e1 [label="3\ngen\n[i|r]"]
+patriciaTriestructurePatriciaTrie77a567e1 -> patriciaTriestructurePatriciaTrie736e9adb
+patriciaTriestructurePatriciaTrie736e9adb [label="4\ngenial\n[]"]
+patriciaTriestructurePatriciaTrie77a567e1 -> patriciaTriestructurePatriciaTrie6d21714c
+patriciaTriestructurePatriciaTrie6d21714c [label="4\ngenre\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie108c4c35
+patriciaTriestructurePatriciaTrie108c4c35 [label="1\nla\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie4ccabbaa
+patriciaTriestructurePatriciaTrie4ccabbaa [label="1\nm\n[a|o]"]
+patriciaTriestructurePatriciaTrie4ccabbaa -> patriciaTriestructurePatriciaTrie4bf558aa
+patriciaTriestructurePatriciaTrie4bf558aa [label="2\nmachine\n[]"]
+patriciaTriestructurePatriciaTrie4ccabbaa -> patriciaTriestructurePatriciaTrie2d38eb89
+patriciaTriestructurePatriciaTrie2d38eb89 [label="2\nmodele\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie5fa7e7ff
+patriciaTriestructurePatriciaTrie5fa7e7ff [label="1\nnous\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie4629104a
+patriciaTriestructurePatriciaTrie4629104a [label="1\np\n[a|h|r|u]"]
+patriciaTriestructurePatriciaTrie4629104a -> patriciaTriestructurePatriciaTrie27f8302d
+patriciaTriestructurePatriciaTrie27f8302d [label="2\npar\n[]"]
+patriciaTriestructurePatriciaTrie4629104a -> patriciaTriestructurePatriciaTrie4d76f3f8
+patriciaTriestructurePatriciaTrie4d76f3f8 [label="2\nphrase\n[]"]
+patriciaTriestructurePatriciaTrie4629104a -> patriciaTriestructurePatriciaTrie2d8e6db6
+patriciaTriestructurePatriciaTrie2d8e6db6 [label="2\nprofesseur\n[]"]
+patriciaTriestructurePatriciaTrie4629104a -> patriciaTriestructurePatriciaTrie23ab930d
+patriciaTriestructurePatriciaTrie23ab930d [label="2\npuisque\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie4534b60d
+patriciaTriestructurePatriciaTrie4534b60d [label="3\nque\n[l|{]"]
+patriciaTriestructurePatriciaTrie4534b60d -> patriciaTriestructurePatriciaTrie3fa77460
+patriciaTriestructurePatriciaTrie3fa77460 [label="4\nquel\n[]"]
+patriciaTriestructurePatriciaTrie4534b60d -> patriciaTriestructurePatriciaTrie619a5dff
+patriciaTriestructurePatriciaTrie619a5dff [label="3\nque\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie1ed6993a
+patriciaTriestructurePatriciaTrie1ed6993a [label="1\nredevables\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie7e32c033
+patriciaTriestructurePatriciaTrie7e32c033 [label="1\ns\n[o|u]"]
+patriciaTriestructurePatriciaTrie7e32c033 -> patriciaTriestructurePatriciaTrie7ab2bfe1
+patriciaTriestructurePatriciaTrie7ab2bfe1 [label="2\nsommes\n[]"]
+patriciaTriestructurePatriciaTrie7e32c033 -> patriciaTriestructurePatriciaTrie497470ed
+patriciaTriestructurePatriciaTrie497470ed [label="2\nsuperbe\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTrie63c12fb0
+patriciaTriestructurePatriciaTrie63c12fb0 [label="3\ntou\n[c|t]"]
+patriciaTriestructurePatriciaTrie63c12fb0 -> patriciaTriestructurePatriciaTrieb1a58a3
+patriciaTriestructurePatriciaTrieb1a58a3 [label="4\ntouches\n[]"]
+patriciaTriestructurePatriciaTrie63c12fb0 -> patriciaTriestructurePatriciaTrie6438a396
+patriciaTriestructurePatriciaTrie6438a396 [label="4\ntoute\n[]"]
+patriciaTriestructurePatriciaTrie5387f9e0 -> patriciaTriestructurePatriciaTriee2144e4
+patriciaTriestructurePatriciaTriee2144e4 [label="1\nun\n[]"]
 }
