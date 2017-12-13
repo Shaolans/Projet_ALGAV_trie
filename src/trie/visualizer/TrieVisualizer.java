@@ -15,7 +15,7 @@ public class TrieVisualizer {
 	
 	/**
 	 * Affiche la representation graphique du trie hybride
-	 * @param prefix le chaine de caractere � afficher
+	 * @param prefix le chaine de caractere a afficher
 	 * @param isLast indique si le noeud correspond au dernier fils (fils droit)
 	 * @param isEmpty indique si le noeud est un arbre vide
 	 * @param th noeud courant
@@ -54,11 +54,20 @@ public class TrieVisualizer {
 		}
 	}
 	
-	
+	/**
+	 * Affiche la representation graphique du PATRICIA Trie
+	 * @param pt PATRICIA Trie a afficher
+	 */
 	public static void visualizePatriciaTrie(PatriciaTrie pt){
 		TrieVisualizer.visualizePatriciaTrieAux("", true, pt);
 	}
 	
+	/**
+	 * Affiche la representation graphique du PATRICIA Trie
+	 * @param prefix le prefixe contenant la suite de "|" ou " "
+	 * @param isLast si le PATRICIA Trie est le dernier fils
+	 * @param pt le PATRICIA Trie a afficher
+	 */
 	public static void visualizePatriciaTrieAux(String prefix, boolean isLast, PatriciaTrie pt){
 		System.out.println(prefix + "    " + (isLast ? "└────" : "├────") + (!pt.isFeuille()?pt.getInd()+",":"")  + (pt.getVal()==""?"ROOT":pt.getVal()));
 		String tableau = "[";

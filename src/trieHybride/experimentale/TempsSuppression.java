@@ -21,17 +21,17 @@ public class TempsSuppression {
 		Long fin;
 		Long elapsed;
 		List<String> supp = TrieLoadFile.loadWordsShakespeare();
-		max = 23000;
+		max = supp.size();
 		
 		while(max >= cpt+pas){
 			root = new TrieHybride();
 			TrieLoadFile.loadFileShakespeareTrieHybride(root);
 			debut = System.currentTimeMillis();
 			for(int i = 0; i < cpt; i++){
-				TrieHybridePrimitive.supression(root, supp.get(i));
+				TrieHybridePrimitive.suppression(root, supp.get(i));
 			}
-			System.out.println(cpt);
 			fin = System.currentTimeMillis();
+			System.out.println(cpt);
 			elapsed = fin - debut;
 			time.add(cpt+" "+elapsed);
 			cpt += pas;

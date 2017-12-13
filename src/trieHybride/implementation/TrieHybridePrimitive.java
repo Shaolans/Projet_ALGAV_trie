@@ -395,9 +395,9 @@ public class TrieHybridePrimitive {
 	 * @param word le mot a supprimer
 	 * @return TH sans le mot
 	 */
-	public static ITrieHybride supression(ITrieHybride th, String word){
+	public static ITrieHybride suppression(ITrieHybride th, String word){
 		TrieHybridePrimitive.suppressionAux(th, th, word);
-		//TrieHybridePrimitive.purgeNoWordsBranch(newTrie);
+		//TrieHybridePrimitive.purgeNoWordsBranch(th);
 		return th;
 	}
 	
@@ -413,9 +413,6 @@ public class TrieHybridePrimitive {
 	private static void suppressionAux(ITrieHybride th, ITrieHybride thfather, String word){
 		//si TH null alors arret
 		if(th == null) return;
-		int cptfc = 0;
-		int cptfg = 0;
-		int cptfd = 0;
 		char c = word.charAt(0);
 		
 		//lorsque l'on atteint la derniere lettre du mot a supprimer
@@ -478,16 +475,30 @@ public class TrieHybridePrimitive {
 			TrieHybridePrimitive.suppressionAux(th.getfd(), th, word);
 		}
 		
-		cptfc = TrieHybridePrimitive.comptageMots(th.getfc());
-		cptfg = TrieHybridePrimitive.comptageMots(th.getfg());
-		cptfd = TrieHybridePrimitive.comptageMots(th.getfd());
-		
-		if(cptfc == 0) th.setfc(null);
-		if(cptfd == 0) th.setfd(null);
-		if(cptfg == 0) th.setfg(null);
+		if(!TrieHybridePrimitive.existWord(th.getfc())) th.setfc(null);
+		if(!TrieHybridePrimitive.existWord(th.getfd())) th.setfd(null);
+		if(!TrieHybridePrimitive.existWord(th.getfg())) th.setfg(null);
+
 		
 	}
 	
+	
+	public static boolean existWord(ITrieHybride th){
+		if(th == null) return false;
+		if(th.isWord()){
+			return true;
+		}
+		if(th.existfg() && TrieHybridePrimitive.existWord(th.getfg())){
+			return true;
+		}
+		if(th.existfc() && TrieHybridePrimitive.existWord(th.getfc())){
+			return true;
+		}
+		if(th.existfd() && TrieHybridePrimitive.existWord(th.getfd())){
+			return true;
+		}
+		return false;
+	}
 	
 	//detruit les sous arbres ne contenant pas de mot
 	public static void purgeNoWordsBranch(ITrieHybride th) {

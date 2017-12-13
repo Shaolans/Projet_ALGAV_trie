@@ -27,8 +27,8 @@ public class TempsSuppression {
 			for(int i = 0; i < cpt; i++){
 				PatriciaTrie.supprimerMot(root, supp.get(i));
 			}
-			System.out.println(cpt);
 			fin = System.currentTimeMillis();
+			System.out.println(cpt);
 			elapsed = fin - debut;
 			time.add(cpt+" "+elapsed);
 			cpt += pas;

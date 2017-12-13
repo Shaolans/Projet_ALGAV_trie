@@ -210,7 +210,61 @@ Dans notre implantation JAVA, un PATRICIA trie est représenté par :
  \bigbreak
 AJOUTER SCHÉMA PAT TRIE
 
+
+\section{Description des algorithmes}
+\subsection{Algorithmes triviaux}
+La plupart des algorithmes de l'implantation du trie hybride sont relativement triviaux, notamment
+les fonctions:
+\begin{itemize}
+ \item Recherche(arbre, mot) $\rightarrow$ booléen
+ \item ComptageMots(arbre) $\rightarrow$ entier
+ \item ListeMots(arbre) $\rightarrow$ liste[mots]
+ \item ComptageNil(arbre) $\rightarrow$ entier
+ \item Hauteur(arbre) $\rightarrow$ entier
+ \item ProfondeurMoyenne(arbre) $\rightarrow$ entier
+ \item Prefixe(arbre) $\rightarrow$ entier
+\end{itemize}
+Elles correspondent pour la plupart d'un simple parcours de la structure du trie hybride, dont le traitement
+dépend de la fonction.
+
+\subsection{Ajouter un mot}
+La fonction ajouterMot permet d'ajouter un mot qui n'est pas déjà présent dans le PATRICIA trie. La signature est: ajouterMot(arbre, mot) $\rightarrow$ booléen.
+Voici une description succincte de l'algorithme :
+
+Si la taille du mot à ajouter équivaut à celle du préfixe du PATRICIA trie :
+\begin{itemize}
+	\item s'il existe déjà un PATRICIA trie fils de fin de mot, c'est-à-dire celui qui se trouve à la case correspondant au caractère de fin de mot "\{", on renvoie FAUX. En effet, cela signifie qu'il est déjà présent. 
+	\item sinon, on le crée puis on renvoie VRAI.
+\end{itemize}
+\smallbreak
+Sinon on regarde le PATRICIA trie fils se trouvant à la lettre indiquée par l'indice du PATRICIA trie courant.
+\begin{itemize}
+	\item si la case indiquée est un pointeur vers NIL, alors on crée à cette case un nouveau PATRICIA trie, ayant pour valeur le mot, pour indice l'indice du père + 1 et est considéré comme une feuille. Ensuite, on renvoie VRAI.
+	\item sinon un PATRICIA trie fils existe déjà à cette case, et alors il faut comparer sa valeur avec le mot qu'on veut ajouter.
+	\begin{itemize}
+			\item si sa valeur, notée val, est correspond au préfixe du mot à ajouter, alors on fait un appel récursif sur ce PATRICIA trie.
+			\item sinon, on compare val avec le mot à ajouter, pour trouver l'indice à partir duquel ils diffèrent. En effet, on doit créer un PATRICIA trie qui contient le préfixe commun de val et du mot à ajouter, puis créer des PATRICIA tries fils à ce nouveau PATRICIA trie, qui contiendront val et le mot à ajouter.
+	\end{itemize}
+	Finalement, on renvoie VRAI.
+\end{itemize}
+
+
+\subsection{Supprimer un mot}
+La fonction supprimerMot permet la suppression d'un mot dans le trie hybride et maintient le trie hybride cohérent en supprimant
+les nœuds dont il n'existe pas de mot, la signature est: supprimerMot(arbre, mot) $\rightarrow$ booléen
+
+Voici une description succincte de l'algorithme :
+
+\begin{itemize}
+ \item Si la longueur du mot est strictement inférieure à l'indice du PATRICIA trie, le mot n'est pas dans le PATRICIA trie, on renvoie FAUX.
+ \item Si la longueur du mot est égale à cet indice, on considère le PATRICIA trie fils de fin de mot.
+ \item Sinon, on considère le PATRICIA trie fils se trouvant à la case correspondant à la lettre à considérer dans le mot. On trouve cette case en récupérant la lettre du mot à l'indice du PATRICIA trie. En effet, cet indice est aussi la taille du préfixe. Donc la lettre du mot qui se trouve à cet indice est la lettre qui suit le préfixe dans le mot. 
+\end{itemize}
+
 \section{Complexité}
+
+Comme nous avons décidé d'implanter le PATRICIA trie avec un tableau pour ses fils, l'accès à ses fils se fait en $\Theta$(1).
+
 \subsection{Recherche}
 La recherche d'un mot dans un PATRICIA trie de hauteur h est de complexité O(h).
 En effet, lors de la recherche, on est aiguillé par l'indice du PATRICIA trie, qui nous mène vers un de ses PATRICIA trie fils.
@@ -231,8 +285,10 @@ Soit un PATRICIA trie de taille n. Pour trouver sa hauteur, il faut parcourir ch
 Soit un PATRICIA trie de taille n. Pour trouver sa profondeur moyenne, il faut parcourir chaque branche de l'arbre, et récupérer toutes les longueurs de ses branches, et ensuite en faire la moyenne ( en O(1) ). Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Préfixe}
-Soit un PATRICIA trie de taille n. Pour le nombre de mots qui ont en commun un certain préfixe, il faut parcourir la branche de l'arbre qui contient ce préfixe,. Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
+Soit un PATRICIA trie de taille n. Pour le nombre de mots qui ont en commun un certain préfixe, il faut parcourir la branche de l'arbre qui contient ce préfixe. Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
+
 \subsection{Suppression}
+Soit un PATRICIA trie de hauteur h. Pour supprimer un mot, on parcourt dans le pire cas la hauteur de l'arbre. Comme les accès aux PATRICIA tries fils se font en $\Theta$(1), la complexité est de la suppression est la hauteur de l'arbre O(h).
 
 \chapter{Fonctions complexes}
 \section{Implantation}

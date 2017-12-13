@@ -3,6 +3,7 @@ package patriciaTrie.test;
 import org.junit.Test;
 
 import patriciaTrie.structure.PatriciaTrie;
+import trie.file.GraphvizPrint;
 import trie.file.TrieLoadFile;
 import trie.visualizer.TrieVisualizer;
 
@@ -26,9 +27,7 @@ public class PatriaciaTrieTest {
 		PatriciaTrie.ajouterMot(p3, "ameli");
 		
 		TrieVisualizer.visualizePatriciaTrie(p3);
-		TrieVisualizer.visualizePatriciaTrie(PatriciaTrie.fusion(p3, p2));
-		
-		
+		TrieVisualizer.visualizePatriciaTrie(PatriciaTrie.fusion(p3, p2));		
 		
 		
 	}

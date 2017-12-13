@@ -44,10 +44,20 @@ public class TrieLoadFile {
 		
 	}
 	
+	/**
+	 * Construction d'un Trie Hybride a partir d'un fichier
+	 * @param file le fichier
+	 * @return le Trie Hybride issu du chargement
+	 */
 	public static ITrieHybride loadFileTrieHybride(String file) {
 		return TrieLoadFile.loadFileTrieHybride(file, null);
 	}
 	
+	/**
+	 * Construction d'un Trie Hybride prenant toutes les oeuvres de Shakespeare
+	 * @param th le Trie Hybride dont on ajoute les mots
+	 * @return le Trie Hybride resultant
+	 */
 	public static ITrieHybride loadFileShakespeareTrieHybride(ITrieHybride th){
 		String prefix = "files/Shakespeare";
 		File folder = new File(prefix);
@@ -60,6 +70,11 @@ public class TrieLoadFile {
 
 	}
 	
+	/**
+	 * Charge les mots d'un fichier dans une liste
+	 * @param file le fichier a charger
+	 * @return la liste de mots
+	 */
 	public static List<String> loadWords(String file){
 		String word;
 		List<String> listword = new ArrayList<String>();
@@ -77,6 +92,11 @@ public class TrieLoadFile {
 		return listword;
 	}
 	
+	
+	/**
+	 * Charge les oeuvres de Shakespeare dans une liste
+	 * @return la liste de mots
+	 */
 	public static List<String> loadWordsShakespeare(){
 		List<String> listword = new ArrayList<String>();
 		String prefix = "files/Shakespeare";
@@ -88,6 +108,11 @@ public class TrieLoadFile {
 		return listword;
 	}
 	
+	/**
+	 * Construit un PATRICIA Trie a partir d'un fichier donnee en argument
+	 * @param file le fichier a charger
+	 * @return le PATRICIA Trie resultant
+	 */
 	public static PatriciaTrie loadFilePatriciaTrie(String file) {
 		File f = new File(file);
 		Scanner sc = null;
@@ -108,6 +133,10 @@ public class TrieLoadFile {
 		return construction;
 	}
 	
+	/**
+	 * Construit le PATRICIA Trie contenant toutes les oeuvres de Shakespeare
+	 * @return le PATRICIA Trie resultant
+	 */
 	public static PatriciaTrie loadFileShakespearePatriciaTrie() {
 		String prefix = "files/Shakespeare";
 		File folder = new File(prefix);
