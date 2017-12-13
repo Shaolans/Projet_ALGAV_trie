@@ -8,8 +8,14 @@ import patriciaTrie.structure.PatriciaTrie;
 import trieHybride.interfaces.ITrieHybride;
 
 public class GraphvizPrint {
+	//permet d'attribuer les noeuds null du TH
 	private static int cptnull = 0;
 	
+	/**
+	 * Ecrit dans un fichier la representation du Trie Hybride en langage DOT
+	 * @param file le fichier de sortie
+	 * @param th le TH
+	 */
 	public static void printTrieHybrideGraph(String file, ITrieHybride th) {
 		FileWriter fileWriter = null;
 		PrintWriter printWriter = null;
@@ -26,6 +32,11 @@ public class GraphvizPrint {
 		}
 	}
 	
+	/**
+	 * Ecrit le noeud courant du Trie Hybride dans un fichier
+	 * @param printWriter l'instance d'ecriture
+	 * @param th le Trie Hybride
+	 */
 	public static void printTrieHybrideNode(PrintWriter printWriter, ITrieHybride th) {
 		String name = th.parsePointer();
 		printWriter.println(name+" [label=\""+th.getChar()+"\\n"+th.getValue()+"\"]");
@@ -58,7 +69,11 @@ public class GraphvizPrint {
 	}
 	
 	
-	
+	/**
+	 * Ecrit dans un fichier la representation du Trie Hybride en langage DOT
+	 * @param file le fichier de sortie
+	 * @param pt le PATRICIA Trie
+	 */
 	public static void printPatriciaTrieGraph(String file, PatriciaTrie pt) {
 		FileWriter fileWriter = null;
 		PrintWriter printWriter = null;
@@ -75,7 +90,11 @@ public class GraphvizPrint {
 		}
 	}
 	
-	
+	/**
+	 * Ecrit le noeud courant du PATRICIA Trie dans un fichier
+	 * @param printWriter l'instance d'ecriture
+	 * @param pt le PATRICIA Trie
+	 */
 	public static void printPatriciaTrieNode(PrintWriter printWriter, PatriciaTrie pt) {
 		String name = pt.parsePointer();
 		PatriciaTrie pattable[] = pt.getPatTries();
