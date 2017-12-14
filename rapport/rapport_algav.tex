@@ -2,7 +2,6 @@
 %\documentclass[a4paper,10pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
-\usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 % \usepackage{hyperref}
@@ -22,7 +21,7 @@
 }
 
 \title{\Huge Rapport \\ Projet ALGAV Trie \\ \large Implantation du Trie Hybride et du Patricia Trie}
-\author{Amel Arkoub 3301571 \\ Ling-Chun SO 3414546}
+\author{Amel ARKOUB 3301571 \\ Ling-Chun SO 3414546}
 \date{22 décembre 2017}
 
 \pdfinfo{%
@@ -257,8 +256,10 @@ Voici une description succincte de l'algorithme :
 
 \begin{itemize}
  \item Si la longueur du mot est strictement inférieure à l'indice du PATRICIA trie, le mot n'est pas dans le PATRICIA trie, on renvoie FAUX.
- \item Si la longueur du mot est égale à cet indice, on considère le PATRICIA trie fils de fin de mot.
- \item Sinon, on considère le PATRICIA trie fils se trouvant à la case correspondant à la lettre à considérer dans le mot. On trouve cette case en récupérant la lettre du mot à l'indice du PATRICIA trie. En effet, cet indice est aussi la taille du préfixe. Donc la lettre du mot qui se trouve à cet indice est la lettre qui suit le préfixe dans le mot. 
+ \item Si la longueur du mot est égale à cet indice, on considère le PATRICIA trie fils de fin de mot. Sinon, on considère le PATRICIA trie fils se trouvant à la case correspondant à la lettre à considérer dans le mot. On trouve cette case en récupérant la lettre du mot à l'indice du PATRICIA trie. En effet, cet indice est aussi la taille du préfixe. Donc la lettre du mot qui se trouve à cet indice est la lettre qui suit le préfixe dans le mot. 
+ \item Si le PATRICIA trie fils considéré est un pointeur vers NIL, cela signifie que le mot n'est pas présent dans l'arbre, et on renvoie FAUX.
+ \item Si le PATRICIA trie fils considéré est une feuille et que sa valeur équivaut au mot à supprimer, on fait pointer cette case vers NIL. En d'autres termes, le mot ne fait plus partie de l'arbre. Maintenant, on parcourt tous les fils du PATRICIA trie courant, pour voir s'il existe un seul autre PATRICIA trie fils. Dans ce cas là, le PATRICIA trie courant prend la valeur de son fils, son indice et est une feuille. On fait donc pointer ce fils vers NIL, ensuite on renvoie VRAI.
+ \item Sinon, on renvoie le résultat de l'appel récursif sur ce PATRICIA trie fils.
 \end{itemize}
 
 \section{Complexité}
