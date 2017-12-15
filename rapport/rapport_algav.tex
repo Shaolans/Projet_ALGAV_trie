@@ -227,7 +227,7 @@ Elles correspondent pour la plupart d'un simple parcours de la structure du trie
 dépend de la fonction.
 
 \subsection{Ajouter un mot}
-La fonction ajouterMot permet d'ajouter un mot qui n'est pas déjà présent dans le PATRICIA trie. La signature est: ajouterMot(arbre, mot) $\rightarrow$ booléen.
+La fonction ajouterMot permet d'ajouter un mot qui n'est pas déjà présent dans le PATRICIA trie. La signature est: ajouterMot(PATRICIA trie, mot) $\rightarrow$ booléen.
 Voici une description succincte de l'algorithme :
 
 Si la taille du mot à ajouter équivaut à celle du préfixe du PATRICIA trie :
@@ -250,15 +250,15 @@ Sinon on regarde le PATRICIA trie fils se trouvant à la lettre indiquée par l'
 
 \subsection{Supprimer un mot}
 La fonction supprimerMot permet la suppression d'un mot dans le trie hybride et maintient le trie hybride cohérent en supprimant
-les nœuds dont il n'existe pas de mot, la signature est: supprimerMot(arbre, mot) $\rightarrow$ booléen
+les nœuds dont il n'existe pas de mot, la signature est: supprimerMot(PATRICIA trie, mot) $\rightarrow$ booléen
 
 Voici une description succincte de l'algorithme :
 
 \begin{itemize}
  \item Si la longueur du mot est strictement inférieure à l'indice du PATRICIA trie, le mot n'est pas dans le PATRICIA trie, on renvoie FAUX.
  \item Si la longueur du mot est égale à cet indice, on considère le PATRICIA trie fils de fin de mot. Sinon, on considère le PATRICIA trie fils se trouvant à la case correspondant à la lettre à considérer dans le mot. On trouve cette case en récupérant la lettre du mot à l'indice du PATRICIA trie. En effet, cet indice est aussi la taille du préfixe. Donc la lettre du mot qui se trouve à cet indice est la lettre qui suit le préfixe dans le mot. 
- \item Si le PATRICIA trie fils considéré est un pointeur vers NIL, cela signifie que le mot n'est pas présent dans l'arbre, et on renvoie FAUX.
- \item Si le PATRICIA trie fils considéré est une feuille et que sa valeur équivaut au mot à supprimer, on fait pointer cette case vers NIL. En d'autres termes, le mot ne fait plus partie de l'arbre. Maintenant, on parcourt tous les fils du PATRICIA trie courant, pour voir s'il existe un seul autre PATRICIA trie fils. Dans ce cas là, le PATRICIA trie courant prend la valeur de son fils, son indice et est une feuille. On fait donc pointer ce fils vers NIL, ensuite on renvoie VRAI.
+ \item Si le PATRICIA trie fils considéré est un pointeur vers NIL, cela signifie que le mot n'est pas présent dans le trie, et on renvoie FAUX.
+ \item Si le PATRICIA trie fils considéré est une feuille et que sa valeur équivaut au mot à supprimer, on fait pointer cette case vers NIL. En d'autres termes, le mot ne fait plus partie du trie. Maintenant, on parcourt tous les fils du PATRICIA trie courant, pour voir s'il existe un seul autre PATRICIA trie fils. Dans ce cas là, le PATRICIA trie courant prend la valeur de son fils, son indice et est une feuille. On fait donc pointer ce fils vers NIL, ensuite on renvoie VRAI.
  \item Sinon, on renvoie le résultat de l'appel récursif sur ce PATRICIA trie fils.
 \end{itemize}
 
@@ -295,7 +295,82 @@ Soit un PATRICIA trie de hauteur h. Pour supprimer un mot, on parcourt dans le p
 \section{Implantation}
 \subsection{Fusion de Patricia Trie}
 
+La fonction de fusion de deux PATRICIA trie en un PATRICIA trie a pour signature : fusion(PATRICIA trie, PATRICIA trie) $\rightarrow$ PATRICIA trie
+Cette fonction rend un tout nouveau PATRICIA trie.
+
+Voici une description succincte de l'algorithme de fusion de deux PATRICIA trie.
+On nomme p1 et p2 ces deux tries.
+
+\begin{itemize}
+\item Si p1 et p2 sont des feuilles, alors leur valeur commence par la même lettre.
+	\begin{itemize}
+		\item Si p1 et p2 ont exactement la même valeur (et alors le même indice), alors on crée et renvoie un nouveau PATRICIA trie qui prend cette valeur, cet indice, et qui est une feuille.
+		\item Sinon, on crée un PATRICIA trie auquel on ajoute la valeur de p1 et la valeur de p2, via des appels à la fonction ajouterMot. Comme p1 et p2 commencent par la même lettre, on renvoie le PATRICIA trie fils se trouvant à la case correspondant à cette lettre.
+	\end{itemize}
+
+\item Sinon, on doit comparer les valeurs de p1 et de p2. Suite à cette comparaison, on récupère l'indice de la première lettre qui diffère, noté j.
+	\begin{itemize}
+	\item Si la valeur de p1 est le préfixe de la valeur de p2, et que la taille de la valeur de p2 est plus grande que celle de la valeur de p1, alors on fait une copie de p1, via un appel à la fonction copiePatTrie. Ensuite, on fait la fusion du PATRICIA trie fils se trouvant à la case j et de p2. Le raisonnement est identique si la valeur de p2 est le préfixe de la valeur de p1. Finalement, on renvoie ce PATRICIA trie copié et modifié.
+
+	\item Si la valeur de p1 et de p2 est la même, on crée un PATRICIA trie p3 de cette valeur, cet indice, et qui n'est pas une feuille. Ensuite, on doit créer les fils de ce nouveau PATRICIA trie de la manière suivant, pour k allant de 0 à 26: 
+	\begin{itemize}
+	\item Si p1 et p2 possèdent tous les deux des fils à la case k, on attribue à cette case des fils de p3 la fusion du fils de p1 et p2, par appel récursif.
+	\item Si p1 n'a pas de fils et que p2 en a un à la case k, on attribue à cette case des fils de p3 la copie du fils de p2, par appel à la fonction copiePatTrie.
+	\item Si p2 n'a pas de fils et que p1 en a un à la case k, on attribue à cette case des fils de p3 la copie du fils de p1, par appel à la fonction copiePatTrie.
+	\end{itemize}
+	
+	\item Si la valeur de p1 et celle de p2 ont en commun un préfixe de taille j (ici, les valeurs de p1 et de p2 sont différentes), alors on crée un nouveau PATRICIA trie ayant pour valeur ce préfixe, j pour indice, et qui n'est pas une feuille. Ensuite, on copie p1 à la case des PATRICIA tries fils correspondant à la lettre à l'indice j+1 de la valeur de p1, et on fait de même pour p2.
+	
+	\end{itemize}
+Finalement, on renvoie le nouveau PATRICIA trie, issu de la fusion de p1 et p2.
+\end{itemize}
+
+
 \subsection{Conversion de Patricia Trie en Trie Hybride}
+
+La fonction de conversion d'un PATRICIA trie en un trie hybride a pour signature : patToHybridTrie(PATRICIA trie) $\rightarrow$ trie hybride
+
+Cette fonction traite le cas où l'entrée est un pointeur vers NIL.
+Si c'est le cas, elle renvoie NIL. Sinon, elle fait appel à la fonction suivante :
+patToHybridTrie(PATRICIA trie, trie hybride) $\rightarrow$ trie hybride
+
+de la manière suivante : patToHybridTrie(PATRICIA trie, NIL).
+
+Voici une description succincte de l'algorithme de conversion :
+Préalablement, veuillez noter qu'on fait toujours les ajouts dans le fils droit du trie hybride, car on parcourt les mots du PATRICIA trie par ordre alphabétique.
+
+th est un pointeur vers le trie hybride.
+
+Si on a un PATRICIA trie fils signalant qu'on a un mot égal au préfixe, on doit alors marquer la lettre courante, pointée par th, comme un mot.
+
+Ensuite, on parcourt tous les PATRICIA tries fils (hormis celui du cas traité précédemment).
+
+\begin{itemize}
+\item Si ce PATRICIA trie est une feuille
+	\begin{itemize}
+	\item Si c'est le premier mot qu'on doit ajouter, on crée un nouveau trie hybride contenant tout le reste du mot (à partir de l'indice). Notons-le pTh. Ce pointeur nous indique où on fera les prochains ajouts éventuels. 
+	\item Sinon, on attribue au fils droit de pTh un nouveau trie hybride contenant tout le reste du mot. pTh pointe maintenant vers ce nouveau trie hybride fils.
+	\end{itemize}
+
+	\item Sinon, on récupère la chaîne de caractère qui doit être ajoutée au trie hybride, en enlevant le préfixe à la valeur du PATRICIA trie fils.
+
+	\begin{itemize}
+	\item Si c'est le premier mot qu'on doit ajouter, on crée un nouveau trie hybride de taille 1, contenant la première lettre de la chaîne de caractères à ajouter. Notons-le pTh. Ce pointeur nous indique où on fera les prochains ajouts éventuels. 
+	
+	\item Sinon, on attribue au fils droit de pTh un nouveau trie hybride contenant la première lettre de la chaîne de caractères à ajouter. pTh pointe maintenant vers ce nouveau trie hybride fils.
+		
+	\item On construit le fils central du trie hybride, qui contiendra les lettres de la chaîne de caractères (à partir de l'indice 1, pTh a déjà pour valeur la lettre à la position 0).
+	
+	\item  On ajoute en tant que fils central un trie hybride, par appel récursif à la fonction patToHybridTrie, sur le PATRICIA trie fils courant, et le pointeur pTH.
+	
+	\end{itemize}	
+
+		
+	
+\end{itemize}
+
+Finalement, on retourne le pointeur th.
+
 
 \subsection{Conversion de Trie Hybride en Patricia Trie}
 

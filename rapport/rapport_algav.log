@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.7.11)  14 DEC 2017 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.20)  15 DEC 2017 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport_algav.tex
 (./rapport_algav.tex
 LaTeX2e <2014/05/01>
-Babel <3.9l> and hyphenation patterns for 2 languages loaded.
+Babel <3.9l> and hyphenation patterns for 4 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -746,59 +746,59 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
  3.
 [12
 
-] [13]
+] [13] [14] [15]
  4.
-<../comparaison/courbe_temps_construction.png, id=63, 481.8pt x 361.35pt>
+<../comparaison/courbe_temps_construction.png, id=69, 481.8pt x 361.35pt>
 File: ../comparaison/courbe_temps_construction.png Graphic file (type png)
 
 <use ../comparaison/courbe_temps_construction.png>
 Package pdftex.def Info: ../comparaison/courbe_temps_construction.png used on i
-nput line 359.
+nput line 434.
 (pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
 
-<../comparaison/courbe_ajout_mot.png, id=64, 481.8pt x 361.35pt>
+<../comparaison/courbe_ajout_mot.png, id=70, 481.8pt x 361.35pt>
 File: ../comparaison/courbe_ajout_mot.png Graphic file (type png)
 
 <use ../comparaison/courbe_ajout_mot.png>
 Package pdftex.def Info: ../comparaison/courbe_ajout_mot.png used on input line
- 367.
+ 442.
 (pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
- [14
+ [16
 
  <../comparaison/courbe_temps_construction.png>]
-<../comparaison/courbe_temps_suppression.png, id=69, 481.8pt x 361.35pt>
+<../comparaison/courbe_temps_suppression.png, id=75, 481.8pt x 361.35pt>
 File: ../comparaison/courbe_temps_suppression.png Graphic file (type png)
 
 <use ../comparaison/courbe_temps_suppression.png>
 Package pdftex.def Info: ../comparaison/courbe_temps_suppression.png used on in
-put line 374.
+put line 449.
 (pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
- [15 <../comparaison/courbe_ajout_mot.png>]
-<../comparaison/courbe_profondeur_moyenne.png, id=74, 481.8pt x 361.35pt>
+ [17 <../comparaison/courbe_ajout_mot.png>]
+<../comparaison/courbe_profondeur_moyenne.png, id=80, 481.8pt x 361.35pt>
 File: ../comparaison/courbe_profondeur_moyenne.png Graphic file (type png)
 
 <use ../comparaison/courbe_profondeur_moyenne.png>
 Package pdftex.def Info: ../comparaison/courbe_profondeur_moyenne.png used on i
-nput line 383.
+nput line 458.
 (pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
- [16 <../comparaison/courbe_temps_suppression.png>]
-<../comparaison/courbe_hauteur.png, id=79, 481.8pt x 361.35pt>
+ [18 <../comparaison/courbe_temps_suppression.png>]
+<../comparaison/courbe_hauteur.png, id=86, 481.8pt x 361.35pt>
 File: ../comparaison/courbe_hauteur.png Graphic file (type png)
 
 <use ../comparaison/courbe_hauteur.png>
-Package pdftex.def Info: ../comparaison/courbe_hauteur.png used on input line 3
-90.
+Package pdftex.def Info: ../comparaison/courbe_hauteur.png used on input line 4
+65.
 (pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
- [17 <../comparaison/courbe_profondeur_moyenne.png>] [18 <../comparaison/courbe
+ [19 <../comparaison/courbe_profondeur_moyenne.png>] [20 <../comparaison/courbe
 _hauteur.png>] (./rapport_algav.aux) ) 
 Here is how much of TeX's memory you used:
- 12915 strings out of 495020
- 260238 string characters out of 6181324
- 289381 words of memory out of 5000000
- 15874 multiletter control sequences out of 15000+600000
+ 12916 strings out of 494991
+ 260261 string characters out of 6180055
+ 289477 words of memory out of 5000000
+ 15884 multiletter control sequences out of 15000+600000
  15689 words of font info for 37 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,14n,76p,524b,1504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,14n,76p,521b,1504s stack positions out of 5000i,500n,10000p,200000b,80000s
  </users/Etu1/3301571/.texmf-var/fonts/pk
 /ljfour/jknappen/ec/ecss1200.600pk> </users/Etu1/3301571/.texmf-var/fonts/pk/lj
 four/jknappen/ec/ecbx1440.600pk> </users/Etu1/3301571/.texmf-var/fonts/pk/ljfou
@@ -812,10 +812,10 @@ crm1440.600pk> </users/Etu1/3301571/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport_algav.pdf (19 pages, 191064 bytes).
+Output written on rapport_algav.pdf (21 pages, 196417 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 457 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
