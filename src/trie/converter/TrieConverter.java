@@ -127,7 +127,7 @@ private static ITrieHybride patToHybridTrie(PatriciaTrie p, ITrieHybride th){
 	public static PatriciaTrie hybrideTrieToPatricia(ITrieHybride th){
 		
 		if(th==null)
-			return null;
+			return new PatriciaTrie();
 		
 		//appel à la méthode privée
 		return hybrideTrieToPatricia(th, new PatriciaTrie());
