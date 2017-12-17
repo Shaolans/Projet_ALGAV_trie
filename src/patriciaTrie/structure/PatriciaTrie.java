@@ -628,31 +628,12 @@ public class PatriciaTrie {
 		
 		/*
 		 * Si les deux pat tries sont des feuilles, alors leurs valeurs respectives 
-		 * commencent par la même lettre.
+		 * commencent par la même lettre et  s'ils ont la même valeur,
+		 *  on renvoie un pat trie contenant le mot.
 		 */
-		if(p1.feuille && p2.feuille){
-			
-			/*
-			 * s'ils ont la même valeur, on renvoie un pat trie contenant le mot
-			 */
-			if(p1.val.equals(p2.val)){
-				PatriciaTrie p = new PatriciaTrie(p1.ind, p1.val, p1.feuille);
-				ajouterMot(p, p1.val);
-				return p;
-			}
-			
-			/*
-			 * sinon, on crée un pat trie auquel on ajoute les deux différents mots, et on
-			 * renvoie le pat trie fils du contenant les mots 1 et mot2. En effet, 
-			 * les mot1 et mot2 ayant en commun au moins leur première lettre, ils ont été
-			 * ajoutés dans le même pat trie
-			 */
-			else{
-				PatriciaTrie p = new PatriciaTrie();
-				ajouterMot(p, p1.val);
-				ajouterMot(p, p2.val);
-				return p.patTries[p1.val.charAt(0)-97];
-			}
+		if(p1.feuille && p2.feuille && p1.val.equals(p2.val)){
+			PatriciaTrie p = new PatriciaTrie(p1.ind, p1.val, p1.feuille);
+			return p;
 		}
 		
 		/*
@@ -692,7 +673,10 @@ public class PatriciaTrie {
 		 */
 		if(j==mot1.length() && mot2.length()!=mot1.length()){
 			patfusion = copiePatTrie(pmot1);
-			patfusion.patTries[mot2.charAt(j)-97]= fusion(pmot1.patTries[mot2.charAt(j)-97], pmot2);
+			if(pmot1.patTries[mot2.charAt(j)-97]!=null)
+				patfusion.patTries[mot2.charAt(j)-97]= fusion(pmot1.patTries[mot2.charAt(j)-97], pmot2);
+			else
+				patfusion.patTries[mot2.charAt(j)-97]=copiePatTrie(pmot2);
 		}
 		else{
 			/*
