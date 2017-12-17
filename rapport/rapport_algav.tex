@@ -262,32 +262,32 @@ Voici une description succincte de l'algorithme :
 \section{Complexité}
 
 Comme nous avons décidé d'implanter le PATRICIA trie avec un tableau pour ses fils, l'accès à ses fils se fait en $\Theta$(1).
-Notons qu'en moyenne, la hauteur d'un PATRICIA trie est en $\mathcal{O}$(log(n)), n comparaison de bits.
 
 \subsection{Recherche}
-La recherche d'un mot dans un PATRICIA trie de hauteur h est de complexité $\mathcal{O}$(h).
-En effet, lors de la recherche, on est aiguillé par l'indice du PATRICIA trie, qui nous mène vers un de ses PATRICIA trie fils. Cet indice nous évite de parcourir le préfixe. On sait en $\Theta$(1) quelle est la prochaine lettre à évaluer pour l'aiguillage.
+La recherche d'un mot dans un PATRICIA trie est de complexité pire cas $\mathcal{O}$(L) comparaisons de bits, où L est la longueur maximale de bits d'une valeur.
+En moyenne, la recherche est en complexité $\mathcal{O}$(log(n))comparaisons de bits.
+En effet, lors de la recherche, on est aiguillé par l'indice du PATRICIA trie, qui nous mène vers un de ses PATRICIA trie fils en $\Theta$(1). Si ce PATRICIA trie est une feuille, alors on compare la valeur du PATRICIA trie fils avec le mot à trouver, en $\mathcal{O}$(L) comparaisons de bits.
 
 \subsection{Comptage Mots}
-Soit un PATRICIA trie de taille n. Compter les mots qu'il contient revient à parcourir chaque nœud de l'arbre. Ainsi sa complexité est $\Theta$(n).
+Soit un PATRICIA trie de taille n (en nombre de nœuds). Compter les mots qu'il contient revient à parcourir chaque nœud de l'arbre. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Liste Mots}
-Soit un PATRICIA trie de taille n. Lister les mots qu'il contient revient à parcourir chaque nœud de l'arbre. Ainsi sa complexité est $\Theta$(n).
+Soit un PATRICIA trie de taille n (en nombre de nœuds). Lister les mots qu'il contient revient à parcourir chaque nœud de l'arbre. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Comptage Nil}
-Soit un PATRICIA trie de taille n. Compter le nombre de pointeurs à nil qu'il contient revient à compter le nombre de pointeurs à nil de chaque nœud de l'arbre. Ainsi sa complexité est $\Theta$(n).
+Soit un PATRICIA trie de taille n (en nombre de nœuds). Compter le nombre de pointeurs à nil qu'il contient revient à compter le nombre de pointeurs à nil de chaque nœud de l'arbre. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Hauteur}
-Soit un PATRICIA trie de taille n. Pour trouver sa hauteur, il faut parcourir chaque branche de l'arbre. Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
+Soit un PATRICIA trie de taille n (en nombre de nœuds). Pour trouver sa hauteur, il faut parcourir chaque branche de l'arbre. Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Profondeur Moyenne}
-Soit un PATRICIA trie de taille n. Pour trouver sa profondeur moyenne, il faut parcourir chaque branche de l'arbre, et récupérer toutes les longueurs de ses branches, et ensuite en faire la moyenne en $\mathcal{O}$(1). Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
+Soit un PATRICIA trie de taille n (en nombre de nœuds). Pour trouver sa profondeur moyenne, il faut parcourir chaque branche de l'arbre, et récupérer toutes les longueurs de ses branches, et ensuite en faire la moyenne en $\Theta$(1). Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Préfixe}
 Soit un PATRICIA trie de taille n. Pour le nombre de mots qui ont en commun un certain préfixe, il faut parcourir la branche de l'arbre qui contient ce préfixe. Ainsi, on parcourt chaque nœud qu'il contient. Ainsi sa complexité est $\Theta$(n).
 
 \subsection{Suppression}
-Soit un PATRICIA trie de hauteur h. Pour supprimer un mot, on parcourt dans le pire cas la hauteur de l'arbre. Comme les accès aux PATRICIA tries fils se font en $\Theta$(1), la complexité est de la suppression est la hauteur de l'arbre $\mathcal{O}$(h).
+Soit un PATRICIA trie contenant un mot de taille maximale L. Pour supprimer un mot, aiguillé par l'indice, on compare dans le pire cas $\mathcal{O}$(L) bits. et dans le cas où on doit supprimer un étage, c'est-à-dire dans le cas où le PATRICIA trie du mot supprimé n'avait qu'un frère, on modifie des pointeurs en $\Theta$(1). Pour trouver le nombre de PATRICIA trie fils, on fait une boucle de taille 27 (pour les 26 lettres de l'alphabet + le caractère de fin de mot). Ainsi, on a une complexité en  $\mathcal{O}$(L).
 
 
 \chapter{Fonctions complexes}
@@ -301,13 +301,9 @@ Voici une description succincte de l'algorithme de fusion de deux PATRICIA trie.
 On nomme p1 et p2 ces deux tries.
 
 \begin{itemize}
-\item Si p1 et p2 sont des feuilles, alors leur valeur commence par la même lettre.
-	\begin{itemize}
-		\item Si p1 et p2 ont exactement la même valeur (et alors le même indice), alors on crée et renvoie un nouveau PATRICIA trie qui prend cette valeur, cet indice, et qui est une feuille.
-		\item Sinon, on crée un PATRICIA trie auquel on ajoute la valeur de p1 et la valeur de p2, via des appels à la fonction ajouterMot. Comme p1 et p2 commencent par la même lettre, on renvoie le PATRICIA trie fils se trouvant à la case correspondant à cette lettre.
-	\end{itemize}
+\item Si p1 et p2 sont des feuilles et qu'ils ont exactement la même valeur (et alors le même indice), alors on crée et renvoie un nouveau PATRICIA trie qui prend cette valeur, cet indice, et qui est une feuille.
 
-\item Sinon, on doit comparer les valeurs de p1 et de p2. Suite à cette comparaison, on récupère l'indice de la première lettre qui diffère, noté j.
+\item Sinon, par comparaison, on récupère l'indice de la première lettre qui diffère, noté j.
 	\begin{itemize}
 	\item Si la valeur de p1 est le préfixe de la valeur de p2, et que la taille de la valeur de p2 est plus grande que celle de la valeur de p1, alors on fait une copie de p1, via un appel à la fonction copiePatTrie. Ensuite, on fait la fusion du PATRICIA trie fils se trouvant à la case j et de p2. Le raisonnement est identique si la valeur de p2 est le préfixe de la valeur de p1. Finalement, on renvoie ce PATRICIA trie copié et modifié.
 
@@ -430,12 +426,20 @@ Il est important de noter que le nombre maximal de nœuds d'un chemin de fils ga
 pour les lettres de l'alphabet).
 
 \section{Complexité}
-\subsection{Fusion de Patricia Trie}
-La complexité de la fusion d'un PATRICIA trie
+\subsection{Fusion de PATRICIA Trie}
 
-\subsection{Conversion de Patricia Trie en Trie Hybride}
+Soient p1 et p2 deux PATRICIA tries de taille n1 et n2 (en nombre de noeuds).
+La fusion de deux PATRICIA tries nous donne un nouveau PATRICIA trie. Notons que la copie d'un noeud se fait en $\Theta$(1).
+Dans le pire ca, si p1 et p2 contiennent exactement les mêmes valeurs de noeuds, alors il y aura n1*L comparaisons de bits et n1 noeuds à copier, L étant la longueur maximale d'une valeur d'un noeud de p1 (et ainsi de p2). Ainsi, on a une complexité de $\mathcal{O}$(n1*L + n1) = $\mathcal{O}$(n1*L) .
 
-\subsection{Conversion de Trie Hybride en Patricia Trie}
+
+\subsection{Conversion de PATRICIA Trie en Trie Hybride}
+Soit un PATRICIA trie dont la somme des longueurs des mots qui le composent vaut N (les préfixes communs n'étant comptés qu'une seule fois). On doit alors créer N noeuds dans le trie hybride. La création d'un noeud d'un trie hybride est en $\Theta$(1).
+Ainsi la complexité de la conversion d'un PATRICIA trie vers un trie hybride est en $\Theta$(N).
+
+\subsection{Conversion de Trie Hybride en PATRICIA Trie}
+Soit un trie hybride possédant N mots. On doit alors créer autant de PATRICIA trie qu'il y a de mots et de préfixes communs dans le trie hybride.
+La création d'un noeud d'un PATRICIA trie étant en $\Theta$(1), la complexité de conversion d'un trie hybride en PATRICIA trie $\Theta$(N + nb de préfixes commums).
 
 \subsection{Rééquilibrage de Trie Hybride}
 \paragraph{checkBalance}
