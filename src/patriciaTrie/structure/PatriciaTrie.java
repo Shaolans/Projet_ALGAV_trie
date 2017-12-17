@@ -265,6 +265,9 @@ public class PatriciaTrie {
 				return false;
 		}
 		
+		if(word.length()<p.ind)
+			return false;
+		
 		/*
 		 * On récupère la lettre se trouvant à l'indice du pat trie
 		 */
@@ -277,11 +280,17 @@ public class PatriciaTrie {
 		if(p.patTries[c-97]==null)
 			return false;
 		/*
-		 * Sinon, si le mot est égale à la valeur de ce pat trie, alors
+		 * Sinon, si ce pattrie est une feuille,
+		 *  si le mot est égale à la valeur de ce pat trie, alors
 		 * le mot est présent.
 		 */
-		if(word.equals(p.patTries[c-97].val))
-			return true;
+		if(p.patTries[c-97].feuille){
+			 if(word.equals(p.patTries[c-97].val))
+				 return true;
+			 else
+				 return false;
+		}
+			
 		/*
 		 * Sinon on continue la recherche à partir de ce pat trie
 		 * (on descend en profondeur)
