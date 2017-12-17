@@ -341,42 +341,47 @@ public class PatriciaTrie {
 		 * Sinon, si le pat trie fils est une feuille, et que sa valeur est
 		 * égale au mot à supprimer, on le supprime
 		 */
-		if(p.patTries[c-97].feuille && word.equals(p.patTries[c-97].val)){
-			
-			//suppression du pat trie contenant le mot
-			p.patTries[c-97]=null;
-			
-			
-			/*
-			 * On regarde si le pat trie courant à au moins un autre fils.
-			 */
-			int patTriesOqp=0;
-			int autrePat=0;
-			for(int i=0; i<27; i++){
-				if(p.patTries[i]!=null){
-					if(i!=c-97)
-						autrePat = i;
-					patTriesOqp++;
+		if(p.patTries[c-97].feuille){
+			if(word.equals(p.patTries[c-97].val)){
+		
+				//suppression du pat trie contenant le mot
+				p.patTries[c-97]=null;
+				
+				
+				/*
+				 * On regarde si le pat trie courant à au moins un autre fils.
+				 */
+				int patTriesOqp=0;
+				int autrePat=0;
+				for(int i=0; i<27; i++){
+					if(p.patTries[i]!=null){
+						if(i!=c-97)
+							autrePat = i;
+						patTriesOqp++;
+					}
+					if(patTriesOqp==2)
+						break;
 				}
-				if(patTriesOqp==2)
-					break;
+				
+				/*
+				 * Si le pat trie a au moins deux fils, on renvoie true.
+				 * Dans le cas où il n'en a qu'un seul, le pat trie courant devient le pat trie fils.
+				 */
+				if(patTriesOqp==1){
+					if(!p.patTries[autrePat].feuille){
+						p.val = p.patTries[autrePat].val;
+						p.ind = p.patTries[autrePat].ind;
+						p.patTries = p.patTries[autrePat].patTries;
+					}
+					else{
+						p.val = p.patTries[autrePat].val;
+						p.patTries[autrePat]=null;
+						p.feuille=true;
+					}
+				}
 			}
-			
-			/*
-			 * Si le pat trie a au moins deux fils, on renvoie true.
-			 * Dans le cas où il n'en a qu'un seul, le pat trie courant devient le pat trie fils.
-			 */
-			if(patTriesOqp==1){
-				if(!p.patTries[autrePat].feuille){
-					p.val = p.patTries[autrePat].val;
-					p.ind = p.patTries[autrePat].ind;
-					p.patTries = p.patTries[autrePat].patTries;
-				}
-				else{
-					p.val = p.patTries[autrePat].val;
-					p.patTries[autrePat]=null;
-					p.feuille=true;
-				}
+			else{
+				return false;
 			}
 			
 		}
