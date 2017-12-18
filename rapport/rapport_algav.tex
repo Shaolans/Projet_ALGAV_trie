@@ -4,10 +4,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage{hyperref}
+% \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage[margin=0.75in]{geometry}
 \usetikzlibrary{arrows}
+
+\renewcommand{\contentsname}{Sommaire}
 
 \renewcommand{\chaptername}{}
 \setcounter{chapter}{-1}
@@ -45,7 +47,7 @@
 Nous souhaitons représenter un dictionnaire de mots, c'est-à-dire implanter une structure de
 données efficace stockant des mots. Pour cela, nous allons nous servir de la structure de {\itshape trie}.
 Dans cette optique, nous proposons les implantations de deux structures de tries concurrentes : le trie hybride
-et le PATRICIA trie. Ensuite, nous effectuerons une étude expérimentale de laquelle nous analyserons les résultats, afin de mettre en exergue
+et le PATRICIA trie. Ensuite, nous effectuerons une étude expérimentale dans laquelle nous analyserons les résultats, afin de mettre en exergue
 les avantages et inconvénients de chacune des structures. Nous avons choisi le langage de programmation Java pour nos implantations.
 
 \section*{Trie}
@@ -62,7 +64,6 @@ efficace. Pour ce faire, plutôt que chaque nœud interne ait pour valeur une le
 
 \chapter{Trie Hybride}
 \section{Implantation}
-\subsection{Structure}
 Dans notre implantation JAVA, un trie hybride est un objet qui contient 5 éléments:
 \begin{itemize}
  \item un char ``letter'', qui correspond à la lettre stockée.
@@ -85,6 +86,7 @@ Voici une représentation du trie hybride résultant des ajouts successifs des m
  \item dort
 \end{itemize}
 
+\begin{center}
 \begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 6cm/#1,
   level distance = 2.5cm}]
 \node [arn_n] {d \\ -1}
@@ -92,11 +94,11 @@ Voici une représentation du trie hybride résultant des ajouts successifs des m
     child{ node [arn_n] {o \\ -1}
 	    child{ node [arn_x] {}}
             child{ node [arn_n] {n \\ 0} 
+							child{ node [arn_x] {}}
+							child{ node [arn_x] {}}
 							child{ node [arn_n] {r \\ -1}
 							      child{ node [arn_n] {t \\ 3}}
-							}
-							child{ node [arn_x] {}}
-							child{ node [arn_x] {}}
+							}	
             }
             child{ node [arn_x] {}}
 		}
@@ -105,6 +107,8 @@ Voici une représentation du trie hybride résultant des ajouts successifs des m
     }
 ; 
 \end{tikzpicture}
+\end{center}
+
 \begin{figure}[!htbp]
 \caption{Représentation d'un Trie Hybride}
 \end{figure}
@@ -130,18 +134,18 @@ La fonction ajoutMot permet d'ajouter un mot dans le trie hybride, et par consé
 dont la signature est: ajoutMot(mot, arbre) $\rightarrow$ void.
 Les étapes sont donc:
 \begin{itemize}
- \item le cas d'arrêt lorsque le mot a été ajouté.
- \item si on est dans la racine qui est encore vide alors on ajoute le mot.
+ \item le cas d'arrêt est lorsque le mot a été ajouté.
+ \item si nous sommes dans la racine qui est encore vide alors on ajoute le mot (on génère la suite de noeud formant un mot).
  \item si le mot est de longueur 1, alors on vérifie si le trie hybride courant correspond à la bonne lettre
- sinon on fait des appels récursifs sur le fils gauche ou droit.
+ sinon on effectue des appels récursifs sur le fils gauche ou droit.
  \item dans le cas général, on compare le caractère du mot et le caractère du trie hybride courant, si les lettres
- concordent alors on appelle récursivement sur le fils central ; si elles sont différentes, on fait un appel récursif sur le
+ concordent alors on appelle récursivement sur le fils central ; si elles sont différentes, on effectue un appel récursif sur le
  fils gauche ou droit suivant l'ordre alphabétique des caractères.
 \end{itemize}
 
 \subsection{Suppression}
 La fonction suppressionMot permet la suppression d'un mot dans le trie hybride et maintient le trie hybride cohérent en supprimant
-les nœuds dont il n'existe pas de mot, la signature est: suppression(arbre, mot) $\rightarrow$ void
+les nœuds dont il n'existe pas de mot, la signature est: suppression(arbre, mot) $\rightarrow$ void.
 Les étapes sont donc:
 \begin{itemize}
  \item si le trie hybride courant est un pointeur null alors on a un cas d'arrêt.
@@ -150,20 +154,17 @@ Les étapes sont donc:
  \item dans le cas général, on compare le caractère du mot et le caractère du Trie Hybride courant, si les lettres
  concordent alors on appelle récursivement sur le fils central ; si elles sont différentes, on fait un appel récursif sur le
  fils gauche ou droit suivant l'ordre alphabétique des caractères.
- \item on calcul le nombre de mots issus de chaque fils, s'il existe un fils dont le nombre de mots est égal à 0, alors on détruit
- le fils en question.
+ \item on effectue un vérification d'éxistence de mots dans les fils du trie hybride, si un fils ne possède pas de noeud mot
+ alors il n'est plus référencé par le trie hybride courant.
 \end{itemize}
 
 
 \section{Complexité}
 \subsection{Recherche}
 Pour la recherche d'un mot de \textit{L} caractères et un trie hybride de taille \textit{n}, 
-en prenant la comparaison de caractère comme mesure, on obtient une complexité dans le cas général:
-\begin{itemize}
- \item en $\Theta$(L), si \textit{L} < \textit{n};
- \item en $\Theta$(n) sinon.
-\end{itemize}
-Sinon on a une complexité en $\Theta$(n) dans le pire cas.
+en prenant la comparaison de caractère comme mesure, on obtient une complexité dans le cas général en $\Theta$(L), si \textit{L} < \textit{n}
+puisqu'il faut parcourir chaque caractère du mot au minimum. Sinon le pire cas est atteint en $\Theta$(n) lorsqu'il y a des
+ajouts par ordre alphabétique et que le mot recherché contient une succession de lettre 'z'.
 
 \subsection{Comptage Mots}
 Le comptage de mots revient à faire un parcours de l'arbre en entier.
@@ -172,12 +173,13 @@ on a donc une complexité $\Theta$(n).
 
 \subsection{Liste Mots}
 La récupération des mots dans un trie hybride correspond aussi à un parcours de l'arbre en entier en gardant le \textit{préfixe}
-en argument dans les appels de fonctions.
+en argument dans les appels de fonctions (il est nécessaire d'effectuer une comparaison de la \textit{valeur} de chaque noeud du
+trie hybride).
 Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du nœud comme mesure,
 on a donc une complexité en $\Theta$(n).
 
 \subsection{Comptage Nil}
-Le comptage de pointeur vers null correspond à un parcours de tous les nœuds pour compter le nombre de fils null.
+Le comptage de pointeur vers null correspond à un parcours de tous les nœuds afin de compter le nombre de fils null.
 Soit un arbre de taille \textit{n}, en prenant la comparaison de la valeur du nœud comme mesure,
 on a une complexité en $\Theta$(n) puisque pour \textit{n} noeuds, on a un nombre de comparaisons $\le$ \textit{3n}.
 
@@ -185,8 +187,9 @@ on a une complexité en $\Theta$(n) puisque pour \textit{n} noeuds, on a un nomb
 La détermination de la hauteur du trie hybride est un parcours complet de l'arbre, en prenant l'existence de fils comme mesure, on obtient une complexité en $\Theta$(n).
 
 \subsection{Profondeur Moyenne}
-La profondeur moyenne d'un trie hybride est un parcours jusqu'aux feuilles dont on ajoute la profondeur dans une liste et on effectue
-une division. En prenant la comparaison d'existence de fils comme mesure, on obtient une complexité de $\Theta$(n).
+La profondeur moyenne d'un trie hybride est un parcours jusqu'aux feuilles où on ajoute la profondeur dans une liste dont on 
+effectue une division à la fin du parcours. En prenant la comparaison d'existence de fils comme mesure, on obtient une complexité
+de $\Theta$(n).
 
 \subsection{Préfixe}
 La recherche du préfixe peut être dans le pire cas en $\Theta$(n). En effet, le pire cas est atteint lorsque le trie hybride
@@ -194,7 +197,7 @@ est une ``liste chaînée'' et donc à hauteur \textit{h}=n.
 
 \subsection{Suppression}
 La suppression d'un mot est une recherche dans le trie hybride, ce qui correspond à une complexité en $\Theta$(n) comparaisons
-dans le pire cas. Cependant, il y a aussi 3 appels à la fonction comptageMots de complexité $\Theta$(n).
+dans le pire cas. Cependant, il y a aussi 3 appels une fonction qui recherche l'existence d'un noeud mot de compléxité $\Theta$(n).
 On a donc une complexité en $\mathcal{O}$($n^2$).
 
 \chapter{PATRICIA Trie}
@@ -255,7 +258,7 @@ Sinon on regarde le PATRICIA trie fils se trouvant à la lettre indiquée par l'
 
 
 \subsection{Supprimer un mot}
-La fonction supprimerMot permet la suppression d'un mot dans le trie hybride et maintient le trie hybride cohérent en supprimant
+La fonction supprimerMot permet la suppression d'un mot dans le PATRICIA trie et maintient ce PATRICIA trie cohérent en supprimant
 les nœuds dont il n'existe pas de mot, la signature est: supprimerMot(PATRICIA trie, mot) $\rightarrow$ booléen
 
 Voici une description succincte de l'algorithme :
@@ -274,7 +277,7 @@ Comme nous avons décidé d'implanter le PATRICIA trie avec un tableau pour ses 
 
 \subsection{Recherche}
 La recherche d'un mot dans un PATRICIA trie est de complexité pire cas $\mathcal{O}$(L) comparaisons de bits, où L est la longueur maximale de bits d'une valeur.
-En moyenne, la recherche est en complexité $\mathcal{O}$(log(n))comparaisons de bits.
+En moyenne, la recherche est en complexité $\mathcal{O}$(log(n)) comparaisons de bits.
 En effet, lors de la recherche, on est aiguillé par l'indice du PATRICIA trie, qui nous mène vers un de ses PATRICIA trie fils en $\Theta$(1). Si ce PATRICIA trie est une feuille, alors on compare la valeur du PATRICIA trie fils avec le mot à trouver, en $\mathcal{O}$(L) comparaisons de bits.
 
 \subsection{Comptage Mots}
@@ -303,7 +306,7 @@ Soit un PATRICIA trie contenant un mot de taille maximale L. Pour supprimer un m
 \section{Implantation}
 \subsection{Fusion de Patricia Trie}
 
-La fonction de fusion de deux PATRICIA trie en un PATRICIA trie a pour signature : fusion(PATRICIA trie, PATRICIA trie) $\rightarrow$ PATRICIA trie
+La fonction de fusion de deux PATRICIA trie en un PATRICIA trie a pour signature : fusion(PATRICIA trie, PATRICIA trie) $\rightarrow$ PATRICIA trie.
 Cette fonction rend un tout nouveau PATRICIA trie.
 
 Voici une description succincte de l'algorithme de fusion de deux PATRICIA trie.
@@ -389,7 +392,7 @@ Voici une description succincte de l'algorithme de conversion :
 
 Tout d'abord, s'ils existent, on fait un appel récursif sur chacun des fils gauche et droit du nœud du trie hybride. Leur valeur de retour est un pointeur sur un PATRICIA trie modifié.
 
-On considère comme préfixe courant est la valeur du PATRICIA trie actuel, et un pointeur pTh qui pointe vers le trie hybride.
+On considère comme préfixe courant étant la valeur du PATRICIA trie actuel, et un pointeur pTh qui pointe vers le trie hybride.
 
 Tant que le nœud n'a pas de fils gauche ni droit, c'est-à-dire tant qu'on a possiblement une suite de nœuds centraux, on fait les étapes suivantes :
 \begin{itemize}
@@ -412,12 +415,12 @@ partir d'un nœud courant, pour ses fils gauche et droit. En effet, ceux-ci sont
 considérer comme un équilibrage d'AVL dont les fils gauche et droit correspondent respectivement aux fils gauche et droit d'un AVL.
 La fonction checkBalance(arbre) $\rightarrow$ booléen, permet d'identifier si un trie hybride est équilibré ou non. Celle-ci
 calcule dans tout le trie hybride s'il existe un nœud dont le nombre de successions de fils gauche ou droit dans le fils gauche ou 
-droit du nœud courant diffère de plus de 1. Si tel est le cas, alors le trie hybride est déséquilibré.
+droit du nœud courant diffère de plus de 1. Si tel est le cas, alors le trie hybride est considéré comme déséquilibré.
 
 \paragraph{}
 La fonction de rééquilibrage est balanceTrieHybride(arbre) $\rightarrow$ void, elle se décompose en ces étapes:
 \begin{itemize}
- \item le cas de base est le trie hybride est null.
+ \item le cas de base est le trie hybride null.
  \item on calcule si le trie hybride est déjà équilibré : s'il est équilibré alors on récupère tous les fils centraux de la
  successions de fils gauche et droit du nœud courant et on effectue des appels recursifs sur ces fils.
  \item on extrait la succession des fils gauche et droit du nœud courant et on effectue un tri dans l'ordre alphabétique
@@ -474,13 +477,12 @@ tous les mots contenus dans l’œuvre de Shakespeare, en repartant d'un trie vi
 \caption{Courbe du temps de calcul en fonction du nombre d'ajouts}
 \end{figure}
 
-\section{Temps d'ajout d'un mot}
-Nous avons aussi calculé le temps d'ajout d'un mot dans des tries qui avaient les œuvres de Shakespeare déjà chargées. Nous avons alors
-ajouté des mots français de longueur croissante, dont le plus long mot est composé de 25 lettres.\\
-\includegraphics{../comparaison/courbe_ajout_mot.png}
-\begin{figure}[!htbp]
-\caption{Courbe du temps de calcul en fonction de la longueur du mot}
-\end{figure}
+D'après la courbe obtenue, le temps de construction d'un trie hybride et d'un PATRICIA trie semble être en $\Theta$(n).
+Ce qui est en adéquation avec l'étude théorique puisque les deux implantations de tries effectuent, pour la construction,
+une recherche dans un premier temps et ensuite l'ajout.
+La différence observée au niveau de la courbe est vraisemblablement dû en raison du trie hybride qui possède des noeuds-lettre
+et le PATRICIA trie des noeuds-chaine-de-caractère.
+
 \section{Temps de suppression}
 Le temps de suppression en chargeant dans les tries les œuvres de Shakespeare et en supprimant un ensemble de mot avec un pas
 de 1000.\\
@@ -488,6 +490,24 @@ de 1000.\\
 \begin{figure}[!htbp]
 \caption{Courbe du temps de calcul en fonction du nombre de suppression}
 \end{figure}
+
+D'après la courbe obtenue, le temps de construction d'un trie hybride et d'un PATRICIA trie semble être en $\Theta$(n).
+Ce qui est en adéquation avec l'étude théorique puisque les deux implantations de tries effectuent, pour la suppression,
+une recherche dans un premier temps, ensuite une suppression et enfin une consolidation de cohérence.
+La différence observée au niveau de la courbe est vraisemblablement dû en nombre d'accès de noeuds. En effet, le trie hybride
+effectue une recherche plus longue par rapport au PATRICIA trie en raison de leurs structures. De plus, le maintient de la
+cohérence des tries oblige encore des parcours dans les fils pour supprimer les noeuds qui ne possèdent pas de mots.
+
+\section{Temps d'ajout d'un mot}
+Nous avons aussi calculé le temps d'ajout d'un mot dans des tries qui avaient les œuvres de Shakespeare déjà chargées. Nous avons alors
+ajouté des mots français de longueur croissante, dont le plus long mot est composé de 25 lettres.\\
+\includegraphics{../comparaison/courbe_ajout_mot.png}
+\begin{figure}[!htbp]
+\caption{Courbe du temps de calcul en fonction de la longueur du mot}
+\end{figure}
+
+Nous pouvons remarquer que le temps d'ajout d'un mot, que cela soit dans un trie hybride ou un PATRICIA trie, est négligeable
+puisque la taille d'un mot français ne prend que rarement de grande valeur (en nombre de lettres).
 
 \section{Profondeur moyenne des structures}
 Cette étude de la profondeur des structures permet de mettre en évidence l'évolution de la profondeur moyenne des structures
@@ -497,6 +517,11 @@ moyenne entre ces ajouts.\\
 \begin{figure}[!htbp]
 \caption{Courbe de la profondeur moyenne en fonction du nombre d'ajouts}
 \end{figure}
+
+Au niveau de cette courbe, nous remarquons que la profondeur moyenne du PATRICIA trie est nettement inférieure au trie hybride. Ce
+qui est en adéquation avec l'étude théorique puisqu'un PATRICIA trie contient une sous-chaine de lettre correspondant à un
+préfixe a l'instar du trie hybride dont chaque noeud correspond à une lettre.
+Nous pouvons aussi observer que le rééquilibrage permet de réduire notablement la profondeur moyenne du trie hybride.
 \section{Hauteur}
 De la même manière que pour le calcul de la profondeur moyenne, nous avons chargé les œuvres et Shakespeare avec un pas de 1000
 et en calculant la hauteur entre ces ajouts.\\
@@ -505,4 +530,11 @@ et en calculant la hauteur entre ces ajouts.\\
 \caption{Courbe de la hauteur en fonction du nombre d'ajouts}
 \end{figure}
 
+Au niveau de cette courbe, nous remarquons que la hauteur du PATRICIA trie est nettement inférieure au trie hybride. Ce
+qui est en adéquation avec l'étude théorique.
+En effet, pour un trie hybride, la hauteur de l'arbre peut être en grande partie dû à la longueur du mot \textit{L} puisqu'un noeud
+ne peut contenir qu'une lettre. On a donc toujours une hauteur $\geq$\textit{L} pour un trie hybride alors que pour un PATRICIA trie
+la longueur d'un mot peut au mieux être inclus entièrement dans un seul PATRICIA trie.
+Nous pouvons aussi observer que le rééquilibrage permet dans certain cas de réduire la hauteur de l'arbre, cependant
+il n'est parfois pas possible de réduire en raison de la longueur du mot.
 \end{document}
