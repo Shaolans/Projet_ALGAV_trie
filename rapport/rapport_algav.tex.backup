@@ -480,7 +480,7 @@ tous les mots contenus dans l’œuvre de Shakespeare, en repartant d'un trie vi
 D'après la courbe obtenue, le temps de construction d'un trie hybride et d'un PATRICIA trie semble être en $\Theta$(n).
 Ce qui est en adéquation avec l'étude théorique puisque les deux implantations de tries effectuent, pour la construction,
 une recherche dans un premier temps et ensuite l'ajout.
-La différence observées au niveau de la courbe est vraisemblablement dû en raison du trie hybride qui possède des noeuds-lettre
+La différence observée au niveau de la courbe est vraisemblablement dû en raison du trie hybride qui possède des noeuds-lettre
 et le PATRICIA trie des noeuds-chaine-de-caractère.
 
 \section{Temps de suppression}
@@ -492,10 +492,11 @@ de 1000.\\
 \end{figure}
 
 D'après la courbe obtenue, le temps de construction d'un trie hybride et d'un PATRICIA trie semble être en $\Theta$(n).
-Ce qui est en adéquation avec l'étude théorique puisque les deux implantations de tries effectuent, pour la construction,
-une recherche dans un premier temps et ensuite l'ajout.
-La différence observées au niveau de la courbe est vraisemblablement dû en raison du trie hybride qui possède des noeuds-lettre
-et le PATRICIA trie des noeuds-chaine-de-caractère.
+Ce qui est en adéquation avec l'étude théorique puisque les deux implantations de tries effectuent, pour la suppression,
+une recherche dans un premier temps, ensuite une suppression et enfin une consolidation de cohérence.
+La différence observée au niveau de la courbe est vraisemblablement dû en nombre d'accès de noeuds. En effet, le trie hybride
+effectue une recherche plus longue par rapport au PATRICIA trie en raison de leurs structures. De plus, le maintient de la
+cohérence des tries oblige encore des parcours dans les fils pour supprimer les noeuds qui ne possèdent pas de mots.
 
 \section{Temps d'ajout d'un mot}
 Nous avons aussi calculé le temps d'ajout d'un mot dans des tries qui avaient les œuvres de Shakespeare déjà chargées. Nous avons alors
@@ -536,4 +537,13 @@ ne peut contenir qu'une lettre. On a donc toujours une hauteur $\geq$\textit{L} 
 la longueur d'un mot peut au mieux être inclus entièrement dans un seul PATRICIA trie.
 Nous pouvons aussi observer que le rééquilibrage permet dans certain cas de réduire la hauteur de l'arbre, cependant
 il n'est parfois pas possible de réduire en raison de la longueur du mot.
+
+\chapter{Conclusion}
+A la suite de cette étude à la fois théorique et expérimentale, nous pouvons conclure que la PATRICIA trie semble l'implantation
+la plus efficace en terme de rapidité. Non seulement, le temps de construction est faible comparé au trie hybride, le temps de 
+suppression, la profondeur moyenne et la hauteur semble jouer en faveur du PATRICIA trie.
+Cependant, il est important de noté l'occupation mémoire de PATRICIA trie, en effet, le PATRICIA trie comporte pour chaque
+noeud un tableau de 27 cases afin de stocker ses fils alors que pour le trie hybride il n'en suffit que 3.
+
+
 \end{document}

@@ -537,4 +537,17 @@ ne peut contenir qu'une lettre. On a donc toujours une hauteur $\geq$\textit{L} 
 la longueur d'un mot peut au mieux être inclus entièrement dans un seul PATRICIA trie.
 Nous pouvons aussi observer que le rééquilibrage permet dans certain cas de réduire la hauteur de l'arbre, cependant
 il n'est parfois pas possible de réduire en raison de la longueur du mot.
+
+\chapter{Conclusion}
+A la suite de cette étude à la fois théorique et expérimentale, nous pouvons conclure que le PATRICIA trie semble l'implantation
+la plus efficace en terme de rapidité. Non seulement, le temps de construction est faible comparé au trie hybride, le temps de 
+suppression, la profondeur moyenne et la hauteur semble jouer en faveur du PATRICIA trie.
+Cependant, il est important de noté l'occupation mémoire de PATRICIA trie, en effet, le PATRICIA trie comporte pour chaque
+noeud un tableau de 27 cases afin de stocker ses fils alors que pour le trie hybride il n'en suffit que 3. Dans le cas où 
+les mots chargés sont très nombreux et variés, il semblerait que le PATRICIA trie serait plus coûteux en mémoire qu'un trie
+hybride.
+Ainsi le PATRICIA trie serait plus adéquat pour un dictionnaire de taille moyenne nécessitant des accès rapides alors que le 
+trie hybride serait plus utilie pour stocker un dictionnaire de grande taille.
+
+
 \end{document}
