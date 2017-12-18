@@ -197,7 +197,7 @@ La suppression d'un mot est une recherche dans le trie hybride, ce qui correspon
 dans le pire cas. Cependant, il y a aussi 3 appels à la fonction comptageMots de complexité $\Theta$(n).
 On a donc une complexité en $\mathcal{O}$($n^2$).
 
-\chapter{Patricia Trie}
+\chapter{PATRICIA Trie}
 \section{Implantation}
 Dans notre implantation JAVA, un PATRICIA trie est représenté par :
 \begin{itemize}
@@ -207,7 +207,10 @@ Dans notre implantation JAVA, un PATRICIA trie est représenté par :
 \item un booléen, {\itshape isFeuille} indiquant si ce nœud est une feuille ou non. Dans le cas où le nœud est une feuille, le préfixe est en fait le mot en entier.
 \end{itemize}
  \bigbreak
-AJOUTER SCHÉMA PAT TRIE
+
+Voici un exemple de la structure de données après les insertions des mots "saler", "sale" et "salut".
+
+\includegraphics[scale=0.45]{../rapport/Schema PAT trie.png}
 
 
 \section{Description des algorithmes}
